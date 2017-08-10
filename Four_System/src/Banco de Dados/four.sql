@@ -1,4 +1,4 @@
------------------------------------------------
+﻿-----------------------------------------------
 -- Criando o esquema banco
 -----------------------------------------------
 DROP SCHEMA IF EXISTS banco_four CASCADE;
@@ -87,83 +87,73 @@ INSERT INTO email_boleto VALUES ('Condominio_1', '101', 'kimgames1@gmail.com'),
                                 ('Condominio_4', '301', 'fourassociados@gmail.com'),
                       			    ('Condominio_5', '101A', 'contato.kimgames@gmail.com'),
                       			    ('Condominio_5', '101B', 'kim-ruan@hotmail.com');
--- 10 Consultas:
 
---1
---Selecionar o empregado que está na empresa a mais tempo
+-- Todos os condominios
+SELECT * FROM condominio
 
-SELECT f.nome, f.data_admissao
-FROM funcionario f
-WHERE f.data_admissao
-IN (SELECT MIN(data_admissao) FROM funcionario);
+--Condominio especifico pelo nome
+SELECT * FROM condominio WHERE nome LIKE '<nome>' 
 
---2
---Mostrar a quantidade de agencias localizadas em cada estado
+--Condominios especificos pelo começo de uma letra especifica
 
-SELECT estado, COUNT(*)
-FROM agencia
-GROUP BY estado;
+SELECT * FROM condominio WHERE nome LIKE '<letra>%' 
 
---3
---Mostrar a quantidade de agencias localizadas em cada estado com mais de 2 agencias por estado
+--Condominios especificos pelo nome da rua
 
-SELECT estado, COUNT(*)
-FROM agencia
-GROUP BY estado
-HAVING COUNT(*) > 2;
+SELECT * FROM condominio WHERE rua LIKE '<rua>' 
 
---4
---Mostrar a média de saldo das contas corrente por estado
+--Condominios especificos pelo nome do bairro
 
-SELECT a.estado, AVG(saldo)
-FROM agencia a, conta_corrente cc
-WHERE a.nome = cc.nome_agencia
-GROUP BY a.estado;
+SELECT * FROM condominio WHERE bairro LIKE '<bairro>' 
 
---5
---Mostrar a média de saldo das contas corrente por estado com média de saldo maior que 5000
+--Condominio que o morador especificado na consulta mora
 
-SELECT a.estado, AVG(saldo)
-FROM agencia a, conta_corrente cc
-WHERE a.nome = cc.nome_agencia
-GROUP BY a.estado
-HAVING AVG(saldo) > 5000;
+SELECT * FROM condominio c, apartamento a, morador m
+WHERE p.nome = '<nome>' AND  m.id = a.id_morador
+AND c.id = a.id_condominio
 
---6
---Mostrar o id da conta poupança e o cpf do cliente para todos os clientes que possuem conta poupança
+--Condominio que o proprietario especificado na colsuta possui apartamento(s)
 
-SELECT cpc.id_conta, c.cpf, c.nome
-FROM conta_poupanca_cliente cpc, cliente c
-WHERE cpc.cpf_cliente = c.cpf;
+SELECT * FROM condominio c,apartamento a, proprietario p WHERE p.nome = '<nome>'
+AND p.id = a.id_proprietario AND a.id_condominio = c.id
 
---7
---Mostrar todos os funcionarios que não são gerentes de nenhum cliente
+--Todos os proprietarios
 
-SELECT nome
-FROM funcionario
-WHERE num_funcional
-NOT IN (SELECT num_gerente FROM cliente);
+SELECT * FROM proprietario
 
---8
---Mostrar o nome dos clientes que não fizeram emprestimos
+--Proprietario especifico pelo nome (permutação de todos os nomes q compoem o nome do prop)
+SELECT * FROM proprietario WHERE nome LIKE '%<nome>%'
 
-SELECT nome
-FROM cliente
-WHERE cpf
-NOT IN (SELECT cpf_cliente FROM emprestimos_cliente);
+--Proprietario especifico pelo CPF
 
---9
---Mostrar todos os supervisores
+SELECT * FROM proprietario WHERE cpf = '<cpf>'
 
-SELECT DISTINCT f1.*
-FROM funcionario f1, funcionario f2
-WHERE f1.num_funcional = f2.num_supervisor;
+--Proprietario especifico pelos apartamentos que possui
 
---10
---Mostrar a soma de todos os saldos das contas poupança
+SELECT * FROM condominio c, apartamento a, proprietario p
+WHERE c.nome = '<nome>' AND c.id = a.id_condominio 
+AND a.id_proprietario = p.id
 
-SELECT SUM(saldo)
-FROM conta_poupanca;
+--Todos os moradores
+
+SELECT * FROM morador
+
+
+-- Morador especifico pelo nome (permutação de todos os nomes q compoem o nome do prop)
+
+SELECT * FROM morador WHERE nome = '%<nome>%'
+
+--Morador especifico pelo CPF
+
+SELECT * FROM morador WHERE cpf = '<cpf>'
+
+--Morador especifico pelo apartamento que mora
+
+SELECT * FROM condominio c, apartamento a, morador m
+WHERE c.nome = '<nome>' AND c.id = a.id_condominio 
+AND a.id_morador = m.id 
+
+
 
 -------------------------------
 -- Stored Procedure e Tiggers:
