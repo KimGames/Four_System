@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.mail.Session;
 
-public class EnviarBoletos{
+public class EnviarComunicado{
 
   private static String cid = "1";
   private static final String BODY = "<html>"
@@ -26,18 +26,20 @@ public class EnviarBoletos{
   private static final String IMAGE_BODY = "..\\Four_System\\Imagens\\crea.png";
 
   private final ArrayList<String> to = new ArrayList<>();
-  private final ArrayList<String> filename_to = new ArrayList<>();
+  private final String filename_to;
 
-  public EnviarBoletos(){}
+  public EnviarComunicado(){
+    this.filename_to = new String();
+  }
 
-  public void enviar(Session session, String mes_ano){
+  public void enviar(Session session, String assunto){
 
-    String subject = "Taxa de Condomínio " + mes_ano;
+    String subject = "Comunicado sobre " + assunto;
     System.out.println("Enviando email..");
     //ENVIAR EMAILS
     try {
         for(int i = 0; i < to.size(); i++){
-            SendAttachment.sendEmail(session, to.get(i), filename_to.get(i),
+            SendAttachment.sendEmail(session, to.get(i), filename_to,
                                      subject, BODY, IMAGE_BODY);
         }
         System.out.println("Email Enviado com sucesso!");
