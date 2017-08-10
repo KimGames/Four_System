@@ -21,7 +21,8 @@ CREATE TABLE sindico (
   cpf		     CHAR(15),
   tipo       CHAR(1),
   -- restrições
-  CONSTRAINT pk_sindico PRIMARY KEY (id_sindico)
+  CONSTRAINT pk_sindico
+  PRIMARY KEY (id_sindico)
 );
 
 -- -----------------------------------------------------
@@ -31,7 +32,8 @@ CREATE TABLE pessoa (
   cpf  CHAR(15),
   nome VARCHAR(100),
   -- restrições
-  CONSTRAINT pk_pessoa PRIMARY KEY (cpf)
+  CONSTRAINT pk_pessoa
+  PRIMARY KEY (cpf)
 );
 
 -- -----------------------------------------------------
@@ -42,8 +44,14 @@ CREATE TABLE condominio (
   nome		      VARCHAR(50),
   sindico       INT,
   -- restrições
-  CONSTRAINT pk_condominio PRIMARY KEY (id_condominio),
-  CONSTRAINT fk_sindico_condominio FOREIGN KEY (sindico) REFERENCES sindico (id_sindico) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_condominio
+  PRIMARY KEY (id_condominio),
+
+  CONSTRAINT fk_sindico_condominio
+  FOREIGN KEY (sindico)
+  REFERENCES sindico (id_sindico)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -54,9 +62,20 @@ CREATE TABLE morador (
   pessoa_cpf  CHAR(15),
   pessoa_nome VARCHAR(100),
   -- restrições
-  CONSTRAINT pk_morador PRIMARY KEY (id_morador, pessoa_cpf),
-  CONSTRAINT fk_morador_cpf FOREIGN KEY (pessoa_cpf) REFERENCES pessoa (cpf) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_morador_nome FOREIGN KEY (pessoa_nome) REFERENCES pessoa (nome) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_morador
+  PRIMARY KEY (id_morador, pessoa_cpf),
+
+  CONSTRAINT fk_morador_cpf
+  FOREIGN KEY (pessoa_cpf)
+  REFERENCES pessoa (cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_morador_nome
+  FOREIGN KEY (pessoa_nome)
+  REFERENCES pessoa (nome)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -67,9 +86,20 @@ CREATE TABLE proprietario (
   pessoa_cpf      CHAR(15),
   pessoa_nome     VARCHAR(100),
   -- restrições
-  CONSTRAINT pk_proprietario PRIMARY KEY (id_proprietario, pessoa_cpf),
-  CONSTRAINT fk_proprietario_cpf FOREIGN KEY (pessoa_cpf) REFERENCES pessoa (cpf) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_proprietario_nome FOREIGN KEY (pessoa_nome) REFERENCES pessoa (nome) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_proprietario
+  PRIMARY KEY (id_proprietario, pessoa_cpf),
+
+  CONSTRAINT fk_proprietario_cpf
+  FOREIGN KEY (pessoa_cpf)
+  REFERENCES pessoa (cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_proprietario_nome
+  FOREIGN KEY (pessoa_nome)
+  REFERENCES pessoa (nome)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
@@ -84,58 +114,48 @@ CREATE TABLE apartamento (
   id_morador      INT,
   morador         CHAR(15),
   -- restrições
-  CONSTRAINT pk_apartamento PRIMARY KEY (numero, bloco, condominio),
-  CONSTRAINT fk_apartamento_condominio FOREIGN KEY (condominio) REFERENCES condominio (id_condominio) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_apartamento_proprietario FOREIGN KEY (id_proprietario, proprietario) REFERENCES proprietario (id_proprietario, pessoa_cpf) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_apartamento_morador FOREIGN KEY (id_morador, morador) REFERENCES morador (id_morador, pessoa_cpf) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_apartamento
+  PRIMARY KEY (numero, bloco, condominio),
+
+  CONSTRAINT fk_apartamento_condominio
+  FOREIGN KEY (condominio)
+  REFERENCES condominio (id_condominio)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_apartamento_proprietario
+  FOREIGN KEY (id_proprietario, proprietario)
+  REFERENCES proprietario (id_proprietario, pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_apartamento_morador
+  FOREIGN KEY (id_morador, morador)
+  REFERENCES morador (id_morador, pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 
 -- Povoamento (Alimentação Inicial do Banco de Dados):
 
-
-INSERT INTO condominio VALUES ('Condominio_1'),
-			                        ('Condominio_2'),
-                      			  ('Condominio_3'),
-                      			  ('Condominio_4'),
-                      			  ('Condominio_5');
-
-INSERT INTO morador VALUES ('Condominio_1', '101', TRUE),
-                			     ('Condominio_2', '103', TRUE),
-                			     ('Condominio_2', '104', TRUE),
-                			     ('Condominio_1', '202', FLASE),
-                			     ('Condominio_3', '101', TRUE),
-                           ('Condominio_4', '301', TRUE),
-                			     ('Condominio_5', '101A', FLASE),
-                			     ('Condominio_5', '101B', TRUE);
-
-INSERT INTO email_boleto VALUES ('Condominio_1', '101', 'kimgames1@gmail.com'),
-                                ('Condominio_1', '101', 'contato.kimgames@gmail.com'),
-                      			    ('Condominio_2', '103', 'kim-ruan@hotmail.com'),
-                      			    ('Condominio_2', '104', 'fourassociados@gmai.com'),
-                      			    ('Condominio_1', '202', 'kimgames1@gmail.com'),
-                      			    ('Condominio_3', '101', 'contato.kimgames@gmail.com'),
-                                ('Condominio_4', '301', 'fourassociados@gmail.com'),
-                      			    ('Condominio_5', '101A', 'contato.kimgames@gmail.com'),
-                      			    ('Condominio_5', '101B', 'kim-ruan@hotmail.com');
-
 -- Todos os condominios
 SELECT * FROM condominio
 
 --Condominio especifico pelo nome
-SELECT * FROM condominio WHERE nome LIKE '<nome>' 
+SELECT * FROM condominio WHERE nome LIKE '<nome>'
 
 --Condominios especificos pelo começo de uma letra especifica
 
-SELECT * FROM condominio WHERE nome LIKE '<letra>%' 
+SELECT * FROM condominio WHERE nome LIKE '<letra>%'
 
 --Condominios especificos pelo nome da rua
 
-SELECT * FROM condominio WHERE rua LIKE '<rua>' 
+SELECT * FROM condominio WHERE rua LIKE '<rua>'
 
 --Condominios especificos pelo nome do bairro
 
-SELECT * FROM condominio WHERE bairro LIKE '<bairro>' 
+SELECT * FROM condominio WHERE bairro LIKE '<bairro>'
 
 --Condominio que o morador especificado na consulta mora
 
@@ -162,7 +182,7 @@ SELECT * FROM proprietario WHERE cpf = '<cpf>'
 --Proprietario especifico pelos apartamentos que possui
 
 SELECT * FROM condominio c, apartamento a, proprietario p
-WHERE c.nome = '<nome>' AND c.id = a.id_condominio 
+WHERE c.nome = '<nome>' AND c.id = a.id_condominio
 AND a.id_proprietario = p.id
 
 --Todos os moradores
@@ -181,8 +201,8 @@ SELECT * FROM morador WHERE cpf = '<cpf>'
 --Morador especifico pelo apartamento que mora
 
 SELECT * FROM condominio c, apartamento a, morador m
-WHERE c.nome = '<nome>' AND c.id = a.id_condominio 
-AND a.id_morador = m.id 
+WHERE c.nome = '<nome>' AND c.id = a.id_condominio
+AND a.id_morador = m.id
 
 
 
