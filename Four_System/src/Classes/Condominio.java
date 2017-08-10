@@ -69,7 +69,7 @@ public class Condominio {
     return resposta;
   }
 
-  public ResultSet consultarTodosCondominio(Statement sentenca){
+  public ResultSet consultarTodosCondominios(Statement sentenca){
 
     ResultSet resposta = null;
     System.out.println(">Realizando consulta..");

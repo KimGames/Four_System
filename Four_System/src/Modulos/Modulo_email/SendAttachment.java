@@ -2,6 +2,7 @@ package Modulos.Modulo_email;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Statement;
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
@@ -18,35 +19,16 @@ import javax.mail.internet.MimeMessage;
 
 public class SendAttachment{
 
-  private static String cid = "1";
+  private Properties properties;
+  private Session session;
 
+  private static String cid = "1";
   private static final String USER = "****@gmail.com"; //change accordingly
   private static final String PASSWORD = "****"; //change accordingly
   private static final String MAIL_SERVER = "smtp";
   private static final String SMTP_HOST_NAME = "smtp.gmail.com";
   private static final int SMTP_HOST_PORT = 587;
-  private static final String SUBJECT = "Taxa de Condomínio Agosto/2017";
-  private static final String BODY = "<html>"
-                                     + " <body>"
-                                     + "<p>Segue anexo,</p>"
-                                     + "<p>Atenciosamente,</p>"
-                                     + "<p>Kim Ruan</p>"
-                                     + "<p>--</p>"
-                                     + "<p><h2 style=\"font-family:Comic Sans MS; color:rgb(56, 118, 29);\">Four Associados Administração de Condomínios</h2></p>"
-                                     + "<img src=\"cid:" + cid + "\" />"
-                                     + "<b style=\"font-family:Sans Serif; color:rgb(11, 83, 148);\">:03-004547/O</b>"
-                                     + "<p><b style=\"font-family:Comic Sans MS; color:black;\">Horário de funcionamento: segunda a sexta-feira "
-                                     + "de 09:00 as 18:00h.</b></p>"
-                                     + "<p style=\"color:black;\">(34) 3213- 6203</p>"
-                                     + "<p style=\"color:black;\">(34) 9630-2967</p>"
-                                     + "<p style=\"color:black;\">(34) 9226-2967</p>"
-                                     + " </body>"
-                                     + "</html>";
-  private static final String IMAGE_BODY = "..\\Four_System\\Imagens\\crea.png";
-
-  private Properties properties;
-  private Session session;
-
+  
   public SendAttachment(){
 
     //1) get the session object
@@ -67,8 +49,13 @@ public class SendAttachment{
         });
   }
 
+  public Session getSession(){
+    return session;
+  }
+
   public static void sendEmail(Session session, String to, String filename,
-                               String subject) throws IOException{
+                               String subject, String body,
+                               String image_body) throws IOException{
 
     MimeMessage message = new MimeMessage(session);
     try{
@@ -79,7 +66,7 @@ public class SendAttachment{
         //3) create MimeBodyPart object and set your message text
         MimeBodyPart messageBodyPart_HTML = new MimeBodyPart();
 
-        messageBodyPart_HTML.setText(BODY, "US-ASCII", "html");
+        messageBodyPart_HTML.setText(body, "US-ASCII", "html");
 
         //4) create new MimeBodyPart object and set DataHandler object to this object
         MimeBodyPart messageBody_FILE = new MimeBodyPart();
@@ -90,7 +77,7 @@ public class SendAttachment{
 
         MimeBodyPart messageBodyPart_IMAGE = new MimeBodyPart();
 
-        messageBodyPart_IMAGE.attachFile(IMAGE_BODY);
+        messageBodyPart_IMAGE.attachFile(image_body);
         messageBodyPart_IMAGE.setContentID("<" + cid + ">");
         messageBodyPart_IMAGE.setDisposition(MimeBodyPart.INLINE);
 
@@ -110,9 +97,8 @@ public class SendAttachment{
         transport.close();
         //Transport.send(message);
 
-       System.out.println("message sent....");
+       System.out.println("Mensagem enviada com sucesso!");
     }catch (MessagingException ex){
-        ex.printStackTrace();
     }
   }
 }
