@@ -12,51 +12,82 @@ CREATE SEQUENCE seq_id_contaP START WITH 1 INCREMENT BY 2;
 CREATE SEQUENCE seq_id_op START WITH 100 INCREMENT BY 100;
 CREATE SEQUENCE seq_numero START WITH 1001 INCREMENT BY 1;
 */
+
+-- -----------------------------------------------------
+-- Tabela SINDICO
+-- -----------------------------------------------------
+CREATE TABLE sindico (
+  id_sindico INT,
+  cpf		     CHAR(15),
+  tipo       CHAR(1),
+  -- restrições
+  CONSTRAINT pk_sindico PRIMARY KEY (id_sindico)
+);
+
+-- -----------------------------------------------------
+-- Tabela PESSOA
+-- -----------------------------------------------------
+CREATE TABLE pessoa (
+  cpf  CHAR(15),
+  nome VARCHAR(100),
+  -- restrições
+  CONSTRAINT pk_pessoa PRIMARY KEY (cpf)
+);
+
 -- -----------------------------------------------------
 -- Tabela CONDOMINIO
 -- -----------------------------------------------------
 CREATE TABLE condominio (
-  nome		  VARCHAR(50),
+  id_condominio INT,
+  nome		      VARCHAR(50),
+  sindico       INT,
   -- restrições
-  CONSTRAINT pk_condominio PRIMARY KEY (nome)
+  CONSTRAINT pk_condominio PRIMARY KEY (id_condominio),
+  CONSTRAINT fk_sindico_condominio FOREIGN KEY (sindico) REFERENCES sindico (id_sindico) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
 -- Tabela MORADOR
 -- -----------------------------------------------------
 CREATE TABLE morador (
-  apartamento	  VARCHAR(10),
-  condominio    VARCHAR(50),
-  paga	        BOOLEAN NOT NULL,
+  id_morador  INT,
+  pessoa_cpf  CHAR(15),
+  pessoa_nome VARCHAR(100),
   -- restrições
-  CONSTRAINT pk_morador PRIMARY KEY (apartamento),
-  CONSTRAINT fk_morador_condominio FOREIGN KEY (condominio) REFERENCES condominio (nome) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_morador PRIMARY KEY (id_morador, pessoa_cpf),
+  CONSTRAINT fk_morador_cpf FOREIGN KEY (pessoa_cpf) REFERENCES pessoa (cpf) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT fk_morador_nome FOREIGN KEY (pessoa_nome) REFERENCES pessoa (nome) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
 -- Tabela PROPRIETARIO
 -- -----------------------------------------------------
 CREATE TABLE proprietario (
-  condominio    VARCHAR(50),
-  apartamento	  VARCHAR(10),
-  morador	      VARCHAR(50),
+  id_proprietario INT,
+  pessoa_cpf      CHAR(15),
+  pessoa_nome     VARCHAR(100),
   -- restrições
-  CONSTRAINT pk_proprietario PRIMARY KEY (condominio, apartamento),
-  CONSTRAINT fk_proprietario_condominio FOREIGN KEY (condominio) REFERENCES morador (condominio) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_proprietario_apartamento FOREIGN KEY (apartamento) REFERENCES morador (apartamento) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_proprietario PRIMARY KEY (id_proprietario, pessoa_cpf),
+  CONSTRAINT fk_proprietario_cpf FOREIGN KEY (pessoa_cpf) REFERENCES pessoa (cpf) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT fk_proprietario_nome FOREIGN KEY (pessoa_nome) REFERENCES pessoa (nome) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
--- Tabela EMAIL_BOLETO
+-- Tabela APARTAMENTO
 -- -----------------------------------------------------
-CREATE TABLE email_boleto (
-  condominio     VARCHAR(50),
-  apartamento	   VARCHAR(10),
-  email	         VARCHAR(100)	NOT NULL,
+CREATE TABLE apartamento (
+  numero          INT,
+  bloco	          CHAR(10),
+  condominio      INT,
+  id_proprietario INT,
+  proprietario    CHAR(15),
+  id_morador      INT,
+  morador         CHAR(15),
   -- restrições
-  CONSTRAINT pk_email_boleto PRIMARY KEY (condominio, apartamento, email),
-  CONSTRAINT fk_email_boleto_condominio FOREIGN KEY (condominio) REFERENCES condominio (nome) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_email_boleto_apartamento FOREIGN KEY (apartamento) REFERENCES morador (apartamento) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_apartamento PRIMARY KEY (numero, bloco, condominio),
+  CONSTRAINT fk_apartamento_condominio FOREIGN KEY (condominio) REFERENCES condominio (id_condominio) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT fk_apartamento_proprietario FOREIGN KEY (id_proprietario, proprietario) REFERENCES proprietario (id_proprietario, pessoa_cpf) ON DELETE NO ACTION ON UPDATE CASCADE,
+  CONSTRAINT fk_apartamento_morador FOREIGN KEY (id_morador, morador) REFERENCES morador (id_morador, pessoa_cpf) ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 
