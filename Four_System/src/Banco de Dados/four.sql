@@ -4,14 +4,12 @@
 DROP SCHEMA IF EXISTS banco_four CASCADE;
 CREATE SCHEMA banco_four;
 SET search_path TO banco_four;
-/*
-CREATE SEQUENCE seq_empr START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_num_funcional START WITH 10 INCREMENT BY 10;
-CREATE SEQUENCE seq_id_contaC START WITH 2 INCREMENT BY 2;
-CREATE SEQUENCE seq_id_contaP START WITH 1 INCREMENT BY 2;
-CREATE SEQUENCE seq_id_op START WITH 100 INCREMENT BY 100;
-CREATE SEQUENCE seq_numero START WITH 1001 INCREMENT BY 1;
-*/
+
+CREATE SEQUENCE seq_sindico START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
+CREATE SEQUENCE seq_morador START WITH 2 INCREMENT BY 2;
+CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
+
 
 -- -----------------------------------------------------
 -- Tabela SINDICO
@@ -79,6 +77,54 @@ CREATE TABLE morador (
 );
 
 -- -----------------------------------------------------
+-- Tabela TELEFONES_MORADOR
+-- -----------------------------------------------------
+CREATE TABLE telefones_morador (
+  morador     INT,
+  cpf_morador CHAR(15),
+  telefone    VARCHAR(30),
+  -- restrições
+  CONSTRAINT pk_telefones_morador
+  PRIMARY KEY (morador, cpf_morador, telefone),
+
+  CONSTRAINT fk_telefones_morador_id
+  FOREIGN KEY (morador)
+  REFERENCES morador (id_morador)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_telefones_morador_cpf
+  FOREIGN KEY (cpf_morador)
+  REFERENCES morador (pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
+-- Tabela EMAILS_MORADOR
+-- -----------------------------------------------------
+CREATE TABLE emails_morador (
+  morador     INT,
+  cpf_morador CHAR(15),
+  email       VARCHAR(100),
+  -- restrições
+  CONSTRAINT pk_emails_morador
+  PRIMARY KEY (morador, cpf_morador, email),
+
+  CONSTRAINT fk_emails_morador_id
+  FOREIGN KEY (morador)
+  REFERENCES morador (id_morador)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_emails_morador_cpf
+  FOREIGN KEY (cpf_morador)
+  REFERENCES morador (pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
 -- Tabela PROPRIETARIO
 -- -----------------------------------------------------
 CREATE TABLE proprietario (
@@ -98,6 +144,54 @@ CREATE TABLE proprietario (
   CONSTRAINT fk_proprietario_nome
   FOREIGN KEY (pessoa_nome)
   REFERENCES pessoa (nome)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
+-- Tabela TELEFONES_PROPRIETARIO
+-- -----------------------------------------------------
+CREATE TABLE telefones_proprietario (
+  proprietario     INT,
+  cpf_proprietario CHAR(15),
+  telefone         VARCHAR(30),
+  -- restrições
+  CONSTRAINT pk_telefones_proprietario
+  PRIMARY KEY (proprietario, cpf_proprietario, telefone),
+
+  CONSTRAINT fk_telefones_proprietario_id
+  FOREIGN KEY (proprietario)
+  REFERENCES proprietario (id_proprietario)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_telefones_proprietario_cpf
+  FOREIGN KEY (cpf_proprietario)
+  REFERENCES proprietario (pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
+-- Tabela EMAILS_MORADOR
+-- -----------------------------------------------------
+CREATE TABLE emails_proprietario (
+  proprietario     INT,
+  cpf_proprietario CHAR(15),
+  email            VARCHAR(100),
+  -- restrições
+  CONSTRAINT pk_emails_proprietario
+  PRIMARY KEY (proprietario, cpf_proprietario, email),
+
+  CONSTRAINT fk_emails_proprietario_id
+  FOREIGN KEY (proprietario)
+  REFERENCES proprietario (id_proprietario)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_emails_proprietario_cpf
+  FOREIGN KEY (cpf_proprietario)
+  REFERENCES proprietario (pessoa_cpf)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
