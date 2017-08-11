@@ -8,4 +8,7 @@ public class ConsultaEmail{
 
   public void emailMorador(String id_condominio, String numero_apartamento){
   }
+
+  public void emailsCondominio(String id_condominio){
+  }
 }
