@@ -5,10 +5,10 @@ DROP SCHEMA IF EXISTS banco_four CASCADE;
 CREATE SCHEMA banco_four;
 SET search_path TO banco_four;
 
-CREATE SEQUENCE seq_sindico START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE seq_pessoa START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
-CREATE SEQUENCE seq_morador START WITH 2 INCREMENT BY 2;
-CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
+--CREATE SEQUENCE seq_morador START WITH 2 INCREMENT BY 2;
+--CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
 
 -- -----------------------------------------------------
 -- Tabela PESSOA
@@ -32,6 +32,7 @@ CREATE TABLE tipo_pessoa (
   -- restrições
   CONSTRAINT pk_tipo_pessoa
   PRIMARY KEY (tipo,id_pessoa),
+
   CONSTRAINT fk_tipo_pessoa
   FOREIGN KEY (id_pessoa)
   REFERENCES pessoa (id)
@@ -45,7 +46,7 @@ CREATE TABLE tipo_pessoa (
 -- -----------------------------------------------------
 CREATE TABLE telefones_pessoa (
   id_pessoa     INT,
-  telefone    	VARCHAR(15),
+  telefone    	VARCHAR(20),
   -- restrições
   CONSTRAINT pk_telefones_pessoa
   PRIMARY KEY (id_pessoa,telefone),
@@ -65,7 +66,7 @@ CREATE TABLE emails_pessoa (
   -- restrições
   CONSTRAINT pk_emails_pessoa
   PRIMARY KEY (id_pessoa,email),
-  
+
   CONSTRAINT fk_emails_pessoa
   FOREIGN KEY (id_pessoa)
   REFERENCES pessoa (id)
@@ -100,10 +101,10 @@ CREATE TABLE condominio (
 -- Tabela APARTAMENTO
 -- -----------------------------------------------------
 CREATE TABLE apartamento (
-  id_condominio   	INT UNIQUE NOT NULL,
   numero          	INT,
   bloco	          	VARCHAR(5),
-  
+  id_condominio   	INT UNIQUE NOT NULL,
+
   id_proprietario 	INT UNIQUE NOT NULL,
   id_morador      	INT UNIQUE NOT NULL,
   diretorio_boleto	VARCHAR(50),
@@ -132,6 +133,58 @@ CREATE TABLE apartamento (
 
 
 -- Povoamento (Alimentação Inicial do Banco de Dados):
+
+-- Pessoa
+INSERT INTO pessoa VALUES (DEFAULT, '111.111.111-10', 'Pessoa1'),
+			                    (DEFAULT, '111.111.111-20', 'Pessoa2'),
+              			      (DEFAULT, '111.111.111-30', 'Pessoa3'),
+              			      (DEFAULT, '111.111.111-40', 'Pessoa4'),
+              			      (DEFAULT, '111.111.111-50', 'Pessoa5');
+
+-- Tipo_Pessoa
+INSERT INTO tipo_pessoa VALUES ('Proprietario', 1),
+			                         ('Morador', 2),
+                    			     ('Proprietario', 3),
+                    			     ('Proprietario', 4),
+                    			     ('Morador', 5);
+
+-- Telefones_Pessoa
+INSERT INTO telefones_pessoa VALUES (1, '(34)9 9999-9999'),
+                                    (1, '(34)9 8888-9999'),
+                                    (2, '(64)9 8231-1010'),
+                                    (3, '(34)9 7777-9988'),
+                                    (3, '(34)3226-6547'),
+                                    (3, '(11)9 7896-9299'),
+                                    (3, '(62)9 8345-9981'),
+                                    (4, '(34)3333-3333'),
+                                    (5, '(34)3232-3232'),
+                                    (5, '(34)9 0547-6666');
+
+-- Emails_Pessoa
+INSERT INTO emails_pessoa VALUES (1, 'pessoa1@email.com'),
+                                 (1, 'pessoa1@email.com.br'),
+                                 (2, 'pessoa2@email.com'),
+                                 (3, 'pessoa3@email.com'),
+                                 (3, 'pessoa3@email.com.br'),
+                                 (3, 'pessoa3.outro@email.com'),
+                                 (3, 'pessoa3.outro@email.com.br'),
+                                 (4, 'pessoa4@email.com'),
+                                 (5, 'pessoa5@email.com'),
+                                 (5, 'pessoa5@email.com.br');
+
+-- Condominio
+INSERT INTO condominio VALUES (DEFAULT, 'Condominio1', 1, 'Rua 1', 'Santa Monica', 'Uberlândia'),
+                              (DEFAULT, 'Condominio2', 0, 'Rua 2', 'Martins', 'Uberlândia'),
+                              (DEFAULT, 'Condominio3', 0, 'Rua 3', 'Santa Monica', 'Uberlândia'),
+                              (DEFAULT, 'Condominio4', 3, 'Rua 4', 'Santa Monica', 'Uberlândia'),
+                              (DEFAULT, 'Condominio5', 4, 'Rua 5', 'Umuarama', 'Uberlândia');
+
+-- Condominio
+INSERT INTO apartamento VALUES (101, '1B', 1000, 1, 2, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf'),
+                               (102, '1B', 1000, 3, 3, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf'),
+                               (103, '1B', 1000, 3, 5, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf'),
+                               (104, '1B', 1000, 1, 1, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf');
+
 
 -- Todos os condominios
 SELECT * FROM condominio
