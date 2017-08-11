@@ -1,0 +1,1 @@
+Fazer trigger para garantir que o sindico do condominio seja um proprietario do

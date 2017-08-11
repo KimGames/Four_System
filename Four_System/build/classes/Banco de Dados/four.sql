@@ -1,156 +1,274 @@
------------------------------------------------
+﻿-----------------------------------------------
 -- Criando o esquema banco
 -----------------------------------------------
 DROP SCHEMA IF EXISTS banco_four CASCADE;
 CREATE SCHEMA banco_four;
 SET search_path TO banco_four;
-/*
-CREATE SEQUENCE seq_empr START WITH 1 INCREMENT BY 1;
-CREATE SEQUENCE seq_num_funcional START WITH 10 INCREMENT BY 10;
-CREATE SEQUENCE seq_id_contaC START WITH 2 INCREMENT BY 2;
-CREATE SEQUENCE seq_id_contaP START WITH 1 INCREMENT BY 2;
-CREATE SEQUENCE seq_id_op START WITH 100 INCREMENT BY 100;
-CREATE SEQUENCE seq_numero START WITH 1001 INCREMENT BY 1;
-*/
+
+CREATE SEQUENCE seq_sindico START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
+CREATE SEQUENCE seq_morador START WITH 2 INCREMENT BY 2;
+CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
+
 -- -----------------------------------------------------
--- Tabela CONDOMINIO
+-- Tabela PESSOA
 -- -----------------------------------------------------
-CREATE TABLE condominio (
-  nome		  VARCHAR(50),
+CREATE TABLE pessoa (
+  id   INT,
+  CPF  CHAR(15) UNIQUE NOT NULL,
+  Nome VARCHAR NOT NULL,
   -- restrições
-  CONSTRAINT pk_condominio PRIMARY KEY (nome)
+  CONSTRAINT pk_condominio
+  PRIMARY KEY(id)
+);
+
+-- -----------------------------------------------------
+-- Tabela TIPO_PESSOA
+-- -----------------------------------------------------
+CREATE TABLE tipo_pessoa (
+  Tipo CHAR NOT NULL AUTO_INCREMENT,
+  Pessoa_id INT NOT NULL,
+  -- restrições
+  PRIMARY KEY(Tipo, Pessoa_id),
+
+  CONSTRAINT fk_tipo_pessoa
+  FOREIGN KEY (Pessoa_id)
+  REFERENCES pessoa (id)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
 -- Tabela MORADOR
 -- -----------------------------------------------------
 CREATE TABLE morador (
-  condominio    VARCHAR(50),
-  apartamento	  VARCHAR(10),
-  paga	        BOOLEAN NOT NULL,
+  id_morador  INT,
+  pessoa_cpf  CHAR(15) UNIQUE NOT NULL,
+  pessoa_nome VARCHAR(100) UNIQUE NOT NULL,
   -- restrições
-  CONSTRAINT pk_morador PRIMARY KEY (apartamento),
-  CONSTRAINT fk_condominio FOREIGN KEY (condominio) REFERENCES condominio (nome) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_morador
+  PRIMARY KEY (id_morador, pessoa_cpf),
+
+  CONSTRAINT fk_morador_cpf
+  FOREIGN KEY (pessoa_cpf)
+  REFERENCES pessoa (cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
--- Tabela EMAIL
+-- Tabela TELEFONES_MORADOR
 -- -----------------------------------------------------
-CREATE TABLE email (
-  condominio     VARCHAR(50),
-  apartamento	   VARCHAR(10),
-  email	         VARCHAR(100)	NOT NULL,
+CREATE TABLE telefones_morador (
+  morador     INT,
+  cpf_morador CHAR(15) UNIQUE NOT NULL,
+  telefone    VARCHAR(30),
   -- restrições
-  CONSTRAINT pk_email PRIMARY KEY (condominio, apartamento, email),
-  CONSTRAINT fk_condominio FOREIGN KEY (condominio) REFERENCES condominio (nome) ON DELETE NO ACTION ON UPDATE CASCADE,
-  CONSTRAINT fk_apartamento FOREIGN KEY (apartamento) REFERENCES morador (apartamento) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT pk_telefones_morador
+  PRIMARY KEY (morador, cpf_morador, telefone),
+
+  CONSTRAINT fk_telefones_morador_id
+  FOREIGN KEY (morador,cpf_morador)
+  REFERENCES morador (id_morador,pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+
+);
+
+-- -----------------------------------------------------
+-- Tabela EMAILS_MORADOR
+-- -----------------------------------------------------
+CREATE TABLE emails_morador (
+  morador     INT,
+  cpf_morador CHAR(15) UNIQUE NOT NULL,
+  email       VARCHAR(100) UNIQUE NOT NULL,
+  -- restrições
+  CONSTRAINT pk_emails_morador
+  PRIMARY KEY (morador, cpf_morador, email),
+
+  CONSTRAINT fk_emails_morador_id
+  FOREIGN KEY (morador,cpf_morador)
+  REFERENCES morador (id_morador,pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+
+);
+
+-- -----------------------------------------------------
+-- Tabela PROPRIETARIO
+-- -----------------------------------------------------
+CREATE TABLE proprietario (
+  id_proprietario INT,
+  pessoa_cpf      CHAR(15) UNIQUE NOT NULL,
+  pessoa_nome     VARCHAR(100) UNIQUE NOT NULL,
+  -- restrições
+  CONSTRAINT pk_proprietario
+  PRIMARY KEY (id_proprietario, pessoa_cpf),
+
+  CONSTRAINT fk_proprietario_cpf
+  FOREIGN KEY (pessoa_cpf)
+  REFERENCES pessoa (cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_proprietario_nome
+  FOREIGN KEY (pessoa_nome)
+  REFERENCES pessoa (nome)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
+-- Tabela TELEFONES_PROPRIETARIO
+-- -----------------------------------------------------
+CREATE TABLE telefones_proprietario (
+  proprietario     INT,
+  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
+  telefone         VARCHAR(30) UNIQUE NOT NULL,
+  -- restrições
+  CONSTRAINT pk_telefones_proprietario
+  PRIMARY KEY (proprietario, cpf_proprietario, telefone),
+
+  CONSTRAINT fk_telefones_proprietario_id
+  FOREIGN KEY (proprietario)
+  REFERENCES proprietario (id_proprietario)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_telefones_proprietario_cpf
+  FOREIGN KEY (cpf_proprietario)
+  REFERENCES proprietario (pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
+-- Tabela EMAILS_MORADOR
+-- -----------------------------------------------------
+CREATE TABLE emails_proprietario (
+  proprietario     INT,
+  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
+  email            VARCHAR(100) UNIQUE NOT NULL,
+  -- restrições
+  CONSTRAINT pk_emails_proprietario
+  PRIMARY KEY (proprietario, cpf_proprietario, email),
+
+  CONSTRAINT fk_emails_proprietario_id
+  FOREIGN KEY (proprietario)
+  REFERENCES proprietario (id_proprietario)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_emails_proprietario_cpf
+  FOREIGN KEY (cpf_proprietario)
+  REFERENCES proprietario (pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
+);
+
+-- -----------------------------------------------------
+-- Tabela APARTAMENTO
+-- -----------------------------------------------------
+CREATE TABLE apartamento (
+  numero          INT,
+  bloco	          CHAR(10),
+  id_condominio      INT UNIQUE NOT NULL,
+  id_proprietario INT UNIQUE NOT NULL,
+  proprietario    CHAR(15) UNIQUE NOT NULL,
+  id_morador      INT UNIQUE NOT NULL,
+  morador         CHAR(15) UNIQUE NOT NULL,
+  -- restrições
+  CONSTRAINT pk_apartamento
+  PRIMARY KEY (numero, bloco, id_condominio),
+
+  CONSTRAINT fk_apartamento_condominio
+  FOREIGN KEY (id_condominio)
+  REFERENCES condominio (id_condominio)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_apartamento_proprietario
+  FOREIGN KEY (id_proprietario, proprietario)
+  REFERENCES proprietario (id_proprietario, pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE,
+
+  CONSTRAINT fk_apartamento_morador
+  FOREIGN KEY (id_morador, morador)
+  REFERENCES morador (id_morador, pessoa_cpf)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE
 );
 
 
 -- Povoamento (Alimentação Inicial do Banco de Dados):
 
+-- Todos os condominios
+SELECT * FROM condominio
 
-INSERT INTO condominio VALUES ('Condominio_1'),
-			                        ('Condominio_2'),
-                      			  ('Condominio_3'),
-                      			  ('Condominio_4'),
-                      			  ('Condominio_5');
+--Condominio especifico pelo nome
+SELECT * FROM condominio WHERE nome LIKE '<nome>'
 
-INSERT INTO morador VALUES ('Condominio_1', '101', TRUE),
-                			     ('Condominio_2', '103', TRUE),
-                			     ('Condominio_2', '104', TRUE),
-                			     ('Condominio_1', '202', FLASE),
-                			     ('Condominio_3', '101', TRUE),
-                           ('Condominio_4', '301', TRUE),
-                			     ('Condominio_5', '101A', FLASE),
-                			     ('Condominio_5', '101B', TRUE);
+--Condominios especificos pelo começo de uma letra especifica
 
-INSERT INTO email VALUES ('Condominio_1', '101', 'kimgames1@gmail.com'),
-                         ('Condominio_1', '101', 'contato.kimgames@gmail.com'),
-                			   ('Condominio_2', '103', TRUE),
-                			   ('Condominio_2', '104', TRUE),
-                			   ('Condominio_1', '202', FLASE),
-                			   ('Condominio_3', '101', TRUE),
-                         ('Condominio_4', '301', TRUE),
-                			   ('Condominio_5', '101A', FLASE),
-                			   ('Condominio_5', '101B', TRUE);
--- 10 Consultas:
+SELECT * FROM condominio WHERE nome LIKE '<letra>%'
 
---1
---Selecionar o empregado que está na empresa a mais tempo
+--Condominios especificos pelo nome da rua
 
-SELECT f.nome, f.data_admissao
-FROM funcionario f
-WHERE f.data_admissao
-IN (SELECT MIN(data_admissao) FROM funcionario);
+SELECT * FROM condominio WHERE rua LIKE '<rua>'
 
---2
---Mostrar a quantidade de agencias localizadas em cada estado
+--Condominios especificos pelo nome do bairro
 
-SELECT estado, COUNT(*)
-FROM agencia
-GROUP BY estado;
+SELECT * FROM condominio WHERE bairro LIKE '<bairro>'
 
---3
---Mostrar a quantidade de agencias localizadas em cada estado com mais de 2 agencias por estado
+--Condominio que o morador especificado na consulta mora
 
-SELECT estado, COUNT(*)
-FROM agencia
-GROUP BY estado
-HAVING COUNT(*) > 2;
+SELECT * FROM condominio c, apartamento a, morador m
+WHERE p.nome = '<nome>' AND  m.id = a.id_morador
+AND c.id = a.id_condominio
 
---4
---Mostrar a média de saldo das contas corrente por estado
+--Condominio que o proprietario especificado na colsuta possui apartamento(s)
 
-SELECT a.estado, AVG(saldo)
-FROM agencia a, conta_corrente cc
-WHERE a.nome = cc.nome_agencia
-GROUP BY a.estado;
+SELECT * FROM condominio c,apartamento a, proprietario p WHERE p.nome = '<nome>'
+AND p.id = a.id_proprietario AND a.id_condominio = c.id
 
---5
---Mostrar a média de saldo das contas corrente por estado com média de saldo maior que 5000
+--Todos os proprietarios
 
-SELECT a.estado, AVG(saldo)
-FROM agencia a, conta_corrente cc
-WHERE a.nome = cc.nome_agencia
-GROUP BY a.estado
-HAVING AVG(saldo) > 5000;
+SELECT * FROM proprietario
 
---6
---Mostrar o id da conta poupança e o cpf do cliente para todos os clientes que possuem conta poupança
+--Proprietario especifico pelo nome (permutação de todos os nomes q compoem o nome do prop)
+SELECT * FROM proprietario WHERE nome LIKE '%<nome>%'
 
-SELECT cpc.id_conta, c.cpf, c.nome
-FROM conta_poupanca_cliente cpc, cliente c
-WHERE cpc.cpf_cliente = c.cpf;
+--Proprietario especifico pelo CPF
 
---7
---Mostrar todos os funcionarios que não são gerentes de nenhum cliente
+SELECT * FROM proprietario WHERE cpf = '<cpf>'
 
-SELECT nome
-FROM funcionario
-WHERE num_funcional
-NOT IN (SELECT num_gerente FROM cliente);
+--Proprietario especifico pelos apartamentos que possui
 
---8
---Mostrar o nome dos clientes que não fizeram emprestimos
+SELECT * FROM condominio c, apartamento a, proprietario p
+WHERE c.nome = '<nome>' AND c.id = a.id_condominio
+AND a.id_proprietario = p.id
 
-SELECT nome
-FROM cliente
-WHERE cpf
-NOT IN (SELECT cpf_cliente FROM emprestimos_cliente);
+--Todos os moradores
 
---9
---Mostrar todos os supervisores
+SELECT * FROM morador
 
-SELECT DISTINCT f1.*
-FROM funcionario f1, funcionario f2
-WHERE f1.num_funcional = f2.num_supervisor;
 
---10
---Mostrar a soma de todos os saldos das contas poupança
+-- Morador especifico pelo nome (permutação de todos os nomes q compoem o nome do prop)
 
-SELECT SUM(saldo)
-FROM conta_poupanca;
+SELECT * FROM morador WHERE nome = '%<nome>%'
+
+--Morador especifico pelo CPF
+
+SELECT * FROM morador WHERE cpf = '<cpf>'
+
+--Morador especifico pelo apartamento que mora
+
+SELECT * FROM condominio c, apartamento a, morador m
+WHERE c.nome = '<nome>' AND c.id = a.id_condominio
+AND a.id_morador = m.id
+
+
 
 -------------------------------
 -- Stored Procedure e Tiggers:

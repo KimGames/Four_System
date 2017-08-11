@@ -8,9 +8,9 @@ import java.sql.Statement;
 
 public class Conexao {
   private Connection conexao; //gerencia conexao
-  //private Statement sentenca;
+  private Statement sentenca;
 
-  public Conexao(Statement sentenca){
+  public Conexao(){
 
       System.out.println(">Checando conexao com o banco");
       try{
@@ -27,9 +27,9 @@ public class Conexao {
           se.printStackTrace();
       }
   }
-/*
+
   public Statement getStatement(){
     return sentenca;
   }
-*/
+
 }
