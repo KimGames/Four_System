@@ -39,8 +39,8 @@ CREATE TABLE pessoa (
 -- -----------------------------------------------------
 CREATE TABLE condominio (
   id_condominio INT,
-  nome		      VARCHAR(50),
-  sindico       INT,
+  nome		      VARCHAR(50) UNIQUE NOT NULL,
+  sindico       INT UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_condominio
   PRIMARY KEY (id_condominio),
@@ -57,8 +57,8 @@ CREATE TABLE condominio (
 -- -----------------------------------------------------
 CREATE TABLE morador (
   id_morador  INT,
-  pessoa_cpf  CHAR(15),
-  pessoa_nome VARCHAR(100),
+  pessoa_cpf  CHAR(15) UNIQUE NOT NULL,
+  pessoa_nome VARCHAR(100) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_morador
   PRIMARY KEY (id_morador, pessoa_cpf),
@@ -81,8 +81,8 @@ CREATE TABLE morador (
 -- -----------------------------------------------------
 CREATE TABLE telefones_morador (
   morador     INT,
-  cpf_morador CHAR(15),
-  telefone    VARCHAR(30),
+  cpf_morador CHAR(15) UNIQUE NOT NULL,
+  telefone    VARCHAR(30) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_telefones_morador
   PRIMARY KEY (morador, cpf_morador, telefone),
@@ -105,8 +105,8 @@ CREATE TABLE telefones_morador (
 -- -----------------------------------------------------
 CREATE TABLE emails_morador (
   morador     INT,
-  cpf_morador CHAR(15),
-  email       VARCHAR(100),
+  cpf_morador CHAR(15) UNIQUE NOT NULL,
+  email       VARCHAR(100) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_emails_morador
   PRIMARY KEY (morador, cpf_morador, email),
@@ -129,8 +129,8 @@ CREATE TABLE emails_morador (
 -- -----------------------------------------------------
 CREATE TABLE proprietario (
   id_proprietario INT,
-  pessoa_cpf      CHAR(15),
-  pessoa_nome     VARCHAR(100),
+  pessoa_cpf      CHAR(15) UNIQUE NOT NULL,
+  pessoa_nome     VARCHAR(100) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_proprietario
   PRIMARY KEY (id_proprietario, pessoa_cpf),
@@ -153,8 +153,8 @@ CREATE TABLE proprietario (
 -- -----------------------------------------------------
 CREATE TABLE telefones_proprietario (
   proprietario     INT,
-  cpf_proprietario CHAR(15),
-  telefone         VARCHAR(30),
+  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
+  telefone         VARCHAR(30) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_telefones_proprietario
   PRIMARY KEY (proprietario, cpf_proprietario, telefone),
@@ -177,8 +177,8 @@ CREATE TABLE telefones_proprietario (
 -- -----------------------------------------------------
 CREATE TABLE emails_proprietario (
   proprietario     INT,
-  cpf_proprietario CHAR(15),
-  email            VARCHAR(100),
+  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
+  email            VARCHAR(100) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_emails_proprietario
   PRIMARY KEY (proprietario, cpf_proprietario, email),
@@ -202,11 +202,11 @@ CREATE TABLE emails_proprietario (
 CREATE TABLE apartamento (
   numero          INT,
   bloco	          CHAR(10),
-  condominio      INT,
-  id_proprietario INT,
-  proprietario    CHAR(15),
-  id_morador      INT,
-  morador         CHAR(15),
+  condominio      INT UNIQUE NOT NULL,
+  id_proprietario INT UNIQUE NOT NULL,
+  proprietario    CHAR(15) UNIQUE NOT NULL,
+  id_morador      INT UNIQUE NOT NULL,
+  morador         CHAR(15) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_apartamento
   PRIMARY KEY (numero, bloco, condominio),
