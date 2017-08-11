@@ -39,8 +39,8 @@ CREATE TABLE pessoa (
 -- -----------------------------------------------------
 CREATE TABLE condominio (
   id_condominio INT,
-  nome		      VARCHAR(50) UNIQUE NOT NULL,
-  sindico       INT UNIQUE NOT NULL,
+  nome		      VARCHAR(50),
+  sindico       INT,
   -- restrições
   CONSTRAINT pk_condominio
   PRIMARY KEY (id_condominio),
@@ -57,8 +57,8 @@ CREATE TABLE condominio (
 -- -----------------------------------------------------
 CREATE TABLE morador (
   id_morador  INT,
-  pessoa_cpf  CHAR(15) UNIQUE NOT NULL,
-  pessoa_nome VARCHAR(100) UNIQUE NOT NULL,
+  pessoa_cpf  CHAR(15),
+  pessoa_nome VARCHAR(100),
   -- restrições
   CONSTRAINT pk_morador
   PRIMARY KEY (id_morador, pessoa_cpf),
@@ -66,12 +66,6 @@ CREATE TABLE morador (
   CONSTRAINT fk_morador_cpf
   FOREIGN KEY (pessoa_cpf)
   REFERENCES pessoa (cpf)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_morador_nome
-  FOREIGN KEY (pessoa_nome)
-  REFERENCES pessoa (nome)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
@@ -81,23 +75,18 @@ CREATE TABLE morador (
 -- -----------------------------------------------------
 CREATE TABLE telefones_morador (
   morador     INT,
-  cpf_morador CHAR(15) UNIQUE NOT NULL,
-  telefone    VARCHAR(30) UNIQUE NOT NULL,
+  cpf_morador CHAR(15),
+  telefone    VARCHAR(30),
   -- restrições
   CONSTRAINT pk_telefones_morador
   PRIMARY KEY (morador, cpf_morador, telefone),
 
   CONSTRAINT fk_telefones_morador_id
-  FOREIGN KEY (morador)
-  REFERENCES morador (id_morador)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_telefones_morador_cpf
-  FOREIGN KEY (cpf_morador)
-  REFERENCES morador (pessoa_cpf)
+  FOREIGN KEY (morador,cpf_morador)
+  REFERENCES morador (id_morador,pessoa_cpf)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
+
 );
 
 -- -----------------------------------------------------
@@ -105,23 +94,18 @@ CREATE TABLE telefones_morador (
 -- -----------------------------------------------------
 CREATE TABLE emails_morador (
   morador     INT,
-  cpf_morador CHAR(15) UNIQUE NOT NULL,
-  email       VARCHAR(100) UNIQUE NOT NULL,
+  cpf_morador CHAR(15),
+  email       VARCHAR(100),
   -- restrições
   CONSTRAINT pk_emails_morador
   PRIMARY KEY (morador, cpf_morador, email),
 
   CONSTRAINT fk_emails_morador_id
-  FOREIGN KEY (morador)
-  REFERENCES morador (id_morador)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_emails_morador_cpf
-  FOREIGN KEY (cpf_morador)
-  REFERENCES morador (pessoa_cpf)
+  FOREIGN KEY (morador,cpf_morador)
+  REFERENCES morador (id_morador,pessoa_cpf)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
+
 );
 
 -- -----------------------------------------------------
@@ -129,8 +113,8 @@ CREATE TABLE emails_morador (
 -- -----------------------------------------------------
 CREATE TABLE proprietario (
   id_proprietario INT,
-  pessoa_cpf      CHAR(15) UNIQUE NOT NULL,
-  pessoa_nome     VARCHAR(100) UNIQUE NOT NULL,
+  pessoa_cpf      CHAR(15),
+  pessoa_nome     VARCHAR(100),
   -- restrições
   CONSTRAINT pk_proprietario
   PRIMARY KEY (id_proprietario, pessoa_cpf),
@@ -153,8 +137,8 @@ CREATE TABLE proprietario (
 -- -----------------------------------------------------
 CREATE TABLE telefones_proprietario (
   proprietario     INT,
-  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
-  telefone         VARCHAR(30) UNIQUE NOT NULL,
+  cpf_proprietario CHAR(15),
+  telefone         VARCHAR(30),
   -- restrições
   CONSTRAINT pk_telefones_proprietario
   PRIMARY KEY (proprietario, cpf_proprietario, telefone),
@@ -177,8 +161,8 @@ CREATE TABLE telefones_proprietario (
 -- -----------------------------------------------------
 CREATE TABLE emails_proprietario (
   proprietario     INT,
-  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
-  email            VARCHAR(100) UNIQUE NOT NULL,
+  cpf_proprietario CHAR(15),
+  email            VARCHAR(100),
   -- restrições
   CONSTRAINT pk_emails_proprietario
   PRIMARY KEY (proprietario, cpf_proprietario, email),
@@ -202,11 +186,11 @@ CREATE TABLE emails_proprietario (
 CREATE TABLE apartamento (
   numero          INT,
   bloco	          CHAR(10),
-  condominio      INT UNIQUE NOT NULL,
-  id_proprietario INT UNIQUE NOT NULL,
-  proprietario    CHAR(15) UNIQUE NOT NULL,
-  id_morador      INT UNIQUE NOT NULL,
-  morador         CHAR(15) UNIQUE NOT NULL,
+  condominio      INT,
+  id_proprietario INT,
+  proprietario    CHAR(15),
+  id_morador      INT,
+  morador         CHAR(15),
   -- restrições
   CONSTRAINT pk_apartamento
   PRIMARY KEY (numero, bloco, condominio),
