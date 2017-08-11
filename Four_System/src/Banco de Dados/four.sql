@@ -16,21 +16,22 @@ CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
 CREATE TABLE pessoa (
   id   INT,
   CPF  CHAR(15) UNIQUE NOT NULL,
-  Nome VARCHAR NOT NULL,
+  Nome VARCHAR(50) NOT NULL,
   -- restrições
-  CONSTRAINT pk_condominio
+  CONSTRAINT pk_pessoa
   PRIMARY KEY(id)
 );
+
 
 -- -----------------------------------------------------
 -- Tabela TIPO_PESSOA
 -- -----------------------------------------------------
 CREATE TABLE tipo_pessoa (
-  Tipo CHAR NOT NULL AUTO_INCREMENT,
+  Tipo VARCHAR(15) NOT NULL,
   Pessoa_id INT NOT NULL,
   -- restrições
-  PRIMARY KEY(Tipo, Pessoa_id),
-
+  CONSTRAINT pk_tipo_pessoa
+  PRIMARY KEY (tipo),
   CONSTRAINT fk_tipo_pessoa
   FOREIGN KEY (Pessoa_id)
   REFERENCES pessoa (id)
@@ -38,30 +39,12 @@ CREATE TABLE tipo_pessoa (
   ON UPDATE CASCADE
 );
 
--- -----------------------------------------------------
--- Tabela MORADOR
--- -----------------------------------------------------
-CREATE TABLE morador (
-  id_morador  INT,
-  pessoa_cpf  CHAR(15) UNIQUE NOT NULL,
-  pessoa_nome VARCHAR(100) UNIQUE NOT NULL,
-  -- restrições
-  CONSTRAINT pk_morador
-  PRIMARY KEY (id_morador, pessoa_cpf),
-
-  CONSTRAINT fk_morador_cpf
-  FOREIGN KEY (pessoa_cpf)
-  REFERENCES pessoa (cpf)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE
-);
 
 -- -----------------------------------------------------
--- Tabela TELEFONES_MORADOR
+-- Tabela TELEFONES_PESSOA
 -- -----------------------------------------------------
-CREATE TABLE telefones_morador (
-  morador     INT,
-  cpf_morador CHAR(15) UNIQUE NOT NULL,
+CREATE TABLE telefones_pessoa (
+  Pessoa_id     INT,
   telefone    VARCHAR(30),
   -- restrições
   CONSTRAINT pk_telefones_morador
