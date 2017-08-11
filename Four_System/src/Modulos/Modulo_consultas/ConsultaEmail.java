@@ -1,4 +1,6 @@
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -24,6 +26,11 @@ public class ConsultaEmail{
       System.out.println(query);
       //consulta
       resposta = sentenca.executeQuery(query);
+			while( resposta.next() ){
+				for( int i = 1; i <= sentenca.getColumnCount(); i++ ){
+							emails.add( resposta.getString( i ) );
+        }
+      }
     }catch(SQLException se){
       System.out.println(">Nao foi possivel realizar a consulta!!!");
       se.printStackTrace();
