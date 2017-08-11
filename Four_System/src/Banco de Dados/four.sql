@@ -10,44 +10,30 @@ CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
 CREATE SEQUENCE seq_morador START WITH 2 INCREMENT BY 2;
 CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
 
-
--- -----------------------------------------------------
--- Tabela SINDICO
--- -----------------------------------------------------
-CREATE TABLE sindico (
-  id_sindico INT,
-  cpf		     CHAR(15),
-  tipo       CHAR(1),
-  -- restrições
-  CONSTRAINT pk_sindico
-  PRIMARY KEY (id_sindico)
-);
-
 -- -----------------------------------------------------
 -- Tabela PESSOA
 -- -----------------------------------------------------
 CREATE TABLE pessoa (
-  cpf  CHAR(15),
-  nome VARCHAR(100),
+  id   INT,
+  CPF  CHAR(15) UNIQUE NOT NULL,
+  Nome VARCHAR NOT NULL,
   -- restrições
-  CONSTRAINT pk_pessoa
-  PRIMARY KEY (cpf)
+  CONSTRAINT pk_condominio
+  PRIMARY KEY(id)
 );
 
 -- -----------------------------------------------------
--- Tabela CONDOMINIO
+-- Tabela TIPO_PESSOA
 -- -----------------------------------------------------
-CREATE TABLE condominio (
-  id_condominio INT,
-  nome		      VARCHAR(50) UNIQUE NOT NULL,
-  sindico       INT UNIQUE NOT NULL,
+CREATE TABLE tipo_pessoa (
+  Tipo CHAR NOT NULL AUTO_INCREMENT,
+  Pessoa_id INT NOT NULL,
   -- restrições
-  CONSTRAINT pk_condominio
-  PRIMARY KEY (id_condominio),
+  PRIMARY KEY(Tipo, Pessoa_id),
 
-  CONSTRAINT fk_sindico_condominio
-  FOREIGN KEY (sindico)
-  REFERENCES sindico (id_sindico)
+  CONSTRAINT fk_tipo_pessoa
+  FOREIGN KEY (Pessoa_id)
+  REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
@@ -186,17 +172,17 @@ CREATE TABLE emails_proprietario (
 CREATE TABLE apartamento (
   numero          INT,
   bloco	          CHAR(10),
-  condominio      INT UNIQUE NOT NULL,
+  id_condominio      INT UNIQUE NOT NULL,
   id_proprietario INT UNIQUE NOT NULL,
   proprietario    CHAR(15) UNIQUE NOT NULL,
   id_morador      INT UNIQUE NOT NULL,
   morador         CHAR(15) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_apartamento
-  PRIMARY KEY (numero, bloco, condominio),
+  PRIMARY KEY (numero, bloco, id_condominio),
 
   CONSTRAINT fk_apartamento_condominio
-  FOREIGN KEY (condominio)
+  FOREIGN KEY (id_condominio)
   REFERENCES condominio (id_condominio)
   ON DELETE NO ACTION
   ON UPDATE CASCADE,
