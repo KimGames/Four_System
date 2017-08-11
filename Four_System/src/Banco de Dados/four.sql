@@ -67,12 +67,6 @@ CREATE TABLE morador (
   FOREIGN KEY (pessoa_cpf)
   REFERENCES pessoa (cpf)
   ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_morador_nome
-  FOREIGN KEY (pessoa_nome)
-  REFERENCES pessoa (nome)
-  ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
 
@@ -88,16 +82,11 @@ CREATE TABLE telefones_morador (
   PRIMARY KEY (morador, cpf_morador, telefone),
 
   CONSTRAINT fk_telefones_morador_id
-  FOREIGN KEY (morador)
-  REFERENCES morador (id_morador)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_telefones_morador_cpf
-  FOREIGN KEY (cpf_morador)
-  REFERENCES morador (pessoa_cpf)
+  FOREIGN KEY (morador,cpf_morador)
+  REFERENCES morador (id_morador,pessoa_cpf)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
+
 );
 
 -- -----------------------------------------------------
@@ -112,16 +101,11 @@ CREATE TABLE emails_morador (
   PRIMARY KEY (morador, cpf_morador, email),
 
   CONSTRAINT fk_emails_morador_id
-  FOREIGN KEY (morador)
-  REFERENCES morador (id_morador)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_emails_morador_cpf
-  FOREIGN KEY (cpf_morador)
-  REFERENCES morador (pessoa_cpf)
+  FOREIGN KEY (morador,cpf_morador)
+  REFERENCES morador (id_morador,pessoa_cpf)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
+
 );
 
 -- -----------------------------------------------------
