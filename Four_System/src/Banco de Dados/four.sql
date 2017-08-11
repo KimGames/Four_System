@@ -27,13 +27,13 @@ CREATE TABLE pessoa (
 -- Tabela TIPO_PESSOA
 -- -----------------------------------------------------
 CREATE TABLE tipo_pessoa (
-  Tipo VARCHAR(15) NOT NULL,
-  Pessoa_id INT NOT NULL,
+  tipo VARCHAR(15) NOT NULL,
+  id_pessoa INT NOT NULL,
   -- restrições
   CONSTRAINT pk_tipo_pessoa
-  PRIMARY KEY (tipo),
+  PRIMARY KEY (tipo,id_pessoa),
   CONSTRAINT fk_tipo_pessoa
-  FOREIGN KEY (Pessoa_id)
+  FOREIGN KEY (id_pessoa)
   REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
@@ -44,140 +44,88 @@ CREATE TABLE tipo_pessoa (
 -- Tabela TELEFONES_PESSOA
 -- -----------------------------------------------------
 CREATE TABLE telefones_pessoa (
-  Pessoa_id     INT,
-  telefone    VARCHAR(30),
+  id_pessoa     INT,
+  telefone    	VARCHAR(15),
   -- restrições
-  CONSTRAINT pk_telefones_morador
-  PRIMARY KEY (morador, cpf_morador, telefone),
-
-  CONSTRAINT fk_telefones_morador_id
-  FOREIGN KEY (morador,cpf_morador)
-  REFERENCES morador (id_morador,pessoa_cpf)
+  CONSTRAINT pk_telefones_pessoa
+  PRIMARY KEY (id_pessoa,telefone),
+  CONSTRAINT fk_telefones_pessoa
+  FOREIGN KEY (id_pessoa)
+  REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
--- Tabela EMAILS_MORADOR
+-- Tabela EMAILS_PESSOA
 -- -----------------------------------------------------
-CREATE TABLE emails_morador (
-  morador     INT,
-  cpf_morador CHAR(15) UNIQUE NOT NULL,
-  email       VARCHAR(100) UNIQUE NOT NULL,
+CREATE TABLE emails_pessoa (
+  id_pessoa     INT,
+  email    	VARCHAR(50),
   -- restrições
-  CONSTRAINT pk_emails_morador
-  PRIMARY KEY (morador, cpf_morador, email),
-
-  CONSTRAINT fk_emails_morador_id
-  FOREIGN KEY (morador,cpf_morador)
-  REFERENCES morador (id_morador,pessoa_cpf)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE
-
-);
-
--- -----------------------------------------------------
--- Tabela PROPRIETARIO
--- -----------------------------------------------------
-CREATE TABLE proprietario (
-  id_proprietario INT,
-  pessoa_cpf      CHAR(15) UNIQUE NOT NULL,
-  pessoa_nome     VARCHAR(100) UNIQUE NOT NULL,
-  -- restrições
-  CONSTRAINT pk_proprietario
-  PRIMARY KEY (id_proprietario, pessoa_cpf),
-
-  CONSTRAINT fk_proprietario_cpf
-  FOREIGN KEY (pessoa_cpf)
-  REFERENCES pessoa (cpf)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_proprietario_nome
-  FOREIGN KEY (pessoa_nome)
-  REFERENCES pessoa (nome)
+  CONSTRAINT pk_emails_pessoa
+  PRIMARY KEY (id_pessoa,email),
+  
+  CONSTRAINT fk_emails_pessoa
+  FOREIGN KEY (id_pessoa)
+  REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
 
 -- -----------------------------------------------------
--- Tabela TELEFONES_PROPRIETARIO
+-- Tabela CONDOMINIO
 -- -----------------------------------------------------
-CREATE TABLE telefones_proprietario (
-  proprietario     INT,
-  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
-  telefone         VARCHAR(30) UNIQUE NOT NULL,
+CREATE TABLE condominio (
+  id	       	INT,
+  nome	   	VARCHAR NOT NULL,
+  id_sindico   	INT,
+  rua	 	VARCHAR(50),
+  bairro      	VARCHAR(50),
+  cidade	VARCHAR(50),
   -- restrições
-  CONSTRAINT pk_telefones_proprietario
-  PRIMARY KEY (proprietario, cpf_proprietario, telefone),
+  CONSTRAINT pk_condominio
+  PRIMARY KEY (id),
 
-  CONSTRAINT fk_telefones_proprietario_id
-  FOREIGN KEY (proprietario)
-  REFERENCES proprietario (id_proprietario)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_telefones_proprietario_cpf
-  FOREIGN KEY (cpf_proprietario)
-  REFERENCES proprietario (pessoa_cpf)
+  CONSTRAINT fk_condominio_pessoa
+  FOREIGN KEY (id_sindico)
+  REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
 
--- -----------------------------------------------------
--- Tabela EMAILS_MORADOR
--- -----------------------------------------------------
-CREATE TABLE emails_proprietario (
-  proprietario     INT,
-  cpf_proprietario CHAR(15) UNIQUE NOT NULL,
-  email            VARCHAR(100) UNIQUE NOT NULL,
-  -- restrições
-  CONSTRAINT pk_emails_proprietario
-  PRIMARY KEY (proprietario, cpf_proprietario, email),
 
-  CONSTRAINT fk_emails_proprietario_id
-  FOREIGN KEY (proprietario)
-  REFERENCES proprietario (id_proprietario)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE,
-
-  CONSTRAINT fk_emails_proprietario_cpf
-  FOREIGN KEY (cpf_proprietario)
-  REFERENCES proprietario (pessoa_cpf)
-  ON DELETE NO ACTION
-  ON UPDATE CASCADE
-);
 
 -- -----------------------------------------------------
 -- Tabela APARTAMENTO
 -- -----------------------------------------------------
 CREATE TABLE apartamento (
-  numero          INT,
-  bloco	          CHAR(10),
-  id_condominio      INT UNIQUE NOT NULL,
-  id_proprietario INT UNIQUE NOT NULL,
-  proprietario    CHAR(15) UNIQUE NOT NULL,
-  id_morador      INT UNIQUE NOT NULL,
-  morador         CHAR(15) UNIQUE NOT NULL,
+  id_condominio   	INT UNIQUE NOT NULL,
+  numero          	INT,
+  bloco	          	VARCHAR(5),
+  
+  id_proprietario 	INT UNIQUE NOT NULL,
+  id_morador      	INT UNIQUE NOT NULL,
+  diretorio_boleto	VARCHAR(50),
   -- restrições
   CONSTRAINT pk_apartamento
   PRIMARY KEY (numero, bloco, id_condominio),
 
   CONSTRAINT fk_apartamento_condominio
   FOREIGN KEY (id_condominio)
-  REFERENCES condominio (id_condominio)
+  REFERENCES condominio (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE,
 
   CONSTRAINT fk_apartamento_proprietario
-  FOREIGN KEY (id_proprietario, proprietario)
-  REFERENCES proprietario (id_proprietario, pessoa_cpf)
+  FOREIGN KEY (id_proprietario)
+  REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE,
 
   CONSTRAINT fk_apartamento_morador
-  FOREIGN KEY (id_morador, morador)
-  REFERENCES morador (id_morador, pessoa_cpf)
+  FOREIGN KEY (id_morador)
+  REFERENCES pessoa (id)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
 );
