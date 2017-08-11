@@ -55,7 +55,6 @@ CREATE TABLE telefones_pessoa (
   REFERENCES morador (id_morador,pessoa_cpf)
   ON DELETE NO ACTION
   ON UPDATE CASCADE
-
 );
 
 -- -----------------------------------------------------
