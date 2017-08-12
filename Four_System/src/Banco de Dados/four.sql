@@ -1,4 +1,4 @@
-﻿-----------------------------------------------
+﻿﻿-----------------------------------------------
 -- Criando o esquema banco
 -----------------------------------------------
 DROP SCHEMA IF EXISTS banco_four CASCADE;
@@ -14,7 +14,7 @@ CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
 -- Tabela PESSOA
 -- -----------------------------------------------------
 CREATE TABLE pessoa (
-  id   INT,
+  id   INT DEFAULT nextval('seq_pessoa'),
   CPF  CHAR(15) UNIQUE NOT NULL,
   Nome VARCHAR(50) NOT NULL,
   -- restrições
@@ -31,7 +31,7 @@ CREATE TABLE tipo_pessoa (
   id_pessoa INT NOT NULL,
   -- restrições
   CONSTRAINT pk_tipo_pessoa
-  PRIMARY KEY (tipo,id_pessoa),
+  PRIMARY KEY (tipo, id_pessoa),
 
   CONSTRAINT fk_tipo_pessoa
   FOREIGN KEY (id_pessoa)
@@ -45,11 +45,12 @@ CREATE TABLE tipo_pessoa (
 -- Tabela TELEFONES_PESSOA
 -- -----------------------------------------------------
 CREATE TABLE telefones_pessoa (
-  id_pessoa     INT,
-  telefone    	VARCHAR(20),
+  id_pessoa     INT NOT NULL,
+  telefone    	VARCHAR(20) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_telefones_pessoa
-  PRIMARY KEY (id_pessoa,telefone),
+  PRIMARY KEY (id_pessoa, telefone),
+
   CONSTRAINT fk_telefones_pessoa
   FOREIGN KEY (id_pessoa)
   REFERENCES pessoa (id)
@@ -61,11 +62,11 @@ CREATE TABLE telefones_pessoa (
 -- Tabela EMAILS_PESSOA
 -- -----------------------------------------------------
 CREATE TABLE emails_pessoa (
-  id_pessoa     INT,
-  email    	VARCHAR(50),
+  id_pessoa     INT NOT NULL,
+  email    	VARCHAR(60) UNIQUE NOT NULL,
   -- restrições
   CONSTRAINT pk_emails_pessoa
-  PRIMARY KEY (id_pessoa,email),
+  PRIMARY KEY (id_pessoa, email),
 
   CONSTRAINT fk_emails_pessoa
   FOREIGN KEY (id_pessoa)
@@ -78,12 +79,12 @@ CREATE TABLE emails_pessoa (
 -- Tabela CONDOMINIO
 -- -----------------------------------------------------
 CREATE TABLE condominio (
-  id	       	INT,
-  nome	   	VARCHAR NOT NULL,
-  id_sindico   	INT,
-  rua	 	VARCHAR(50),
-  bairro      	VARCHAR(50),
-  cidade	VARCHAR(50),
+  id	       	INT DEFAULT nextval('seq_condominio'),
+  nome	   	VARCHAR UNIQUE NOT NULL,
+  id_sindico   	INT NOT NULL,
+  rua	 	VARCHAR(50) NOT NULL,
+  bairro      	VARCHAR(50) NOT NULL,
+  cidade	VARCHAR(50) NOT NULL,
   -- restrições
   CONSTRAINT pk_condominio
   PRIMARY KEY (id),
@@ -95,19 +96,17 @@ CREATE TABLE condominio (
   ON UPDATE CASCADE
 );
 
-
-
 -- -----------------------------------------------------
 -- Tabela APARTAMENTO
 -- -----------------------------------------------------
 CREATE TABLE apartamento (
-  numero          	INT,
-  bloco	          	VARCHAR(5),
-  id_condominio   	INT UNIQUE NOT NULL,
+  numero          	INT NOT NULL,
+  bloco	          	VARCHAR(5) NOT NULL,
+  id_condominio   	INT NOT NULL,
 
-  id_proprietario 	INT UNIQUE NOT NULL,
+  id_proprietario 	INT NOT NULL,
   id_morador      	INT UNIQUE NOT NULL,
-  diretorio_boleto	VARCHAR(50),
+  diretorio_boleto	VARCHAR(200) UNIQUE,
   -- restrições
   CONSTRAINT pk_apartamento
   PRIMARY KEY (numero, bloco, id_condominio),
@@ -131,7 +130,6 @@ CREATE TABLE apartamento (
   ON UPDATE CASCADE
 );
 
-
 -- Povoamento (Alimentação Inicial do Banco de Dados):
 
 -- Pessoa
@@ -139,7 +137,8 @@ INSERT INTO pessoa VALUES (DEFAULT, '111.111.111-10', 'Pessoa1'),
 			                    (DEFAULT, '111.111.111-20', 'Pessoa2'),
               			      (DEFAULT, '111.111.111-30', 'Pessoa3'),
               			      (DEFAULT, '111.111.111-40', 'Pessoa4'),
-              			      (DEFAULT, '111.111.111-50', 'Pessoa5');
+              			      (DEFAULT, '111.111.111-50', 'Pessoa5'),
+              			      (0, 'Admin', 'Administradora');
 
 -- Tipo_Pessoa
 INSERT INTO tipo_pessoa VALUES ('Proprietario', 1),
@@ -181,11 +180,12 @@ INSERT INTO condominio VALUES (DEFAULT, 'Condominio1', 1, 'Rua 1', 'Santa Monica
 
 -- Condominio
 INSERT INTO apartamento VALUES (101, '1B', 1000, 1, 2, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf'),
-                               (102, '1B', 1000, 3, 3, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf'),
-                               (103, '1B', 1000, 3, 5, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf'),
-                               (104, '1B', 1000, 1, 1, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\101.pdf');
+                               (102, '1B', 1000, 3, 3, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\102.pdf'),
+                               (103, '1B', 1000, 3, 5, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\103.pdf'),
+                               (104, '1B', 1000, 1, 1, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\104.pdf');
 
 
+/*
 -- Todos os condominios
 SELECT * FROM condominio
 
@@ -367,3 +367,5 @@ language plpgsql;
 
 CREATE TRIGGER cupom_trigger
 AFTER INSERT ON operacao_bancaria FOR EACH ROW EXECUTE PROCEDURE gera_cupom();
+
+*/
