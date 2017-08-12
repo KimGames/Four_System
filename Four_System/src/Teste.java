@@ -18,7 +18,7 @@ public class Teste {
         
         ArrayList<String> emails = new ArrayList<String>();
         
-        emails = consulta.emailMorador("1000", "102");
+        emails = consulta.emailsMoradoresCondominio("1000");
         
         for(int i = 0; i < emails.size(); i++){
             System.out.println(emails.get(i));

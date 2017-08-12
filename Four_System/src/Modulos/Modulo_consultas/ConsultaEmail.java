@@ -52,10 +52,12 @@ public class ConsultaEmail{
     try{
       ResultSet resposta = null;
       String query;
-      query = "SELECT e.endereco_email FROM condominio c, "
-            + "pessoa p, emails_pessoa e WHERE c.id = a.condominio_id AND "
-            + "a.pessoa_id = p.id AND p.id = e.pessoa_id"
-            + "AND c.id = " + id_condominio + ";";
+      query = "SELECT e.email "
+            + "FROM condominio c, apartamento a, pessoa p, emails_pessoa e "
+            + "WHERE c.id = a.id_condominio "
+            + "AND a.id_morador = p.id "
+            + "AND e.id_pessoa = p.id "
+            + "AND c.id = " + id_condominio;
       System.out.println(query);
       //consulta
       resposta = sentenca.executeQuery(query);

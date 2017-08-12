@@ -1,3 +1,5 @@
 Fazer trigger para garantir que o sindico do condominio seja um proprietario do
 
 Para todo objeto cadastrado no sistema, o sistema deve armazenar a data em que foi cadastrado tal objeto
+
+Garantir que o morador inserido na tabela apartamento seja de fato um morador na tabela tipo_pessoa

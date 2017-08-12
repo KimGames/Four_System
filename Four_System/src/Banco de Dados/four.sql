@@ -39,7 +39,6 @@ CREATE TABLE tipo_pessoa (
   ON UPDATE CASCADE
 );
 
-
 -- -----------------------------------------------------
 -- Tabela TELEFONES_PESSOA
 -- -----------------------------------------------------
@@ -144,7 +143,12 @@ INSERT INTO tipo_pessoa VALUES ('Proprietario', 1),
 			                         ('Morador', 2),
                     			     ('Proprietario', 3),
                     			     ('Proprietario', 4),
-                    			     ('Morador', 5);
+                    			     ('Morador', 5),
+                    			     ('Morador', 3),
+                    			     ('Morador', 1);
+
+INSERT INTO tipo_pessoa VALUES ('Morador', 3),
+                    	       ('Morador', 1);
 
 -- Telefones_Pessoa
 INSERT INTO telefones_pessoa VALUES (1, '(34)9 9999-9999'),
