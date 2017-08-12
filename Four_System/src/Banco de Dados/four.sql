@@ -22,7 +22,6 @@ CREATE TABLE pessoa (
   PRIMARY KEY(id)
 );
 
-
 -- -----------------------------------------------------
 -- Tabela TIPO_PESSOA
 -- -----------------------------------------------------
@@ -183,6 +182,10 @@ INSERT INTO apartamento VALUES (101, '1B', 1000, 1, 2, 'C:\\Pasta_Condominio\\Pa
                                (102, '1B', 1000, 3, 3, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\102.pdf'),
                                (103, '1B', 1000, 3, 5, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\103.pdf'),
                                (104, '1B', 1000, 1, 1, 'C:\\Pasta_Condominio\\Pasta_Boleto_Ano\\Pasta_Mes\\104.pdf');
+
+
+
+
 
 
 /*

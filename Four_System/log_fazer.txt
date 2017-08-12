@@ -1,1 +1,3 @@
 Fazer trigger para garantir que o sindico do condominio seja um proprietario do
+
+Para todo objeto cadastrado no sistema, o sistema deve armazenar a data em que foi cadastrado tal objeto
