@@ -15,8 +15,8 @@ CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
 -- -----------------------------------------------------
 CREATE TABLE pessoa (
   id   INT DEFAULT nextval('seq_pessoa'),
-  CPF  CHAR(15) UNIQUE NOT NULL,
-  Nome VARCHAR(50) NOT NULL,
+  cpf  CHAR(15) UNIQUE NOT NULL,
+  nome VARCHAR(50) NOT NULL,
   -- restrições
   CONSTRAINT pk_pessoa
   PRIMARY KEY(id)
@@ -78,7 +78,7 @@ CREATE TABLE emails_pessoa (
 -- -----------------------------------------------------
 CREATE TABLE condominio (
   id	       	INT DEFAULT nextval('seq_condominio'),
-  nome	   	VARCHAR UNIQUE NOT NULL,
+  nome	   	VARCHAR(20) UNIQUE NOT NULL,
   id_sindico   	INT NOT NULL,
   rua	 	VARCHAR(50) NOT NULL,
   bairro      	VARCHAR(50) NOT NULL,
@@ -146,9 +146,6 @@ INSERT INTO tipo_pessoa VALUES ('Proprietario', 1),
                     			     ('Morador', 5),
                     			     ('Morador', 3),
                     			     ('Morador', 1);
-
-INSERT INTO tipo_pessoa VALUES ('Morador', 3),
-                    	       ('Morador', 1);
 
 -- Telefones_Pessoa
 INSERT INTO telefones_pessoa VALUES (1, '(34)9 9999-9999'),

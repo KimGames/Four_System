@@ -16,41 +16,128 @@ import java.sql.Statement;
  */
 public class Condominio {
 
-  private String id_condominio;
+  private String id;
   private String nome;
-  private String sindico;
+  private String id_sindico;
+  private String rua;
+  private String bairro;
+  private String cidade;
 
-  public Condominio(String id, String name, String sin){
-    id_condominio = id;
-    nome = name;
-    sindico = sin;
-  }
+	/**
+	* Default empty Condominio constructor
+	*/
+	public Condominio() {
+		super();
+	}
 
-  public Condominio(){}
+	/**
+	* Default Condominio constructor
+	*/
+	public Condominio(String id, String nome, String id_sindico, String rua, String bairro, String cidade) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.id_sindico = id_sindico;
+		this.rua = rua;
+		this.bairro = bairro;
+		this.cidade = cidade;
+	}
 
-  public void setId_Condominio(String id){
-    id_condominio = id;
-  }
+	/**
+	* Returns value of id
+	* @return
+	*/
+	public String getId() {
+		return id;
+	}
 
-  public void setNome(String name){
-    nome = name;
-  }
+	/**
+	* Sets new value of id
+	* @param
+	*/
+	public void setId(String id) {
+		this.id = id;
+	}
 
-  public void setSindico(String sin){
-    sindico = sin;
-  }
+	/**
+	* Returns value of nome
+	* @return
+	*/
+	public String getNome() {
+		return nome;
+	}
 
-  public String getId_Condominio(){
-    return id_condominio;
-  }
+	/**
+	* Sets new value of nome
+	* @param
+	*/
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-  public String getNome(){
-    return nome;
-  }
+	/**
+	* Returns value of id_sindico
+	* @return
+	*/
+	public String getId_sindico() {
+		return id_sindico;
+	}
 
-  public String getSindico(){
-    return sindico;
-  }
+	/**
+	* Sets new value of id_sindico
+	* @param
+	*/
+	public void setId_sindico(String id_sindico) {
+		this.id_sindico = id_sindico;
+	}
+
+	/**
+	* Returns value of rua
+	* @return
+	*/
+	public String getRua() {
+		return rua;
+	}
+
+	/**
+	* Sets new value of rua
+	* @param
+	*/
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+
+	/**
+	* Returns value of bairro
+	* @return
+	*/
+	public String getBairro() {
+		return bairro;
+	}
+
+	/**
+	* Sets new value of bairro
+	* @param
+	*/
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+
+	/**
+	* Returns value of cidade
+	* @return
+	*/
+	public String getCidade() {
+		return cidade;
+	}
+
+	/**
+	* Sets new value of cidade
+	* @param
+	*/
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
 
   public ResultSet consultarCondominio(Statement sentenca, String nome){
 
@@ -58,7 +145,9 @@ public class Condominio {
     System.out.println(">Realizando consulta..");
     try{
         String query;
-        query = "SELECT * FROM condominio WHERE nome LIKE '"+nome+"'";
+        query = "SELECT * "
+              + "FROM condominio "
+              + "WHERE nome = " + nome + ";";
         System.out.println(query);
         //consulta
         resposta = sentenca.executeQuery(query);
@@ -75,7 +164,8 @@ public class Condominio {
     System.out.println(">Realizando consulta..");
     try{
         String query;
-        query = "SELECT * FROM condominio";
+        query = "SELECT * "
+              + "FROM condominio;";
         System.out.println(query);
         //consulta
         resposta = sentenca.executeQuery(query);

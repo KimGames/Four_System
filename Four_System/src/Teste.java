@@ -1,4 +1,5 @@
 
+import Classes.Morador;
 import java.util.ArrayList;
 
 /*
@@ -14,15 +15,6 @@ import java.util.ArrayList;
 public class Teste {
     
     public static void main(String[] args) {
-        ConsultaEmail consulta = new ConsultaEmail();
-        
-        ArrayList<String> emails = new ArrayList<String>();
-        
-        emails = consulta.emailsMoradoresCondominio("1000");
-        
-        for(int i = 0; i < emails.size(); i++){
-            System.out.println(emails.get(i));
-        }
     }
     
 }
