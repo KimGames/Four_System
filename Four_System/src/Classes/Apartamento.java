@@ -18,88 +18,141 @@ public class Apartamento {
 
   private String numero;
   private String bloco;
-  private String condominio;
+  private String id_condominio;
   private String id_proprietario;
-  private String proprietario;
   private String id_morador;
-  private String morador;
+  private String diretorio_boleto;
 
-  public Apartamento(String number, String bl, String cond, String id_p,
-                     String prop, String id_m, String mor){
-    numero = number;
-    bloco = bl;
-    condominio = cond;
-    id_proprietario = id_p;
-    proprietario = prop;
-    id_morador = id_m;
-    morador = mor;
-  }
+	/**
+	* Default empty Apartamento constructor
+	*/
+	public Apartamento() {
+		super();
+	}
 
-  public Apartamento(){}
+	/**
+	* Default Apartamento constructor
+	*/
+	public Apartamento(String numero, String bloco, String id_condominio,
+                     String id_proprietario, String id_morador,
+                     String diretorio_boleto) {
+		super();
+		this.numero = numero;
+		this.bloco = bloco;
+		this.id_condominio = id_condominio;
+		this.id_proprietario = id_proprietario;
+		this.id_morador = id_morador;
+		this.diretorio_boleto = diretorio_boleto;
+	}
 
-  public void setNumero(String number){
-    numero = number;
-  }
+	/**
+	* Returns value of numero
+	* @return
+	*/
+	public String getNumero() {
+		return numero;
+	}
 
-  public void setBloco(String bl){
-    bloco = bl;
-  }
+	/**
+	* Sets new value of numero
+	* @param
+	*/
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
 
-  public void setCondominio(String cond){
-    condominio = cond;
-  }
+	/**
+	* Returns value of bloco
+	* @return
+	*/
+	public String getBloco() {
+		return bloco;
+	}
 
-  public void setId_Proprietario(String id_p){
-    id_proprietario = id_p;
-  }
+	/**
+	* Sets new value of bloco
+	* @param
+	*/
+	public void setBloco(String bloco) {
+		this.bloco = bloco;
+	}
 
-  public void setProprietario(String prop){
-    proprietario = prop;
-  }
+	/**
+	* Returns value of id_condominio
+	* @return
+	*/
+	public String getId_condominio() {
+		return id_condominio;
+	}
 
-  public void setId_Morador(String id_m){
-    id_morador = id_m;
-  }
+	/**
+	* Sets new value of id_condominio
+	* @param
+	*/
+	public void setId_condominio(String id_condominio) {
+		this.id_condominio = id_condominio;
+	}
 
-  public void setMorador(String mor){
-    morador = mor;
-  }
+	/**
+	* Returns value of id_proprietario
+	* @return
+	*/
+	public String getId_proprietario() {
+		return id_proprietario;
+	}
 
-  public String getNumero(){
-    return numero;
-  }
+	/**
+	* Sets new value of id_proprietario
+	* @param
+	*/
+	public void setId_proprietario(String id_proprietario) {
+		this.id_proprietario = id_proprietario;
+	}
 
-  public String getBloco(){
-    return bloco;
-  }
+	/**
+	* Returns value of id_morador
+	* @return
+	*/
+	public String getId_morador() {
+		return id_morador;
+	}
 
-  public String getCondominio(){
-    return condominio;
-  }
+	/**
+	* Sets new value of id_morador
+	* @param
+	*/
+	public void setId_morador(String id_morador) {
+		this.id_morador = id_morador;
+	}
 
-  public String getId_Proprietario(){
-    return id_proprietario;
-  }
+	/**
+	* Returns value of diretorio_boleto
+	* @return
+	*/
+	public String getDiretorio_boleto() {
+		return diretorio_boleto;
+	}
 
-  public String getProprietario(){
-    return proprietario;
-  }
+	/**
+	* Sets new value of diretorio_boleto
+	* @param
+	*/
+	public void setDiretorio_boleto(String diretorio_boleto) {
+		this.diretorio_boleto = diretorio_boleto;
+	}
 
-  public String getId_Morador(){
-    return id_morador;
-  }
-
-  public String getMorador(){
-    return morador;
-  }
-
-  public ResultSet consultarApartamento(Statement sentenca, String nome){
+  public ResultSet consultarApartamento(Statement sentenca, String condominio,
+                                        String numero){
 
     ResultSet resposta = null;
     System.out.println(">Realizando consulta..");
     try{
         String query;
-        query = "SELECT * FROM sindico WHERE nome LIKE '"+nome+"'";
+        query = "SELECT * "
+              + "FROM condominio c, apartamento a "
+              + "WHERE c.id = a.id_condominio "
+              + "AND c.id = " + condominio + " "
+              + "AND a.numero = " + numero + ";";
         System.out.println(query);
         //consulta
         resposta = sentenca.executeQuery(query);
@@ -110,13 +163,17 @@ public class Apartamento {
     return resposta;
   }
 
-  public ResultSet consultarTodosApartamentos(Statement sentenca){
+  public ResultSet consultarTodosApartamentos(Statement sentenca,
+                                              String condominio){
 
     ResultSet resposta = null;
     System.out.println(">Realizando consulta..");
     try{
         String query;
-        query = "SELECT * FROM condominio";
+        query = "SELECT * "
+              + "FROM condominio c, apartamento a "
+              + "WHERE c.id = a.id_condominio "
+              + "AND c.id = " + condominio + ";";
         System.out.println(query);
         //consulta
         resposta = sentenca.executeQuery(query);

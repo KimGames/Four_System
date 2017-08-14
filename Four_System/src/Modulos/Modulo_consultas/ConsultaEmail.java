@@ -119,7 +119,7 @@ public class ConsultaEmail{
             + "WHERE c.id = a.id_condominio "
             + "AND a.id_proprietario = p.id "
             + "AND e.id_pessoa = p.id "
-            + "AND c.id = " + id_condominio;
+            + "AND c.id = " + id_condominio + ";";
       System.out.println(query);
       //consulta
       resposta = sentenca.executeQuery(query);
