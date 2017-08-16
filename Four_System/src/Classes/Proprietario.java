@@ -16,41 +16,11 @@ import java.sql.Statement;
  */
 public class Proprietario {
 
-  private String id_proprietario;
-  private String pessoa_cpf;
-  private String pessoa_nome;
-
-  public Proprietario(String id, String cpf, String nome){
-      id_proprietario = id;
-      pessoa_cpf = cpf;
-      pessoa_nome = nome;
-  }
-
-  public Proprietario(){}
-
-  public void setId_Proprietario(String id){
-      id_proprietario = id;
-  }
-
-  public void setCpf(String cpf){
-      pessoa_cpf = cpf;
-  }
-
-  public void setNome(String nome){
-      pessoa_nome = nome;
-  }
-
-  public String getId_Proprietario(){
-      return id_proprietario;
-  }
-
-  public String getCpf(){
-      return pessoa_cpf;
-  }
-
-  public String getNome(){
-      return pessoa_nome;
-  }
+  private String id;
+  private String cpf;
+  private String nome;
+  private ArrayList<String> telefone;
+  private ArrayList<String> email;
 
   public ResultSet consultarProprietario(Statement sentenca, String nome){
 
