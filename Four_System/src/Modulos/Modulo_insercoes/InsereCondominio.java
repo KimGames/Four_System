@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class InsereCondominio{
 
   private Statement sentenca;
-  
+
   public InsereCondominio(){
       Conexao conexao = new Conexao();
       sentenca = conexao.getStatement();
@@ -33,5 +33,5 @@ public class InsereCondominio{
     return insercao;
   }
 
-  public int inserirApartamentos(int numero_aps, int blocos, )
+  //public int inserirApartamentos(int numero_aps, int blocos, )
 }

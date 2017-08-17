@@ -46,7 +46,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         }
 
         //ICONE APP
-        URL caminhoIcone = getClass().getResource("../Imagens/logo.png");
+        URL caminhoIcone = getClass().getResource("../src/Imagens/logo.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoIcone);
         this.setIconImage(iconeTitulo);
 
