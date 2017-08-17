@@ -10,6 +10,7 @@ CREATE SEQUENCE seq_condominio START WITH 1000 INCREMENT BY 1;
 --CREATE SEQUENCE seq_morador START WITH 2 INCREMENT BY 2;
 --CREATE SEQUENCE seq_proprietario START WITH 1 INCREMENT BY 2;
 
+
 -- -----------------------------------------------------
 -- Tabela PESSOA
 -- -----------------------------------------------------
