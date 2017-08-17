@@ -139,7 +139,7 @@ public class Condominio {
 		this.cidade = cidade;
 	}
 
-  public ResultSet consultarCondominio(Statement sentenca, String nome){
+  public ResultSet consultarCondominio_Nome(Statement sentenca, String nome){
 
     ResultSet resposta = null;
     System.out.println(">Realizando consulta..");
@@ -153,7 +153,42 @@ public class Condominio {
         resposta = sentenca.executeQuery(query);
     }catch(SQLException se){
         System.out.println(">Nao foi possivel realizar a consulta!!!");
-        se.printStackTrace();
+    }
+    return resposta;
+  }
+
+  public ResultSet consultarCondominio_Rua(Statement sentenca, String rua){
+
+    ResultSet resposta = null;
+    System.out.println(">Realizando consulta..");
+    try{
+        String query;
+        query = "SELECT * "
+              + "FROM condominio "
+              + "WHERE rua = " + rua + ";";
+        System.out.println(query);
+        //consulta
+        resposta = sentenca.executeQuery(query);
+    }catch(SQLException se){
+        System.out.println(">Nao foi possivel realizar a consulta!!!");
+    }
+    return resposta;
+  }
+
+  public ResultSet consultarCondominio_Bairro(Statement sentenca, String bairro){
+
+    ResultSet resposta = null;
+    System.out.println(">Realizando consulta..");
+    try{
+        String query;
+        query = "SELECT * "
+              + "FROM condominio "
+              + "WHERE bairro = " + bairro + ";";
+        System.out.println(query);
+        //consulta
+        resposta = sentenca.executeQuery(query);
+    }catch(SQLException se){
+        System.out.println(">Nao foi possivel realizar a consulta!!!");
     }
     return resposta;
   }
@@ -171,7 +206,6 @@ public class Condominio {
         resposta = sentenca.executeQuery(query);
     }catch(SQLException se){
         System.out.println(">Nao foi possivel realizar a consulta!!!");
-        se.printStackTrace();
     }
     return resposta;
   }

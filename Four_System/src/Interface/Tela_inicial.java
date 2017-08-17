@@ -1328,7 +1328,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelSubTitulo.setForeground(new java.awt.Color(255, 255, 255));
         labelSubTitulo.setText("Consultar Condomínio");
 
-        comboBoxCondominios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "Rua", "Morador", "Proprietário" }));
+        comboBoxCondominios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "Rua", "Bairro" }));
 
         botaoPesquisar.setText("Pesquisar");
 
