@@ -86,19 +86,6 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelOpcao = new javax.swing.JPanel();
         labelTitulo = new javax.swing.JLabel();
         painelOpcaoSwitch = new javax.swing.JPanel();
-        painelOpcaoContainer = new javax.swing.JPanel();
-        botao_condominios = new javax.swing.JPanel();
-        iconeCondominios3 = new javax.swing.JLabel();
-        labelCondominios3 = new javax.swing.JLabel();
-        botao_apartamentos = new javax.swing.JPanel();
-        labelConsultas16 = new javax.swing.JLabel();
-        iconeApartamentos4 = new javax.swing.JLabel();
-        botao_proprietarios = new javax.swing.JPanel();
-        labelConsultas3 = new javax.swing.JLabel();
-        iconeProprietarios = new javax.swing.JLabel();
-        botao_moradores = new javax.swing.JPanel();
-        labelConsultas4 = new javax.swing.JLabel();
-        iconeMoradores = new javax.swing.JLabel();
         painelOpcaoContainer1 = new javax.swing.JPanel();
         botao_condominios1 = new javax.swing.JPanel();
         iconeCondominios4 = new javax.swing.JLabel();
@@ -138,6 +125,19 @@ public class Tela_inicial extends javax.swing.JFrame {
         botao_moradores3 = new javax.swing.JPanel();
         labelConsultas10 = new javax.swing.JLabel();
         iconeMoradores3 = new javax.swing.JLabel();
+        painelOpcaoContainer = new javax.swing.JPanel();
+        botao_condominios = new javax.swing.JPanel();
+        iconeCondominios3 = new javax.swing.JLabel();
+        labelCondominios3 = new javax.swing.JLabel();
+        botao_apartamentos = new javax.swing.JPanel();
+        labelConsultas16 = new javax.swing.JLabel();
+        iconeApartamentos4 = new javax.swing.JLabel();
+        botao_proprietarios = new javax.swing.JPanel();
+        labelConsultas3 = new javax.swing.JLabel();
+        iconeProprietarios = new javax.swing.JLabel();
+        botao_moradores = new javax.swing.JPanel();
+        labelConsultas4 = new javax.swing.JLabel();
+        iconeMoradores = new javax.swing.JLabel();
         painelPrincipalSwitch = new javax.swing.JPanel();
         painelPrincipalConsultar1 = new javax.swing.JPanel();
         textFieldPesquisar = new javax.swing.JTextField();
@@ -302,6 +302,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeAdicionar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeAdicionar.setForeground(new java.awt.Color(255, 255, 255));
+        iconeAdicionar.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Plus_24px.png")); // NOI18N
 
         javax.swing.GroupLayout btnAdicionarLayout = new javax.swing.GroupLayout(btnAdicionar);
         btnAdicionar.setLayout(btnAdicionarLayout);
@@ -312,19 +313,19 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addGap(20, 20, 20))
             .addGroup(btnAdicionarLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(iconeAdicionar)
+                .addGap(36, 36, 36)
+                .addComponent(iconeAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelAdicionar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(130, Short.MAX_VALUE))
         );
         btnAdicionarLayout.setVerticalGroup(
             btnAdicionarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAdicionarLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(btnAdicionarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(iconeAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelAdicionar)
-                    .addComponent(iconeAdicionar)
                     .addComponent(jLabel14))
                 .addContainerGap())
         );
@@ -346,19 +347,22 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeAlterar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeAlterar.setForeground(new java.awt.Color(255, 255, 255));
+        iconeAlterar.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Restart_24px.png")); // NOI18N
 
         javax.swing.GroupLayout btnAlterarLayout = new javax.swing.GroupLayout(btnAlterar);
         btnAlterar.setLayout(btnAlterarLayout);
         btnAlterarLayout.setHorizontalGroup(
             btnAlterarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAlterarLayout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(iconeAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(125, 125, 125)
                 .addComponent(labelAlterar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jLabel13)
                 .addGap(26, 26, 26))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAlterarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(iconeAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(181, 181, 181))
         );
         btnAlterarLayout.setVerticalGroup(
             btnAlterarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -369,9 +373,10 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addComponent(jLabel13))
                     .addGroup(btnAlterarLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(btnAlterarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelAlterar)
-                            .addComponent(iconeAlterar))))
+                        .addComponent(labelAlterar))
+                    .addGroup(btnAlterarLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(iconeAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -392,6 +397,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeConsultas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeConsultas.setForeground(new java.awt.Color(255, 255, 255));
+        iconeConsultas.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Search_24px.png")); // NOI18N
 
         javax.swing.GroupLayout btnConsultarLayout = new javax.swing.GroupLayout(btnConsultar);
         btnConsultar.setLayout(btnConsultarLayout);
@@ -399,7 +405,7 @@ public class Tela_inicial extends javax.swing.JFrame {
             btnConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnConsultarLayout.createSequentialGroup()
                 .addGap(85, 85, 85)
-                .addComponent(iconeConsultas)
+                .addComponent(iconeConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas)
                 .addGap(18, 18, 18)
@@ -413,7 +419,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(btnConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(btnConsultarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(labelConsultas)
-                        .addComponent(iconeConsultas))
+                        .addComponent(iconeConsultas, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel12))
                 .addContainerGap())
         );
@@ -435,6 +441,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeRemover.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeRemover.setForeground(new java.awt.Color(255, 255, 255));
+        iconeRemover.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Minus_24px.png")); // NOI18N
 
         javax.swing.GroupLayout btnRemoverLayout = new javax.swing.GroupLayout(btnRemover);
         btnRemover.setLayout(btnRemoverLayout);
@@ -442,7 +449,7 @@ public class Tela_inicial extends javax.swing.JFrame {
             btnRemoverLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnRemoverLayout.createSequentialGroup()
                 .addGap(79, 79, 79)
-                .addComponent(iconeRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(iconeRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(labelRemover)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -525,7 +532,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(252, Short.MAX_VALUE))
+                .addContainerGap(208, Short.MAX_VALUE))
         );
 
         painelOpcao.setBackground(new java.awt.Color(169, 207, 70));
@@ -542,187 +549,6 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         painelOpcaoSwitch.setLayout(new java.awt.CardLayout());
 
-        painelOpcaoContainer.setBackground(new java.awt.Color(169, 207, 70));
-
-        botao_condominios.setBackground(new java.awt.Color(179, 222, 63));
-        botao_condominios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botao_condominios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botao_condominiosMouseClicked(evt);
-            }
-        });
-
-        iconeCondominios3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeCondominios3.setForeground(new java.awt.Color(255, 255, 255));
-
-        labelCondominios3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        labelCondominios3.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios3.setText("Condomínios");
-
-        javax.swing.GroupLayout botao_condominiosLayout = new javax.swing.GroupLayout(botao_condominios);
-        botao_condominios.setLayout(botao_condominiosLayout);
-        botao_condominiosLayout.setHorizontalGroup(
-            botao_condominiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_condominiosLayout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(iconeCondominios3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelCondominios3)
-                .addGap(18, 18, 18))
-        );
-        botao_condominiosLayout.setVerticalGroup(
-            botao_condominiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(iconeCondominios3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(botao_condominiosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(labelCondominios3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        botao_apartamentos.setBackground(new java.awt.Color(179, 222, 63));
-        botao_apartamentos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botao_apartamentos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botao_apartamentosMouseClicked(evt);
-            }
-        });
-
-        labelConsultas16.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        labelConsultas16.setForeground(new java.awt.Color(255, 255, 255));
-        labelConsultas16.setText("Apartamentos");
-
-        iconeApartamentos4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeApartamentos4.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout botao_apartamentosLayout = new javax.swing.GroupLayout(botao_apartamentos);
-        botao_apartamentos.setLayout(botao_apartamentosLayout);
-        botao_apartamentosLayout.setHorizontalGroup(
-            botao_apartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_apartamentosLayout.createSequentialGroup()
-                .addGroup(botao_apartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(iconeApartamentos4)
-                    .addGroup(botao_apartamentosLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(labelConsultas16)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        botao_apartamentosLayout.setVerticalGroup(
-            botao_apartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_apartamentosLayout.createSequentialGroup()
-                .addComponent(iconeApartamentos4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelConsultas16)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        botao_proprietarios.setBackground(new java.awt.Color(179, 222, 63));
-        botao_proprietarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botao_proprietarios.setPreferredSize(new java.awt.Dimension(178, 48));
-        botao_proprietarios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botao_proprietariosMouseClicked(evt);
-            }
-        });
-
-        labelConsultas3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        labelConsultas3.setForeground(new java.awt.Color(255, 255, 255));
-        labelConsultas3.setText("Proprietários");
-
-        iconeProprietarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeProprietarios.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout botao_proprietariosLayout = new javax.swing.GroupLayout(botao_proprietarios);
-        botao_proprietarios.setLayout(botao_proprietariosLayout);
-        botao_proprietariosLayout.setHorizontalGroup(
-            botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_proprietariosLayout.createSequentialGroup()
-                .addGroup(botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(botao_proprietariosLayout.createSequentialGroup()
-                        .addComponent(iconeProprietarios)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_proprietariosLayout.createSequentialGroup()
-                        .addGap(0, 10, Short.MAX_VALUE)
-                        .addComponent(labelConsultas3)))
-                .addContainerGap())
-        );
-        botao_proprietariosLayout.setVerticalGroup(
-            botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_proprietariosLayout.createSequentialGroup()
-                .addComponent(iconeProprietarios)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(labelConsultas3)
-                .addGap(0, 20, Short.MAX_VALUE))
-        );
-
-        botao_moradores.setBackground(new java.awt.Color(179, 222, 63));
-        botao_moradores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botao_moradores.setPreferredSize(new java.awt.Dimension(178, 48));
-        botao_moradores.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botao_moradoresMouseClicked(evt);
-            }
-        });
-
-        labelConsultas4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        labelConsultas4.setForeground(new java.awt.Color(255, 255, 255));
-        labelConsultas4.setText("Moradores");
-
-        iconeMoradores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeMoradores.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout botao_moradoresLayout = new javax.swing.GroupLayout(botao_moradores);
-        botao_moradores.setLayout(botao_moradoresLayout);
-        botao_moradoresLayout.setHorizontalGroup(
-            botao_moradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_moradoresLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(iconeMoradores)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradoresLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(labelConsultas4)
-                .addContainerGap())
-        );
-        botao_moradoresLayout.setVerticalGroup(
-            botao_moradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradoresLayout.createSequentialGroup()
-                .addComponent(iconeMoradores)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(labelConsultas4)
-                .addGap(0, 15, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout painelOpcaoContainerLayout = new javax.swing.GroupLayout(painelOpcaoContainer);
-        painelOpcaoContainer.setLayout(painelOpcaoContainerLayout);
-        painelOpcaoContainerLayout.setHorizontalGroup(
-            painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelOpcaoContainerLayout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
-                .addComponent(botao_condominios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(botao_apartamentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(botao_proprietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(botao_moradores, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29))
-        );
-        painelOpcaoContainerLayout.setVerticalGroup(
-            painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(painelOpcaoContainerLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelOpcaoContainerLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(botao_moradores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botao_proprietarios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(botao_apartamentos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botao_condominios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-
-        painelOpcaoSwitch.add(painelOpcaoContainer, "card2");
-
         painelOpcaoContainer1.setBackground(new java.awt.Color(169, 207, 70));
 
         botao_condominios1.setBackground(new java.awt.Color(179, 222, 63));
@@ -735,6 +561,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeCondominios4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeCondominios4.setForeground(new java.awt.Color(255, 255, 255));
+        iconeCondominios4.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Building_48px.png")); // NOI18N
 
         labelCondominios6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         labelCondominios6.setForeground(new java.awt.Color(255, 255, 255));
@@ -746,10 +573,10 @@ public class Tela_inicial extends javax.swing.JFrame {
             botao_condominios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_condominios1Layout.createSequentialGroup()
                 .addGap(2, 2, 2)
-                .addComponent(iconeCondominios4)
+                .addComponent(iconeCondominios4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelCondominios6)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_condominios1Layout.setVerticalGroup(
             botao_condominios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -758,7 +585,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(labelCondominios6)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(botao_condominios1Layout.createSequentialGroup()
-                .addComponent(iconeCondominios4)
+                .addComponent(iconeCondominios4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -776,21 +603,22 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeApartamentos5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeApartamentos5.setForeground(new java.awt.Color(255, 255, 255));
+        iconeApartamentos5.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Apartment_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_apartamentos1Layout = new javax.swing.GroupLayout(botao_apartamentos1);
         botao_apartamentos1.setLayout(botao_apartamentos1Layout);
         botao_apartamentos1Layout.setHorizontalGroup(
             botao_apartamentos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_apartamentos1Layout.createSequentialGroup()
-                .addComponent(iconeApartamentos5)
+                .addComponent(iconeApartamentos5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelConsultas17)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_apartamentos1Layout.setVerticalGroup(
             botao_apartamentos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_apartamentos1Layout.createSequentialGroup()
-                .addComponent(iconeApartamentos5)
+                .addComponent(iconeApartamentos5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_apartamentos1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -813,26 +641,27 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeProprietarios1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeProprietarios1.setForeground(new java.awt.Color(255, 255, 255));
+        iconeProprietarios1.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Manager_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_proprietarios1Layout = new javax.swing.GroupLayout(botao_proprietarios1);
         botao_proprietarios1.setLayout(botao_proprietarios1Layout);
         botao_proprietarios1Layout.setHorizontalGroup(
             botao_proprietarios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_proprietarios1Layout.createSequentialGroup()
-                .addComponent(iconeProprietarios1)
+                .addComponent(iconeProprietarios1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas5)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_proprietarios1Layout.setVerticalGroup(
             botao_proprietarios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_proprietarios1Layout.createSequentialGroup()
-                .addComponent(iconeProprietarios1)
+                .addComponent(iconeProprietarios1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_proprietarios1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelConsultas5)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         botao_moradores1.setBackground(new java.awt.Color(179, 222, 63));
@@ -850,6 +679,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeMoradores1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeMoradores1.setForeground(new java.awt.Color(255, 255, 255));
+        iconeMoradores1.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Group_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_moradores1Layout = new javax.swing.GroupLayout(botao_moradores1);
         botao_moradores1.setLayout(botao_moradores1Layout);
@@ -857,20 +687,20 @@ public class Tela_inicial extends javax.swing.JFrame {
             botao_moradores1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradores1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(iconeMoradores1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(iconeMoradores1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelConsultas6)
                 .addGap(30, 30, 30))
         );
         botao_moradores1Layout.setVerticalGroup(
             botao_moradores1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradores1Layout.createSequentialGroup()
-                .addComponent(iconeMoradores1)
+                .addComponent(iconeMoradores1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_moradores1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelConsultas6)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout painelOpcaoContainer1Layout = new javax.swing.GroupLayout(painelOpcaoContainer1);
@@ -915,6 +745,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeCondominios5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeCondominios5.setForeground(new java.awt.Color(255, 255, 255));
+        iconeCondominios5.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Building_48px.png")); // NOI18N
 
         labelCondominios7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         labelCondominios7.setForeground(new java.awt.Color(255, 255, 255));
@@ -926,10 +757,10 @@ public class Tela_inicial extends javax.swing.JFrame {
             botao_condominios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_condominios2Layout.createSequentialGroup()
                 .addGap(2, 2, 2)
-                .addComponent(iconeCondominios5)
+                .addComponent(iconeCondominios5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelCondominios7)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_condominios2Layout.setVerticalGroup(
             botao_condominios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -938,7 +769,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(labelCondominios7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(botao_condominios2Layout.createSequentialGroup()
-                .addComponent(iconeCondominios5)
+                .addComponent(iconeCondominios5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -956,21 +787,22 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeApartamentos6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeApartamentos6.setForeground(new java.awt.Color(255, 255, 255));
+        iconeApartamentos6.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Apartment_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_apartamentos2Layout = new javax.swing.GroupLayout(botao_apartamentos2);
         botao_apartamentos2.setLayout(botao_apartamentos2Layout);
         botao_apartamentos2Layout.setHorizontalGroup(
             botao_apartamentos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_apartamentos2Layout.createSequentialGroup()
-                .addComponent(iconeApartamentos6)
+                .addComponent(iconeApartamentos6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelConsultas18)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_apartamentos2Layout.setVerticalGroup(
             botao_apartamentos2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_apartamentos2Layout.createSequentialGroup()
-                .addComponent(iconeApartamentos6)
+                .addComponent(iconeApartamentos6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_apartamentos2Layout.createSequentialGroup()
                 .addContainerGap()
@@ -993,26 +825,27 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeProprietarios2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeProprietarios2.setForeground(new java.awt.Color(255, 255, 255));
+        iconeProprietarios2.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Manager_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_proprietarios2Layout = new javax.swing.GroupLayout(botao_proprietarios2);
         botao_proprietarios2.setLayout(botao_proprietarios2Layout);
         botao_proprietarios2Layout.setHorizontalGroup(
             botao_proprietarios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_proprietarios2Layout.createSequentialGroup()
-                .addComponent(iconeProprietarios2)
+                .addComponent(iconeProprietarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas7)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_proprietarios2Layout.setVerticalGroup(
             botao_proprietarios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_proprietarios2Layout.createSequentialGroup()
-                .addComponent(iconeProprietarios2)
+                .addComponent(iconeProprietarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_proprietarios2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelConsultas7)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         botao_moradores2.setBackground(new java.awt.Color(179, 222, 63));
@@ -1030,6 +863,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeMoradores2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeMoradores2.setForeground(new java.awt.Color(255, 255, 255));
+        iconeMoradores2.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Group_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_moradores2Layout = new javax.swing.GroupLayout(botao_moradores2);
         botao_moradores2.setLayout(botao_moradores2Layout);
@@ -1037,20 +871,20 @@ public class Tela_inicial extends javax.swing.JFrame {
             botao_moradores2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradores2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(iconeMoradores2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(iconeMoradores2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelConsultas8)
                 .addGap(30, 30, 30))
         );
         botao_moradores2Layout.setVerticalGroup(
             botao_moradores2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradores2Layout.createSequentialGroup()
-                .addComponent(iconeMoradores2)
+                .addComponent(iconeMoradores2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_moradores2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelConsultas8)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout painelOpcaoContainer2Layout = new javax.swing.GroupLayout(painelOpcaoContainer2);
@@ -1095,6 +929,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeCondominios6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeCondominios6.setForeground(new java.awt.Color(255, 255, 255));
+        iconeCondominios6.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Building_48px.png")); // NOI18N
 
         labelCondominios8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         labelCondominios8.setForeground(new java.awt.Color(255, 255, 255));
@@ -1106,10 +941,10 @@ public class Tela_inicial extends javax.swing.JFrame {
             botao_condominios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_condominios3Layout.createSequentialGroup()
                 .addGap(2, 2, 2)
-                .addComponent(iconeCondominios6)
+                .addComponent(iconeCondominios6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelCondominios8)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_condominios3Layout.setVerticalGroup(
             botao_condominios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1118,7 +953,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(labelCondominios8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(botao_condominios3Layout.createSequentialGroup()
-                .addComponent(iconeCondominios6)
+                .addComponent(iconeCondominios6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -1136,21 +971,22 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeApartamentos7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeApartamentos7.setForeground(new java.awt.Color(255, 255, 255));
+        iconeApartamentos7.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Apartment_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_apartamentos3Layout = new javax.swing.GroupLayout(botao_apartamentos3);
         botao_apartamentos3.setLayout(botao_apartamentos3Layout);
         botao_apartamentos3Layout.setHorizontalGroup(
             botao_apartamentos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_apartamentos3Layout.createSequentialGroup()
-                .addComponent(iconeApartamentos7)
+                .addComponent(iconeApartamentos7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelConsultas19)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_apartamentos3Layout.setVerticalGroup(
             botao_apartamentos3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_apartamentos3Layout.createSequentialGroup()
-                .addComponent(iconeApartamentos7)
+                .addComponent(iconeApartamentos7, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_apartamentos3Layout.createSequentialGroup()
                 .addContainerGap()
@@ -1173,26 +1009,27 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeProprietarios3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeProprietarios3.setForeground(new java.awt.Color(255, 255, 255));
+        iconeProprietarios3.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Manager_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_proprietarios3Layout = new javax.swing.GroupLayout(botao_proprietarios3);
         botao_proprietarios3.setLayout(botao_proprietarios3Layout);
         botao_proprietarios3Layout.setHorizontalGroup(
             botao_proprietarios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_proprietarios3Layout.createSequentialGroup()
-                .addComponent(iconeProprietarios3)
+                .addComponent(iconeProprietarios3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas9)
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         botao_proprietarios3Layout.setVerticalGroup(
             botao_proprietarios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(botao_proprietarios3Layout.createSequentialGroup()
-                .addComponent(iconeProprietarios3)
+                .addComponent(iconeProprietarios3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_proprietarios3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelConsultas9)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         botao_moradores3.setBackground(new java.awt.Color(179, 222, 63));
@@ -1210,6 +1047,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeMoradores3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeMoradores3.setForeground(new java.awt.Color(255, 255, 255));
+        iconeMoradores3.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Group_48px.png")); // NOI18N
 
         javax.swing.GroupLayout botao_moradores3Layout = new javax.swing.GroupLayout(botao_moradores3);
         botao_moradores3.setLayout(botao_moradores3Layout);
@@ -1217,20 +1055,20 @@ public class Tela_inicial extends javax.swing.JFrame {
             botao_moradores3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradores3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(iconeMoradores3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addComponent(iconeMoradores3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelConsultas10)
                 .addGap(30, 30, 30))
         );
         botao_moradores3Layout.setVerticalGroup(
             botao_moradores3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradores3Layout.createSequentialGroup()
-                .addComponent(iconeMoradores3)
+                .addComponent(iconeMoradores3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(botao_moradores3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelConsultas10)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout painelOpcaoContainer3Layout = new javax.swing.GroupLayout(painelOpcaoContainer3);
@@ -1262,6 +1100,191 @@ public class Tela_inicial extends javax.swing.JFrame {
         );
 
         painelOpcaoSwitch.add(painelOpcaoContainer3, "card2");
+
+        painelOpcaoContainer.setBackground(new java.awt.Color(169, 207, 70));
+
+        botao_condominios.setBackground(new java.awt.Color(179, 222, 63));
+        botao_condominios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_condominios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botao_condominiosMouseClicked(evt);
+            }
+        });
+
+        iconeCondominios3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        iconeCondominios3.setForeground(new java.awt.Color(255, 255, 255));
+        iconeCondominios3.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Building_48px.png")); // NOI18N
+
+        labelCondominios3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        labelCondominios3.setForeground(new java.awt.Color(255, 255, 255));
+        labelCondominios3.setText("Condomínios");
+
+        javax.swing.GroupLayout botao_condominiosLayout = new javax.swing.GroupLayout(botao_condominios);
+        botao_condominios.setLayout(botao_condominiosLayout);
+        botao_condominiosLayout.setHorizontalGroup(
+            botao_condominiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botao_condominiosLayout.createSequentialGroup()
+                .addGap(2, 2, 2)
+                .addComponent(iconeCondominios3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelCondominios3)
+                .addGap(18, 18, 18))
+        );
+        botao_condominiosLayout.setVerticalGroup(
+            botao_condominiosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(iconeCondominios3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(botao_condominiosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelCondominios3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        botao_apartamentos.setBackground(new java.awt.Color(179, 222, 63));
+        botao_apartamentos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_apartamentos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botao_apartamentosMouseClicked(evt);
+            }
+        });
+
+        labelConsultas16.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        labelConsultas16.setForeground(new java.awt.Color(255, 255, 255));
+        labelConsultas16.setText("Apartamentos");
+
+        iconeApartamentos4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        iconeApartamentos4.setForeground(new java.awt.Color(255, 255, 255));
+        iconeApartamentos4.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Apartment_48px.png")); // NOI18N
+
+        javax.swing.GroupLayout botao_apartamentosLayout = new javax.swing.GroupLayout(botao_apartamentos);
+        botao_apartamentos.setLayout(botao_apartamentosLayout);
+        botao_apartamentosLayout.setHorizontalGroup(
+            botao_apartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botao_apartamentosLayout.createSequentialGroup()
+                .addGroup(botao_apartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iconeApartamentos4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(botao_apartamentosLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(labelConsultas16)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        botao_apartamentosLayout.setVerticalGroup(
+            botao_apartamentosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botao_apartamentosLayout.createSequentialGroup()
+                .addComponent(iconeApartamentos4, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelConsultas16)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        botao_proprietarios.setBackground(new java.awt.Color(179, 222, 63));
+        botao_proprietarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_proprietarios.setPreferredSize(new java.awt.Dimension(178, 48));
+        botao_proprietarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botao_proprietariosMouseClicked(evt);
+            }
+        });
+
+        labelConsultas3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        labelConsultas3.setForeground(new java.awt.Color(255, 255, 255));
+        labelConsultas3.setText("Proprietários");
+
+        iconeProprietarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        iconeProprietarios.setForeground(new java.awt.Color(255, 255, 255));
+        iconeProprietarios.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Manager_48px.png")); // NOI18N
+
+        javax.swing.GroupLayout botao_proprietariosLayout = new javax.swing.GroupLayout(botao_proprietarios);
+        botao_proprietarios.setLayout(botao_proprietariosLayout);
+        botao_proprietariosLayout.setHorizontalGroup(
+            botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botao_proprietariosLayout.createSequentialGroup()
+                .addGroup(botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(botao_proprietariosLayout.createSequentialGroup()
+                        .addComponent(iconeProprietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_proprietariosLayout.createSequentialGroup()
+                        .addGap(0, 2, Short.MAX_VALUE)
+                        .addComponent(labelConsultas3)))
+                .addContainerGap())
+        );
+        botao_proprietariosLayout.setVerticalGroup(
+            botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botao_proprietariosLayout.createSequentialGroup()
+                .addComponent(iconeProprietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelConsultas3)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        botao_moradores.setBackground(new java.awt.Color(179, 222, 63));
+        botao_moradores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botao_moradores.setPreferredSize(new java.awt.Dimension(178, 48));
+        botao_moradores.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botao_moradoresMouseClicked(evt);
+            }
+        });
+
+        labelConsultas4.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        labelConsultas4.setForeground(new java.awt.Color(255, 255, 255));
+        labelConsultas4.setText("Moradores");
+
+        iconeMoradores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        iconeMoradores.setForeground(new java.awt.Color(255, 255, 255));
+        iconeMoradores.setIcon(new javax.swing.ImageIcon("/home/kimruan/Desktop/Four_System/Four_System/Images/Group_48px.png")); // NOI18N
+
+        javax.swing.GroupLayout botao_moradoresLayout = new javax.swing.GroupLayout(botao_moradores);
+        botao_moradores.setLayout(botao_moradoresLayout);
+        botao_moradoresLayout.setHorizontalGroup(
+            botao_moradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botao_moradoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(iconeMoradores, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradoresLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(labelConsultas4)
+                .addContainerGap())
+        );
+        botao_moradoresLayout.setVerticalGroup(
+            botao_moradoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_moradoresLayout.createSequentialGroup()
+                .addComponent(iconeMoradores, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(labelConsultas4)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout painelOpcaoContainerLayout = new javax.swing.GroupLayout(painelOpcaoContainer);
+        painelOpcaoContainer.setLayout(painelOpcaoContainerLayout);
+        painelOpcaoContainerLayout.setHorizontalGroup(
+            painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelOpcaoContainerLayout.createSequentialGroup()
+                .addContainerGap(177, Short.MAX_VALUE)
+                .addComponent(botao_condominios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(botao_apartamentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(botao_proprietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(botao_moradores, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
+        );
+        painelOpcaoContainerLayout.setVerticalGroup(
+            painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(painelOpcaoContainerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelOpcaoContainerLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(painelOpcaoContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botao_moradores, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botao_proprietarios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(botao_apartamentos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botao_condominios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        painelOpcaoSwitch.add(painelOpcaoContainer, "card2");
 
         javax.swing.GroupLayout painelOpcaoLayout = new javax.swing.GroupLayout(painelOpcao);
         painelOpcao.setLayout(painelOpcaoLayout);
@@ -2661,7 +2684,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelOpcao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelPrincipalSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(604, Short.MAX_VALUE))
+                .addContainerGap(556, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
