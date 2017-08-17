@@ -8,11 +8,7 @@ import java.sql.Statement;
 public class InsereCondominio{
 
   private Statement sentenca;
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 096022babda1aa0f7cded4057b0c85c4ec415233
   public InsereCondominio(){
       Conexao conexao = new Conexao();
       sentenca = conexao.getStatement();
