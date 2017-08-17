@@ -1,5 +1,5 @@
 
-import Classes.Morador;
+import Classes.Pessoa;
 import java.util.ArrayList;
 
 /*
@@ -13,8 +13,14 @@ import java.util.ArrayList;
  * @author Kim
  */
 public class Teste {
-    
+
     public static void main(String[] args) {
+        
+        InsereCondominio insere = new InsereCondominio();
+
+        int oqDeu = insere.inserirCondominio("Jose Adolfo", "0", "Patrulheiro", "Centro", "Araguari");
+
+        System.out.println(oqDeu);
     }
-    
+
 }

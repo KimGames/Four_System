@@ -215,7 +215,7 @@ public class Pessoa {
   }
 
   public ResultSet consultarTodosProprietarios(Statement sentenca,
-                                               String nome_condominio)){
+                                               String nome_condominio){
 
     ResultSet resposta = null;
     System.out.println(">Realizando consulta..");
