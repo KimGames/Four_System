@@ -22,8 +22,8 @@ import javax.swing.table.TableColumn;
 public class Tela_inicial extends javax.swing.JFrame {
     private int menu_lateral;
     private int menu_horizontal;
-    
-    
+
+
     public Tela_inicial() {
         initComponents();
         // SET LOOK AND FEEL
@@ -46,7 +46,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         }
 
         //ICONE APP
-        URL caminhoIcone = getClass().getResource("../src/Imagens/logo.png");
+        URL caminhoIcone = getClass().getResource("..\\Four_System\\Images\\logo.png");
         Image iconeTitulo = Toolkit.getDefaultToolkit().getImage(caminhoIcone);
         this.setIconImage(iconeTitulo);
 
@@ -2683,13 +2683,13 @@ public class Tela_inicial extends javax.swing.JFrame {
         array_botoes_laterais.add(btnAdicionar);
         array_botoes_laterais.add(btnAlterar);
         array_botoes_laterais.add(btnRemover);
-        
+
         for(int i = 0;i < array_botoes_laterais.size(); i++){
             array_botoes_laterais.get(i).setBackground(new Color(0,20,90));
         }
         array_botoes_laterais.get(index).setBackground(new Color(0,35,120));
     }
-    
+
     private void btnAdicionarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionarMouseClicked
         // TODO add your handling code here:
         set_btn_bgcolor(1);
@@ -2698,12 +2698,12 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalAdicionar1);
-        
+
         painelOpcaoSwitch.removeAll();
         painelOpcaoSwitch.repaint();
         painelOpcaoSwitch.revalidate();
         painelOpcaoSwitch.add(painelOpcaoContainer1);
-        
+
     }//GEN-LAST:event_btnAdicionarMouseClicked
 
     private void btnConsultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConsultarMouseClicked
@@ -2714,7 +2714,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalConsultar1);
-        
+
         painelOpcaoSwitch.removeAll();
         painelOpcaoSwitch.repaint();
         painelOpcaoSwitch.revalidate();
@@ -2729,20 +2729,20 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalAlterar1);
-        
-        
+
+
         painelOpcaoSwitch.removeAll();
         painelOpcaoSwitch.repaint();
         painelOpcaoSwitch.revalidate();
         painelOpcaoSwitch.add(painelOpcaoContainer2);
-        
+
     }//GEN-LAST:event_btnAlterarMouseClicked
 
     private void btnRemoverMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRemoverMouseClicked
         // TODO add your handling code here:
         set_btn_bgcolor(3);
         labelTitulo.setText("Remover");
-        
+
         painelPrincipalSwitch.removeAll();
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
@@ -2825,8 +2825,8 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalAlterar1);
-        
-        
+
+
     }//GEN-LAST:event_botao_condominios2MouseClicked
 
     private void botao_apartamentos2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_apartamentos2MouseClicked
@@ -2836,8 +2836,8 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalAlterar2);
-        
-        
+
+
     }//GEN-LAST:event_botao_apartamentos2MouseClicked
 
     private void botao_proprietarios2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_proprietarios2MouseClicked
@@ -2847,8 +2847,8 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalAlterar3);
-        
-        
+
+
     }//GEN-LAST:event_botao_proprietarios2MouseClicked
 
     private void botao_moradores2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_moradores2MouseClicked
@@ -2858,8 +2858,8 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalAlterar4);
-        
-        
+
+
     }//GEN-LAST:event_botao_moradores2MouseClicked
 
     private void botao_condominios3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_condominios3MouseClicked
@@ -2868,7 +2868,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalRemover1);
-        
+
     }//GEN-LAST:event_botao_condominios3MouseClicked
 
     private void botao_apartamentos3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_apartamentos3MouseClicked
@@ -2877,8 +2877,8 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalRemover2);
-        
-        
+
+
     }//GEN-LAST:event_botao_apartamentos3MouseClicked
 
     private void botao_proprietarios3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_proprietarios3MouseClicked
@@ -2887,7 +2887,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalRemover3);
-        
+
     }//GEN-LAST:event_botao_proprietarios3MouseClicked
 
     private void botao_moradores3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_moradores3MouseClicked
@@ -2896,7 +2896,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalSwitch.repaint();
         painelPrincipalSwitch.revalidate();
         painelPrincipalSwitch.add(painelPrincipalRemover4);
-        
+
     }//GEN-LAST:event_botao_moradores3MouseClicked
 
     private void botaoPesquisar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar2MouseClicked
@@ -2962,7 +2962,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
