@@ -1331,6 +1331,11 @@ public class Tela_inicial extends javax.swing.JFrame {
         comboBoxCondominios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "Rua", "Bairro" }));
 
         botaoPesquisar.setText("Pesquisar");
+        botaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoPesquisarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout painelPrincipalConsultar1Layout = new javax.swing.GroupLayout(painelPrincipalConsultar1);
         painelPrincipalConsultar1.setLayout(painelPrincipalConsultar1Layout);
@@ -2977,6 +2982,10 @@ public class Tela_inicial extends javax.swing.JFrame {
     private void botaoPesquisar10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar10MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoPesquisar10MouseClicked
+
+    private void botaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPesquisarActionPerformed
+        new ExibeConsultaCondominio().setVisible(true);
+    }//GEN-LAST:event_botaoPesquisarActionPerformed
 
     /**
      * @param args the command line arguments
