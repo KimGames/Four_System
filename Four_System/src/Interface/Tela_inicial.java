@@ -302,30 +302,31 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeAdicionar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeAdicionar.setForeground(new java.awt.Color(255, 255, 255));
+        iconeAdicionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Plus_24px.png"))); // NOI18N
 
         javax.swing.GroupLayout btnAdicionarLayout = new javax.swing.GroupLayout(btnAdicionar);
         btnAdicionar.setLayout(btnAdicionarLayout);
         btnAdicionarLayout.setHorizontalGroup(
             btnAdicionarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnAdicionarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel14)
-                .addGap(20, 20, 20))
-            .addGroup(btnAdicionarLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(81, 81, 81)
                 .addComponent(iconeAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelAdicionar)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel14))
         );
         btnAdicionarLayout.setVerticalGroup(
             btnAdicionarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnAdicionarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(btnAdicionarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(iconeAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelAdicionar)
-                    .addComponent(jLabel14))
+                    .addGroup(btnAdicionarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(labelAdicionar)
+                        .addGroup(btnAdicionarLayout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addComponent(jLabel14))))
                 .addContainerGap())
         );
 
@@ -346,6 +347,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeAlterar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeAlterar.setForeground(new java.awt.Color(255, 255, 255));
+        iconeAlterar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Restart_24px.png"))); // NOI18N
 
         javax.swing.GroupLayout btnAlterarLayout = new javax.swing.GroupLayout(btnAlterar);
         btnAlterar.setLayout(btnAlterarLayout);
@@ -395,6 +397,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeConsultas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeConsultas.setForeground(new java.awt.Color(255, 255, 255));
+        iconeConsultas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Search_24px.png"))); // NOI18N
 
         javax.swing.GroupLayout btnConsultarLayout = new javax.swing.GroupLayout(btnConsultar);
         btnConsultar.setLayout(btnConsultarLayout);
@@ -438,6 +441,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeRemover.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeRemover.setForeground(new java.awt.Color(255, 255, 255));
+        iconeRemover.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Minus_24px.png"))); // NOI18N
 
         javax.swing.GroupLayout btnRemoverLayout = new javax.swing.GroupLayout(btnRemover);
         btnRemover.setLayout(btnRemoverLayout);
@@ -528,7 +532,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addContainerGap(191, Short.MAX_VALUE))
         );
 
         painelOpcao.setBackground(new java.awt.Color(169, 207, 70));
@@ -2661,7 +2665,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(painelOpcao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(painelPrincipalSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(556, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2671,7 +2675,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(painelOpcao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(painelPrincipalSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         pack();
