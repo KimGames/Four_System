@@ -648,7 +648,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(iconeProprietarios, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(labelConsultas3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         botao_proprietariosLayout.setVerticalGroup(
             botao_proprietariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -738,6 +738,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeCondominios4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeCondominios4.setForeground(new java.awt.Color(255, 255, 255));
+        iconeCondominios4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Apartment_48px.png"))); // NOI18N
 
         labelCondominios6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         labelCondominios6.setForeground(new java.awt.Color(255, 255, 255));
@@ -779,6 +780,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeApartamentos5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeApartamentos5.setForeground(new java.awt.Color(255, 255, 255));
+        iconeApartamentos5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Building_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout botao_apartamentos1Layout = new javax.swing.GroupLayout(botao_apartamentos1);
         botao_apartamentos1.setLayout(botao_apartamentos1Layout);
@@ -816,6 +818,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeProprietarios1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeProprietarios1.setForeground(new java.awt.Color(255, 255, 255));
+        iconeProprietarios1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Manager_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout botao_proprietarios1Layout = new javax.swing.GroupLayout(botao_proprietarios1);
         botao_proprietarios1.setLayout(botao_proprietarios1Layout);
@@ -825,7 +828,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(iconeProprietarios1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         botao_proprietarios1Layout.setVerticalGroup(
             botao_proprietarios1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -853,6 +856,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeMoradores1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeMoradores1.setForeground(new java.awt.Color(255, 255, 255));
+        iconeMoradores1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Group_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout botao_moradores1Layout = new javax.swing.GroupLayout(botao_moradores1);
         botao_moradores1.setLayout(botao_moradores1Layout);
@@ -1008,7 +1012,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(iconeProprietarios2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         botao_proprietarios2Layout.setVerticalGroup(
             botao_proprietarios2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1192,7 +1196,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(iconeProprietarios3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelConsultas9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
         botao_proprietarios3Layout.setVerticalGroup(
             botao_proprietarios3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1362,7 +1366,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addComponent(labelCondominios4)
                     .addComponent(textFieldPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoPesquisar))
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalConsultar1, "card2");
@@ -1424,7 +1428,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addComponent(labelCondominios9)
                     .addComponent(textFieldPesquisar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoPesquisar1))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalConsultar2, "card2");
@@ -1485,7 +1489,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addComponent(labelCondominios13)
                     .addComponent(textFieldPesquisar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoPesquisar3))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalConsultar3, "card2");
@@ -1546,7 +1550,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addComponent(labelCondominios21)
                     .addComponent(textFieldPesquisar11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoPesquisar11))
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(139, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalConsultar4, "card2");
@@ -1667,7 +1671,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalAdicionar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelAdd3)
                     .addComponent(textFieldAdd2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addContainerGap(60, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalAdicionar1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(botao_adicionar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1809,7 +1813,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGroup(painelPrincipalAdicionar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelAdd10)
                             .addComponent(textFieldAdd10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAdicionar2, "card2");
@@ -1919,7 +1923,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addComponent(textFieldAdd16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botao_adicionar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAdicionar3, "card2");
@@ -2006,7 +2010,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addComponent(labelAdd15)
                         .addComponent(textFieldAdd14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(botao_adicionar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(358, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAdicionar4, "card2");
@@ -2088,7 +2092,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar1, "card2");
@@ -2170,7 +2174,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar2, "card2");
@@ -2252,7 +2256,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar3, "card2");
@@ -2334,7 +2338,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar4, "card2");
@@ -2416,7 +2420,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover1, "card2");
@@ -2498,7 +2502,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover2, "card2");
@@ -2580,7 +2584,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover3, "card2");
@@ -2662,7 +2666,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                         .addGap(5, 5, 5)))
                 .addGap(15, 15, 15)
                 .addComponent(comboBoxContainer10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(399, Short.MAX_VALUE))
+                .addContainerGap(214, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover4, "card2");
