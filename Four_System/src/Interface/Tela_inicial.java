@@ -2769,25 +2769,41 @@ public class Tela_inicial extends javax.swing.JFrame {
     private void botao_moradoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_moradoresMouseClicked
         // TODO add your handling code here:
         labelSubTitulo.setText("Consultar Moradores");
+        painelPrincipalSwitch.removeAll();
+        painelPrincipalSwitch.repaint();
+        painelPrincipalSwitch.revalidate();
+        painelPrincipalSwitch.add(painelPrincipalConsultar4);
+        
 
     }//GEN-LAST:event_botao_moradoresMouseClicked
 
     private void botao_proprietariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_proprietariosMouseClicked
         // TODO add your handling code here:
         labelSubTitulo.setText("Consultar Proprietários");
-
+        painelPrincipalSwitch.removeAll();
+        painelPrincipalSwitch.repaint();
+        painelPrincipalSwitch.revalidate();
+        painelPrincipalSwitch.add(painelPrincipalConsultar3);
+        
     }//GEN-LAST:event_botao_proprietariosMouseClicked
 
     private void botao_apartamentosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_apartamentosMouseClicked
         // TODO add your handling code here:
         labelSubTitulo.setText("Consultar Apartamentos");
-
+        painelPrincipalSwitch.removeAll();
+        painelPrincipalSwitch.repaint();
+        painelPrincipalSwitch.revalidate();
+        painelPrincipalSwitch.add(painelPrincipalConsultar2);
+        
     }//GEN-LAST:event_botao_apartamentosMouseClicked
 
     private void botao_condominiosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_condominiosMouseClicked
         // TODO add your handling code here:
         labelSubTitulo.setText("Consultar Condomínios");
         painelPrincipalSwitch.removeAll();
+        painelPrincipalSwitch.repaint();
+        painelPrincipalSwitch.revalidate();
+        painelPrincipalSwitch.add(painelPrincipalConsultar1);
         
     }//GEN-LAST:event_botao_condominiosMouseClicked
 
