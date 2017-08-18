@@ -162,8 +162,8 @@ public class Tela_inicial extends javax.swing.JFrame {
         botaoConsultar3 = new javax.swing.JButton();
         painelPrincipalConsultar4 = new javax.swing.JPanel();
         labelSubtitulo4 = new javax.swing.JLabel();
-        labelPesquisapor = new javax.swing.JLabel();
-        labelPesquisa = new javax.swing.JLabel();
+        labelPesquisapor4 = new javax.swing.JLabel();
+        labelPesquisa4 = new javax.swing.JLabel();
         comboBox4 = new javax.swing.JComboBox<>();
         textFieldConsultar4 = new javax.swing.JTextField();
         botaoConsultar4 = new javax.swing.JButton();
@@ -219,58 +219,44 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelBtnAdd3 = new javax.swing.JLabel();
         painelPrincipalAlterar1 = new javax.swing.JPanel();
         labelSubtitulo9 = new javax.swing.JLabel();
-        textFieldPesquisar2 = new javax.swing.JTextField();
-        labelCondominios11 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        labelAlterar1 = new javax.swing.JLabel();
+        textFieldAlterar1 = new javax.swing.JTextField();
+        botaoAlterar1 = new javax.swing.JButton();
         painelPrincipalAlterar2 = new javax.swing.JPanel();
-        botaoPesquisar4 = new javax.swing.JPanel();
-        iconeLupa4 = new javax.swing.JLabel();
-        textFieldPesquisar4 = new javax.swing.JTextField();
-        labelCondominios12 = new javax.swing.JLabel();
-        labelSubTitulo7 = new javax.swing.JLabel();
-        comboBoxContainer4 = new javax.swing.JPanel();
+        labelSubtitulo10 = new javax.swing.JLabel();
+        labelAlterar2 = new javax.swing.JLabel();
+        textFieldAlterar2 = new javax.swing.JTextField();
+        botaoAlterar2 = new javax.swing.JButton();
         painelPrincipalAlterar3 = new javax.swing.JPanel();
-        botaoPesquisar5 = new javax.swing.JPanel();
-        iconeLupa5 = new javax.swing.JLabel();
-        textFieldPesquisar5 = new javax.swing.JTextField();
-        labelCondominios15 = new javax.swing.JLabel();
-        labelSubTitulo8 = new javax.swing.JLabel();
-        comboBoxContainer5 = new javax.swing.JPanel();
+        labelSubtitulo11 = new javax.swing.JLabel();
+        textFieldAlterar3 = new javax.swing.JTextField();
+        labelAterar3 = new javax.swing.JLabel();
+        botaoAlterar3 = new javax.swing.JButton();
         painelPrincipalAlterar4 = new javax.swing.JPanel();
-        botaoPesquisar6 = new javax.swing.JPanel();
-        iconeLupa6 = new javax.swing.JLabel();
-        textFieldPesquisar6 = new javax.swing.JTextField();
-        labelCondominios16 = new javax.swing.JLabel();
-        labelSubTitulo9 = new javax.swing.JLabel();
-        comboBoxContainer6 = new javax.swing.JPanel();
+        labelSubtitulo12 = new javax.swing.JLabel();
+        labelAlterar4 = new javax.swing.JLabel();
+        textFieldAlterar4 = new javax.swing.JTextField();
+        botaoAlterar4 = new javax.swing.JButton();
         painelPrincipalRemover1 = new javax.swing.JPanel();
-        botaoPesquisar7 = new javax.swing.JPanel();
-        iconeLupa7 = new javax.swing.JLabel();
-        textFieldPesquisar7 = new javax.swing.JTextField();
-        labelCondominios17 = new javax.swing.JLabel();
-        labelSubTitulo10 = new javax.swing.JLabel();
-        comboBoxContainer7 = new javax.swing.JPanel();
+        labelSubtitulo13 = new javax.swing.JLabel();
+        textFieldRemover1 = new javax.swing.JTextField();
+        labelRemover1 = new javax.swing.JLabel();
+        botaoRemover1 = new javax.swing.JButton();
         painelPrincipalRemover2 = new javax.swing.JPanel();
-        botaoPesquisar8 = new javax.swing.JPanel();
-        iconeLupa8 = new javax.swing.JLabel();
-        textFieldPesquisar8 = new javax.swing.JTextField();
-        labelCondominios18 = new javax.swing.JLabel();
-        labelSubTitulo11 = new javax.swing.JLabel();
-        comboBoxContainer8 = new javax.swing.JPanel();
+        labelSubtitulo14 = new javax.swing.JLabel();
+        textFieldRemover2 = new javax.swing.JTextField();
+        labelRemover2 = new javax.swing.JLabel();
+        botaoRemover2 = new javax.swing.JButton();
         painelPrincipalRemover3 = new javax.swing.JPanel();
-        labelSubTitulo15 = new javax.swing.JLabel();
-        botaoPesquisar9 = new javax.swing.JPanel();
-        iconeLupa9 = new javax.swing.JLabel();
-        textFieldPesquisar9 = new javax.swing.JTextField();
-        labelCondominios19 = new javax.swing.JLabel();
-        comboBoxContainer9 = new javax.swing.JPanel();
+        labelSubtitulo15 = new javax.swing.JLabel();
+        textFieldRemover3 = new javax.swing.JTextField();
+        labelRemover3 = new javax.swing.JLabel();
+        botaoRemover3 = new javax.swing.JButton();
         painelPrincipalRemover4 = new javax.swing.JPanel();
-        labelSubTitulo16 = new javax.swing.JLabel();
-        botaoPesquisar10 = new javax.swing.JPanel();
-        iconeLupa10 = new javax.swing.JLabel();
-        textFieldPesquisar10 = new javax.swing.JTextField();
-        labelCondominios20 = new javax.swing.JLabel();
-        comboBoxContainer10 = new javax.swing.JPanel();
+        labelSubtitulo16 = new javax.swing.JLabel();
+        textFieldRemover4 = new javax.swing.JTextField();
+        labelRemover4 = new javax.swing.JLabel();
+        botaoRemover4 = new javax.swing.JButton();
 
         jMenu1.setText("jMenu1");
 
@@ -1501,13 +1487,13 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelSubtitulo4.setForeground(new java.awt.Color(255, 255, 255));
         labelSubtitulo4.setText("Consultar Morador");
 
-        labelPesquisapor.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelPesquisapor.setForeground(new java.awt.Color(255, 255, 255));
-        labelPesquisapor.setText("Pesquisa por");
+        labelPesquisapor4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelPesquisapor4.setForeground(new java.awt.Color(255, 255, 255));
+        labelPesquisapor4.setText("Pesquisa por");
 
-        labelPesquisa.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelPesquisa.setForeground(new java.awt.Color(255, 255, 255));
-        labelPesquisa.setText("Pesquisa");
+        labelPesquisa4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelPesquisa4.setForeground(new java.awt.Color(255, 255, 255));
+        labelPesquisa4.setText("Pesquisa");
 
         comboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "CPF", "Apartamento" }));
 
@@ -1525,8 +1511,8 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addGroup(painelPrincipalConsultar4Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(painelPrincipalConsultar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelPesquisapor)
-                            .addComponent(labelPesquisa))
+                            .addComponent(labelPesquisapor4)
+                            .addComponent(labelPesquisa4))
                         .addGap(91, 91, 91)
                         .addGroup(painelPrincipalConsultar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelPrincipalConsultar4Layout.createSequentialGroup()
@@ -1543,11 +1529,11 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(labelSubtitulo4)
                 .addGap(33, 33, 33)
                 .addGroup(painelPrincipalConsultar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelPesquisapor)
+                    .addComponent(labelPesquisapor4)
                     .addComponent(comboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(painelPrincipalConsultar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelPesquisa)
+                    .addComponent(labelPesquisa4)
                     .addComponent(textFieldConsultar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botaoConsultar4))
                 .addContainerGap(139, Short.MAX_VALUE))
@@ -2022,11 +2008,11 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelSubtitulo9.setForeground(new java.awt.Color(255, 255, 255));
         labelSubtitulo9.setText("Alterar Condomínio");
 
-        labelCondominios11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios11.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios11.setText("Pesquisa");
+        labelAlterar1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAlterar1.setForeground(new java.awt.Color(255, 255, 255));
+        labelAlterar1.setText("Pesquisa");
 
-        jButton1.setText("Pesquisar");
+        botaoAlterar1.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalAlterar1Layout = new javax.swing.GroupLayout(painelPrincipalAlterar1);
         painelPrincipalAlterar1.setLayout(painelPrincipalAlterar1Layout);
@@ -2035,15 +2021,15 @@ public class Tela_inicial extends javax.swing.JFrame {
             .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                 .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelSubtitulo9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios11)
+                        .addComponent(labelAlterar1)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldAlterar1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jButton1)))
+                        .addComponent(botaoAlterar1))
+                    .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(labelSubtitulo9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(123, Short.MAX_VALUE))
         );
         painelPrincipalAlterar1Layout.setVerticalGroup(
@@ -2053,10 +2039,10 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(labelSubtitulo9)
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelCondominios11)
+                    .addComponent(labelAlterar1)
                     .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(textFieldPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton1)))
+                        .addComponent(textFieldAlterar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoAlterar1)))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
 
@@ -2065,42 +2051,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalAlterar2.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalAlterar2.setAutoscrolls(true);
 
-        botaoPesquisar4.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar4MouseClicked(evt);
-            }
-        });
+        labelSubtitulo10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo10.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo10.setText("Alterar Apartamento");
 
-        iconeLupa4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa4.setForeground(new java.awt.Color(255, 255, 255));
+        labelAlterar2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAlterar2.setForeground(new java.awt.Color(255, 255, 255));
+        labelAlterar2.setText("Pesquisa");
 
-        javax.swing.GroupLayout botaoPesquisar4Layout = new javax.swing.GroupLayout(botaoPesquisar4);
-        botaoPesquisar4.setLayout(botaoPesquisar4Layout);
-        botaoPesquisar4Layout.setHorizontalGroup(
-            botaoPesquisar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa4)
-                .addContainerGap())
-        );
-        botaoPesquisar4Layout.setVerticalGroup(
-            botaoPesquisar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa4))
-        );
-
-        labelCondominios12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios12.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios12.setText("Pesquisa");
-
-        labelSubTitulo7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo7.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo7.setText("Alterar Apartamento");
-
-        comboBoxContainer4.setLayout(new java.awt.CardLayout());
+        botaoAlterar2.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalAlterar2Layout = new javax.swing.GroupLayout(painelPrincipalAlterar2);
         painelPrincipalAlterar2.setLayout(painelPrincipalAlterar2Layout);
@@ -2109,37 +2068,29 @@ public class Tela_inicial extends javax.swing.JFrame {
             .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
                 .addGroup(painelPrincipalAlterar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo7, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios12)
+                        .addComponent(labelAlterar2)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar4, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldAlterar2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoAlterar2))
+                    .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(labelSubtitulo10, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         painelPrincipalAlterar2Layout.setVerticalGroup(
             painelPrincipalAlterar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalAlterar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo7)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalAlterar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios12)
-                            .addComponent(textFieldPesquisar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalAlterar2Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(labelSubtitulo10)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalAlterar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelAlterar2)
+                    .addGroup(painelPrincipalAlterar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldAlterar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoAlterar2)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar2, "card2");
@@ -2147,42 +2098,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalAlterar3.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalAlterar3.setAutoscrolls(true);
 
-        botaoPesquisar5.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar5MouseClicked(evt);
-            }
-        });
+        labelSubtitulo11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo11.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo11.setText("Alterar Proprietário");
 
-        iconeLupa5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa5.setForeground(new java.awt.Color(255, 255, 255));
+        labelAterar3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAterar3.setForeground(new java.awt.Color(255, 255, 255));
+        labelAterar3.setText("Pesquisa");
 
-        javax.swing.GroupLayout botaoPesquisar5Layout = new javax.swing.GroupLayout(botaoPesquisar5);
-        botaoPesquisar5.setLayout(botaoPesquisar5Layout);
-        botaoPesquisar5Layout.setHorizontalGroup(
-            botaoPesquisar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa5)
-                .addContainerGap())
-        );
-        botaoPesquisar5Layout.setVerticalGroup(
-            botaoPesquisar5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa5))
-        );
-
-        labelCondominios15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios15.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios15.setText("Pesquisa");
-
-        labelSubTitulo8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo8.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo8.setText("Alterar Proprietário");
-
-        comboBoxContainer5.setLayout(new java.awt.CardLayout());
+        botaoAlterar3.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalAlterar3Layout = new javax.swing.GroupLayout(painelPrincipalAlterar3);
         painelPrincipalAlterar3.setLayout(painelPrincipalAlterar3Layout);
@@ -2191,37 +2115,29 @@ public class Tela_inicial extends javax.swing.JFrame {
             .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
                 .addGroup(painelPrincipalAlterar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo8, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios15)
+                        .addComponent(labelAterar3)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar5, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldAlterar3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoAlterar3))
+                    .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(labelSubtitulo11, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         painelPrincipalAlterar3Layout.setVerticalGroup(
             painelPrincipalAlterar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalAlterar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo8)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalAlterar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios15)
-                            .addComponent(textFieldPesquisar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalAlterar3Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(labelSubtitulo11)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalAlterar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelAterar3)
+                    .addGroup(painelPrincipalAlterar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldAlterar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoAlterar3)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar3, "card2");
@@ -2229,42 +2145,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalAlterar4.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalAlterar4.setAutoscrolls(true);
 
-        botaoPesquisar6.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar6MouseClicked(evt);
-            }
-        });
+        labelSubtitulo12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo12.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo12.setText("Alterar Morador");
 
-        iconeLupa6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa6.setForeground(new java.awt.Color(255, 255, 255));
+        labelAlterar4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAlterar4.setForeground(new java.awt.Color(255, 255, 255));
+        labelAlterar4.setText("Pesquisa");
 
-        javax.swing.GroupLayout botaoPesquisar6Layout = new javax.swing.GroupLayout(botaoPesquisar6);
-        botaoPesquisar6.setLayout(botaoPesquisar6Layout);
-        botaoPesquisar6Layout.setHorizontalGroup(
-            botaoPesquisar6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa6)
-                .addContainerGap())
-        );
-        botaoPesquisar6Layout.setVerticalGroup(
-            botaoPesquisar6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa6))
-        );
-
-        labelCondominios16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios16.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios16.setText("Pesquisa");
-
-        labelSubTitulo9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo9.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo9.setText("Alterar Morador");
-
-        comboBoxContainer6.setLayout(new java.awt.CardLayout());
+        botaoAlterar4.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalAlterar4Layout = new javax.swing.GroupLayout(painelPrincipalAlterar4);
         painelPrincipalAlterar4.setLayout(painelPrincipalAlterar4Layout);
@@ -2274,36 +2163,28 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalAlterar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAlterar4Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar4Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelSubtitulo12, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelPrincipalAlterar4Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios16)
+                        .addComponent(labelAlterar4)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar6, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldAlterar4, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoAlterar4)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         painelPrincipalAlterar4Layout.setVerticalGroup(
             painelPrincipalAlterar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalAlterar4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalAlterar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalAlterar4Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo9)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalAlterar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios16)
-                            .addComponent(textFieldPesquisar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalAlterar4Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(labelSubtitulo12)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalAlterar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelAlterar4)
+                    .addGroup(painelPrincipalAlterar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldAlterar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoAlterar4)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar4, "card2");
@@ -2311,42 +2192,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalRemover1.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalRemover1.setAutoscrolls(true);
 
-        botaoPesquisar7.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar7MouseClicked(evt);
-            }
-        });
+        labelSubtitulo13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo13.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo13.setText("Remover Condomínio");
 
-        iconeLupa7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa7.setForeground(new java.awt.Color(255, 255, 255));
+        labelRemover1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelRemover1.setForeground(new java.awt.Color(255, 255, 255));
+        labelRemover1.setText("Pesquisa");
 
-        javax.swing.GroupLayout botaoPesquisar7Layout = new javax.swing.GroupLayout(botaoPesquisar7);
-        botaoPesquisar7.setLayout(botaoPesquisar7Layout);
-        botaoPesquisar7Layout.setHorizontalGroup(
-            botaoPesquisar7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar7Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa7)
-                .addContainerGap())
-        );
-        botaoPesquisar7Layout.setVerticalGroup(
-            botaoPesquisar7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa7))
-        );
-
-        labelCondominios17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios17.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios17.setText("Pesquisa");
-
-        labelSubTitulo10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo10.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo10.setText("Remover Condomínio");
-
-        comboBoxContainer7.setLayout(new java.awt.CardLayout());
+        botaoRemover1.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalRemover1Layout = new javax.swing.GroupLayout(painelPrincipalRemover1);
         painelPrincipalRemover1.setLayout(painelPrincipalRemover1Layout);
@@ -2356,36 +2210,28 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalRemover1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalRemover1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo10, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover1Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelSubtitulo13, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelPrincipalRemover1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios17)
+                        .addComponent(labelRemover1)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar7, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldRemover1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoRemover1)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         painelPrincipalRemover1Layout.setVerticalGroup(
             painelPrincipalRemover1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalRemover1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalRemover1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalRemover1Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo10)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalRemover1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios17)
-                            .addComponent(textFieldPesquisar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalRemover1Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(labelSubtitulo13)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalRemover1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRemover1)
+                    .addGroup(painelPrincipalRemover1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldRemover1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoRemover1)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover1, "card2");
@@ -2393,42 +2239,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalRemover2.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalRemover2.setAutoscrolls(true);
 
-        botaoPesquisar8.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar8MouseClicked(evt);
-            }
-        });
+        labelSubtitulo14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo14.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo14.setText("Remover Apartamento");
 
-        iconeLupa8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa8.setForeground(new java.awt.Color(255, 255, 255));
+        labelRemover2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelRemover2.setForeground(new java.awt.Color(255, 255, 255));
+        labelRemover2.setText("Pesquisa");
 
-        javax.swing.GroupLayout botaoPesquisar8Layout = new javax.swing.GroupLayout(botaoPesquisar8);
-        botaoPesquisar8.setLayout(botaoPesquisar8Layout);
-        botaoPesquisar8Layout.setHorizontalGroup(
-            botaoPesquisar8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa8)
-                .addContainerGap())
-        );
-        botaoPesquisar8Layout.setVerticalGroup(
-            botaoPesquisar8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa8))
-        );
-
-        labelCondominios18.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios18.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios18.setText("Pesquisa");
-
-        labelSubTitulo11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo11.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo11.setText("Remover Apartamento");
-
-        comboBoxContainer8.setLayout(new java.awt.CardLayout());
+        botaoRemover2.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalRemover2Layout = new javax.swing.GroupLayout(painelPrincipalRemover2);
         painelPrincipalRemover2.setLayout(painelPrincipalRemover2Layout);
@@ -2437,37 +2256,29 @@ public class Tela_inicial extends javax.swing.JFrame {
             .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
                 .addGroup(painelPrincipalRemover2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo11, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios18)
+                        .addComponent(labelRemover2)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar8, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldRemover2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoRemover2))
+                    .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(labelSubtitulo14)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         painelPrincipalRemover2Layout.setVerticalGroup(
             painelPrincipalRemover2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalRemover2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo11)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalRemover2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios18)
-                            .addComponent(textFieldPesquisar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalRemover2Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(labelSubtitulo14)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalRemover2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRemover2)
+                    .addGroup(painelPrincipalRemover2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldRemover2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoRemover2)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover2, "card2");
@@ -2475,42 +2286,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalRemover3.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalRemover3.setAutoscrolls(true);
 
-        labelSubTitulo15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo15.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo15.setText("Remover Proprietário");
+        labelSubtitulo15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo15.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo15.setText("Remover Proprietário");
 
-        botaoPesquisar9.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar9MouseClicked(evt);
-            }
-        });
+        labelRemover3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelRemover3.setForeground(new java.awt.Color(255, 255, 255));
+        labelRemover3.setText("Pesquisa");
 
-        iconeLupa9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa9.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout botaoPesquisar9Layout = new javax.swing.GroupLayout(botaoPesquisar9);
-        botaoPesquisar9.setLayout(botaoPesquisar9Layout);
-        botaoPesquisar9Layout.setHorizontalGroup(
-            botaoPesquisar9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar9Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa9)
-                .addContainerGap())
-        );
-        botaoPesquisar9Layout.setVerticalGroup(
-            botaoPesquisar9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar9Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa9))
-        );
-
-        labelCondominios19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios19.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios19.setText("Pesquisa");
-
-        comboBoxContainer9.setLayout(new java.awt.CardLayout());
+        botaoRemover3.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalRemover3Layout = new javax.swing.GroupLayout(painelPrincipalRemover3);
         painelPrincipalRemover3.setLayout(painelPrincipalRemover3Layout);
@@ -2519,37 +2303,29 @@ public class Tela_inicial extends javax.swing.JFrame {
             .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
                 .addGroup(painelPrincipalRemover3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo15, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios19)
+                        .addComponent(labelRemover3)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar9, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldRemover3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoRemover3))
+                    .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(labelSubtitulo15)))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         painelPrincipalRemover3Layout.setVerticalGroup(
             painelPrincipalRemover3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalRemover3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo15)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalRemover3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios19)
-                            .addComponent(textFieldPesquisar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalRemover3Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addComponent(labelSubtitulo15)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalRemover3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelRemover3)
+                    .addGroup(painelPrincipalRemover3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldRemover3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoRemover3)))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover3, "card2");
@@ -2557,42 +2333,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalRemover4.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalRemover4.setAutoscrolls(true);
 
-        labelSubTitulo16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo16.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo16.setText("Remover Morador");
+        labelSubtitulo16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo16.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo16.setText("Remover Morador");
 
-        botaoPesquisar10.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar10MouseClicked(evt);
-            }
-        });
+        labelRemover4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelRemover4.setForeground(new java.awt.Color(255, 255, 255));
+        labelRemover4.setText("Pesquisa");
 
-        iconeLupa10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa10.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout botaoPesquisar10Layout = new javax.swing.GroupLayout(botaoPesquisar10);
-        botaoPesquisar10.setLayout(botaoPesquisar10Layout);
-        botaoPesquisar10Layout.setHorizontalGroup(
-            botaoPesquisar10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar10Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa10)
-                .addContainerGap())
-        );
-        botaoPesquisar10Layout.setVerticalGroup(
-            botaoPesquisar10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar10Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa10))
-        );
-
-        labelCondominios20.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios20.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios20.setText("Pesquisa");
-
-        comboBoxContainer10.setLayout(new java.awt.CardLayout());
+        botaoRemover4.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalRemover4Layout = new javax.swing.GroupLayout(painelPrincipalRemover4);
         painelPrincipalRemover4.setLayout(painelPrincipalRemover4Layout);
@@ -2601,37 +2350,31 @@ public class Tela_inicial extends javax.swing.JFrame {
             .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
                 .addGroup(painelPrincipalRemover4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo16, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
-                        .addComponent(labelCondominios20)
+                        .addComponent(labelRemover4)
                         .addGap(110, 110, 110)
-                        .addComponent(textFieldPesquisar10, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(textFieldRemover4, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addComponent(botaoRemover4))
+                    .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(labelSubtitulo16, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
         painelPrincipalRemover4Layout.setVerticalGroup(
             painelPrincipalRemover4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(labelSubtitulo16)
+                .addGap(18, 18, 18)
                 .addGroup(painelPrincipalRemover4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(painelPrincipalRemover4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(labelRemover4)
+                        .addComponent(textFieldRemover4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo16)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalRemover4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios20)
-                            .addComponent(textFieldPesquisar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalRemover4Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botaoRemover4)
                         .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalRemover4, "card2");
@@ -2921,34 +2664,6 @@ public class Tela_inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoAdicionar4MouseClicked
 
-    private void botaoPesquisar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar4MouseClicked
-
-    private void botaoPesquisar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar5MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar5MouseClicked
-
-    private void botaoPesquisar6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar6MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar6MouseClicked
-
-    private void botaoPesquisar7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar7MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar7MouseClicked
-
-    private void botaoPesquisar8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar8MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar8MouseClicked
-
-    private void botaoPesquisar9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar9MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar9MouseClicked
-
-    private void botaoPesquisar10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar10MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar10MouseClicked
-
     private void botaoConsultar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConsultar1ActionPerformed
         new ExibeConsultaCondominio().setVisible(true);
     }//GEN-LAST:event_botaoConsultar1ActionPerformed
@@ -2999,17 +2714,18 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JPanel botaoAdicionar1;
     private javax.swing.JPanel botaoAdicionar3;
     private javax.swing.JPanel botaoAdicionar4;
+    private javax.swing.JButton botaoAlterar1;
+    private javax.swing.JButton botaoAlterar2;
+    private javax.swing.JButton botaoAlterar3;
+    private javax.swing.JButton botaoAlterar4;
     private javax.swing.JButton botaoConsultar1;
     private javax.swing.JButton botaoConsultar2;
     private javax.swing.JButton botaoConsultar3;
     private javax.swing.JButton botaoConsultar4;
-    private javax.swing.JPanel botaoPesquisar10;
-    private javax.swing.JPanel botaoPesquisar4;
-    private javax.swing.JPanel botaoPesquisar5;
-    private javax.swing.JPanel botaoPesquisar6;
-    private javax.swing.JPanel botaoPesquisar7;
-    private javax.swing.JPanel botaoPesquisar8;
-    private javax.swing.JPanel botaoPesquisar9;
+    private javax.swing.JButton botaoRemover1;
+    private javax.swing.JButton botaoRemover2;
+    private javax.swing.JButton botaoRemover3;
+    private javax.swing.JButton botaoRemover4;
     private javax.swing.JPanel botao_apartamentos;
     private javax.swing.JPanel botao_apartamentos1;
     private javax.swing.JPanel botao_apartamentos2;
@@ -3035,13 +2751,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboBox2;
     private javax.swing.JComboBox<String> comboBox3;
     private javax.swing.JComboBox<String> comboBox4;
-    private javax.swing.JPanel comboBoxContainer10;
-    private javax.swing.JPanel comboBoxContainer4;
-    private javax.swing.JPanel comboBoxContainer5;
-    private javax.swing.JPanel comboBoxContainer6;
-    private javax.swing.JPanel comboBoxContainer7;
-    private javax.swing.JPanel comboBoxContainer8;
-    private javax.swing.JPanel comboBoxContainer9;
     private javax.swing.JLabel iconeAdicionar;
     private javax.swing.JLabel iconeAlterar;
     private javax.swing.JLabel iconeApartamentos4;
@@ -3053,13 +2762,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel iconeCondominios5;
     private javax.swing.JLabel iconeCondominios6;
     private javax.swing.JLabel iconeConsultas;
-    private javax.swing.JLabel iconeLupa10;
-    private javax.swing.JLabel iconeLupa4;
-    private javax.swing.JLabel iconeLupa5;
-    private javax.swing.JLabel iconeLupa6;
-    private javax.swing.JLabel iconeLupa7;
-    private javax.swing.JLabel iconeLupa8;
-    private javax.swing.JLabel iconeLupa9;
     private javax.swing.JLabel iconeMoradores;
     private javax.swing.JLabel iconeMoradores1;
     private javax.swing.JLabel iconeMoradores2;
@@ -3069,7 +2771,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel iconeProprietarios2;
     private javax.swing.JLabel iconeProprietarios3;
     private javax.swing.JLabel iconeRemover;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -3098,18 +2799,14 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel labelAdicionar8;
     private javax.swing.JLabel labelAdicionar9;
     private javax.swing.JLabel labelAlterar;
+    private javax.swing.JLabel labelAlterar1;
+    private javax.swing.JLabel labelAlterar2;
+    private javax.swing.JLabel labelAlterar4;
+    private javax.swing.JLabel labelAterar3;
     private javax.swing.JLabel labelBtnAdd;
     private javax.swing.JLabel labelBtnAdd1;
     private javax.swing.JLabel labelBtnAdd2;
     private javax.swing.JLabel labelBtnAdd3;
-    private javax.swing.JLabel labelCondominios11;
-    private javax.swing.JLabel labelCondominios12;
-    private javax.swing.JLabel labelCondominios15;
-    private javax.swing.JLabel labelCondominios16;
-    private javax.swing.JLabel labelCondominios17;
-    private javax.swing.JLabel labelCondominios18;
-    private javax.swing.JLabel labelCondominios19;
-    private javax.swing.JLabel labelCondominios20;
     private javax.swing.JLabel labelCondominios3;
     private javax.swing.JLabel labelCondominios6;
     private javax.swing.JLabel labelCondominios7;
@@ -3127,23 +2824,27 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel labelConsultas7;
     private javax.swing.JLabel labelConsultas8;
     private javax.swing.JLabel labelConsultas9;
-    private javax.swing.JLabel labelPesquisa;
     private javax.swing.JLabel labelPesquisa1;
     private javax.swing.JLabel labelPesquisa2;
     private javax.swing.JLabel labelPesquisa3;
-    private javax.swing.JLabel labelPesquisapor;
+    private javax.swing.JLabel labelPesquisa4;
     private javax.swing.JLabel labelPesquisapor1;
     private javax.swing.JLabel labelPesquisapor2;
     private javax.swing.JLabel labelPesquisapor3;
+    private javax.swing.JLabel labelPesquisapor4;
     private javax.swing.JLabel labelRemover;
-    private javax.swing.JLabel labelSubTitulo10;
-    private javax.swing.JLabel labelSubTitulo11;
-    private javax.swing.JLabel labelSubTitulo15;
-    private javax.swing.JLabel labelSubTitulo16;
-    private javax.swing.JLabel labelSubTitulo7;
-    private javax.swing.JLabel labelSubTitulo8;
-    private javax.swing.JLabel labelSubTitulo9;
+    private javax.swing.JLabel labelRemover1;
+    private javax.swing.JLabel labelRemover2;
+    private javax.swing.JLabel labelRemover3;
+    private javax.swing.JLabel labelRemover4;
     private javax.swing.JLabel labelSubtitulo1;
+    private javax.swing.JLabel labelSubtitulo10;
+    private javax.swing.JLabel labelSubtitulo11;
+    private javax.swing.JLabel labelSubtitulo12;
+    private javax.swing.JLabel labelSubtitulo13;
+    private javax.swing.JLabel labelSubtitulo14;
+    private javax.swing.JLabel labelSubtitulo15;
+    private javax.swing.JLabel labelSubtitulo16;
     private javax.swing.JLabel labelSubtitulo2;
     private javax.swing.JLabel labelSubtitulo3;
     private javax.swing.JLabel labelSubtitulo4;
@@ -3193,17 +2894,17 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JTextField textFieldAdicionar7;
     private javax.swing.JTextField textFieldAdicionar8;
     private javax.swing.JTextField textFieldAdicionar9;
+    private javax.swing.JTextField textFieldAlterar1;
+    private javax.swing.JTextField textFieldAlterar2;
+    private javax.swing.JTextField textFieldAlterar3;
+    private javax.swing.JTextField textFieldAlterar4;
     private javax.swing.JTextField textFieldConsultar1;
     private javax.swing.JTextField textFieldConsultar2;
     private javax.swing.JTextField textFieldConsultar3;
     private javax.swing.JTextField textFieldConsultar4;
-    private javax.swing.JTextField textFieldPesquisar10;
-    private javax.swing.JTextField textFieldPesquisar2;
-    private javax.swing.JTextField textFieldPesquisar4;
-    private javax.swing.JTextField textFieldPesquisar5;
-    private javax.swing.JTextField textFieldPesquisar6;
-    private javax.swing.JTextField textFieldPesquisar7;
-    private javax.swing.JTextField textFieldPesquisar8;
-    private javax.swing.JTextField textFieldPesquisar9;
+    private javax.swing.JTextField textFieldRemover1;
+    private javax.swing.JTextField textFieldRemover2;
+    private javax.swing.JTextField textFieldRemover3;
+    private javax.swing.JTextField textFieldRemover4;
     // End of variables declaration//GEN-END:variables
 }
