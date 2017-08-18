@@ -4,6 +4,14 @@
  * and open the template in the editor.
  */
 package Interface;
+import Classes.Condominio;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -16,6 +24,7 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
      */
     public ExibeConsultaCondominio() {
         initComponents();
+        List<Condominio> fazerConsulta = fazerConsulta();
     }
 
     /**
@@ -55,23 +64,15 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Nome", "Sindico", "Rua", "Bairro", "Cidade"
+                "Id", "Nome"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
+        ));
         jScrollPane2.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -130,7 +131,42 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public List<Condominio> fazerConsulta(){
+        
+    
+    Conexao c = new Conexao();
+    Condominio con = new Condominio();
+    Condominio conAux = new Condominio();
+    ResultSet resposta = con.consultarTodosCondominios(c.getStatement());
+    List<Condominio> condominios = new ArrayList<>();
+        try {
+            while(resposta.next()){
+                conAux.setId(resposta.getInt("id"));
+                conAux.setNome("nome");
+                
+                condominios.add(conAux);
+            }   } catch (SQLException ex) {
+            Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+        for(Condominio conAux2: condominios){
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            model.addRow(new Object[]{conAux2.getId(),conAux.getNome() } );
+            
+        }
+    
+        
+        
+        
+        
+        return condominios;
+    }
+    
+    
+   
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

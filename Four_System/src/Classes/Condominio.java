@@ -16,7 +16,7 @@ import java.sql.Statement;
  */
 public class Condominio {
 
-  private String id;
+  private int id;
   private String nome;
   private String id_sindico;
   private String rua;
@@ -33,7 +33,7 @@ public class Condominio {
 	/**
 	* Default Condominio constructor
 	*/
-	public Condominio(String id, String nome, String id_sindico, String rua, String bairro, String cidade) {
+	public Condominio(int id, String nome, String id_sindico, String rua, String bairro, String cidade) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -47,7 +47,7 @@ public class Condominio {
 	* Returns value of id
 	* @return
 	*/
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
@@ -55,7 +55,7 @@ public class Condominio {
 	* Sets new value of id
 	* @param
 	*/
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
