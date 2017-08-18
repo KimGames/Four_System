@@ -561,6 +561,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeCondominios3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeCondominios3.setForeground(new java.awt.Color(255, 255, 255));
+        iconeCondominios3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Apartment_48px.png"))); // NOI18N
 
         labelCondominios3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         labelCondominios3.setForeground(new java.awt.Color(255, 255, 255));
@@ -599,6 +600,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeApartamentos4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeApartamentos4.setForeground(new java.awt.Color(255, 255, 255));
+        iconeApartamentos4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Building_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout botao_apartamentosLayout = new javax.swing.GroupLayout(botao_apartamentos);
         botao_apartamentos.setLayout(botao_apartamentosLayout);
@@ -636,6 +638,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeProprietarios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeProprietarios.setForeground(new java.awt.Color(255, 255, 255));
+        iconeProprietarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Manager_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout botao_proprietariosLayout = new javax.swing.GroupLayout(botao_proprietarios);
         botao_proprietarios.setLayout(botao_proprietariosLayout);
@@ -670,6 +673,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         iconeMoradores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         iconeMoradores.setForeground(new java.awt.Color(255, 255, 255));
+        iconeMoradores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Group_48px.png"))); // NOI18N
 
         javax.swing.GroupLayout botao_moradoresLayout = new javax.swing.GroupLayout(botao_moradores);
         botao_moradores.setLayout(botao_moradoresLayout);
@@ -2783,7 +2787,8 @@ public class Tela_inicial extends javax.swing.JFrame {
     private void botao_condominiosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_condominiosMouseClicked
         // TODO add your handling code here:
         labelSubTitulo.setText("Consultar Condomínios");
-
+        painelPrincipalSwitch.removeAll();
+        
     }//GEN-LAST:event_botao_condominiosMouseClicked
 
     private void botao_condominios1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_condominios1MouseClicked
