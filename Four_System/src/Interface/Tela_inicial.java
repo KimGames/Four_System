@@ -2405,6 +2405,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     void set_btn_bgcolor(int index){
