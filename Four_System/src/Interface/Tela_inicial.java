@@ -140,33 +140,33 @@ public class Tela_inicial extends javax.swing.JFrame {
         iconeMoradores3 = new javax.swing.JLabel();
         painelPrincipalSwitch = new javax.swing.JPanel();
         painelPrincipalConsultar1 = new javax.swing.JPanel();
-        textFieldPesquisar = new javax.swing.JTextField();
-        labelCondominios4 = new javax.swing.JLabel();
-        labelCondominios5 = new javax.swing.JLabel();
         labelSubTitulo = new javax.swing.JLabel();
+        labelPesquisapor1 = new javax.swing.JLabel();
         comboBoxCondominios = new javax.swing.JComboBox<>();
-        botaoPesquisar = new javax.swing.JButton();
+        labelPesquisa1 = new javax.swing.JLabel();
+        textFieldPesquisar = new javax.swing.JTextField();
+        botaoConsultar1 = new javax.swing.JButton();
         painelPrincipalConsultar2 = new javax.swing.JPanel();
         textFieldPesquisar1 = new javax.swing.JTextField();
         labelCondominios9 = new javax.swing.JLabel();
         labelCondominios10 = new javax.swing.JLabel();
         labelSubTitulo3 = new javax.swing.JLabel();
         comboBoxApartamentos1 = new javax.swing.JComboBox<>();
-        botaoPesquisar1 = new javax.swing.JButton();
+        botaoConsultar2 = new javax.swing.JButton();
         painelPrincipalConsultar3 = new javax.swing.JPanel();
         textFieldPesquisar3 = new javax.swing.JTextField();
         labelCondominios13 = new javax.swing.JLabel();
         labelCondominios14 = new javax.swing.JLabel();
         labelSubTitulo14 = new javax.swing.JLabel();
         comboBoxProprietarios = new javax.swing.JComboBox<>();
-        botaoPesquisar3 = new javax.swing.JButton();
+        botaoConsultar3 = new javax.swing.JButton();
         painelPrincipalConsultar4 = new javax.swing.JPanel();
         textFieldPesquisar11 = new javax.swing.JTextField();
         labelCondominios21 = new javax.swing.JLabel();
         labelCondominios22 = new javax.swing.JLabel();
         labelSubTitulo15 = new javax.swing.JLabel();
         comboBoxMoradores = new javax.swing.JComboBox<>();
-        botaoPesquisar11 = new javax.swing.JButton();
+        botaoConsultar4 = new javax.swing.JButton();
         painelPrincipalAdicionar1 = new javax.swing.JPanel();
         labelSubTitulo1 = new javax.swing.JLabel();
         textFieldAdd = new javax.swing.JTextField();
@@ -223,7 +223,6 @@ public class Tela_inicial extends javax.swing.JFrame {
         textFieldPesquisar2 = new javax.swing.JTextField();
         labelCondominios11 = new javax.swing.JLabel();
         labelSubTitulo2 = new javax.swing.JLabel();
-        comboBoxContainer2 = new javax.swing.JPanel();
         painelPrincipalAlterar2 = new javax.swing.JPanel();
         botaoPesquisar4 = new javax.swing.JPanel();
         iconeLupa4 = new javax.swing.JLabel();
@@ -277,6 +276,7 @@ public class Tela_inicial extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setSize(new java.awt.Dimension(1319, 896));
 
         bgside.setBackground(new java.awt.Color(0, 18, 53));
         bgside.setName("bgside"); // NOI18N
@@ -537,11 +537,6 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         painelOpcao.setBackground(new java.awt.Color(169, 207, 70));
         painelOpcao.setName("painelOpcao"); // NOI18N
-        painelOpcao.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                painelOpcaoMouseClicked(evt);
-            }
-        });
 
         labelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         labelTitulo.setForeground(new java.awt.Color(255, 255, 255));
@@ -1308,24 +1303,24 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalConsultar1.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalConsultar1.setAutoscrolls(true);
 
-        labelCondominios4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios4.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios4.setText("Pesquisa");
-
-        labelCondominios5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelCondominios5.setForeground(new java.awt.Color(255, 255, 255));
-        labelCondominios5.setText("Pesquisa por");
-
         labelSubTitulo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelSubTitulo.setForeground(new java.awt.Color(255, 255, 255));
         labelSubTitulo.setText("Consultar Condomínio");
 
+        labelPesquisapor1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelPesquisapor1.setForeground(new java.awt.Color(255, 255, 255));
+        labelPesquisapor1.setText("Pesquisa por");
+
         comboBoxCondominios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "Rua", "Bairro" }));
 
-        botaoPesquisar.setText("Pesquisar");
-        botaoPesquisar.addActionListener(new java.awt.event.ActionListener() {
+        labelPesquisa1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelPesquisa1.setForeground(new java.awt.Color(255, 255, 255));
+        labelPesquisa1.setText("Pesquisa");
+
+        botaoConsultar1.setText("Pesquisar");
+        botaoConsultar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoPesquisarActionPerformed(evt);
+                botaoConsultar1ActionPerformed(evt);
             }
         });
 
@@ -1341,14 +1336,14 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addGroup(painelPrincipalConsultar1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(painelPrincipalConsultar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios5)
-                            .addComponent(labelCondominios4))
+                            .addComponent(labelPesquisapor1)
+                            .addComponent(labelPesquisa1))
                         .addGap(91, 91, 91)
                         .addGroup(painelPrincipalConsultar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelPrincipalConsultar1Layout.createSequentialGroup()
                                 .addComponent(textFieldPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(botaoPesquisar))
+                                .addComponent(botaoConsultar1))
                             .addComponent(comboBoxCondominios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(120, Short.MAX_VALUE))
         );
@@ -1359,13 +1354,13 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(labelSubTitulo)
                 .addGap(33, 33, 33)
                 .addGroup(painelPrincipalConsultar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCondominios5)
+                    .addComponent(labelPesquisapor1)
                     .addComponent(comboBoxCondominios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
                 .addGroup(painelPrincipalConsultar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCondominios4)
+                    .addComponent(labelPesquisa1)
                     .addComponent(textFieldPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPesquisar))
+                    .addComponent(botaoConsultar1))
                 .addContainerGap(139, Short.MAX_VALUE))
         );
 
@@ -1388,7 +1383,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         comboBoxApartamentos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Condomínio", "Numero e Blcoo" }));
 
-        botaoPesquisar1.setText("Pesquisar");
+        botaoConsultar2.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalConsultar2Layout = new javax.swing.GroupLayout(painelPrincipalConsultar2);
         painelPrincipalConsultar2.setLayout(painelPrincipalConsultar2Layout);
@@ -1404,7 +1399,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addGroup(painelPrincipalConsultar2Layout.createSequentialGroup()
                         .addComponent(textFieldPesquisar1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar1))
+                        .addComponent(botaoConsultar2))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalConsultar2Layout.createSequentialGroup()
                         .addGap(0, 6, Short.MAX_VALUE)
                         .addComponent(comboBoxApartamentos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1427,7 +1422,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalConsultar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCondominios9)
                     .addComponent(textFieldPesquisar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPesquisar1))
+                    .addComponent(botaoConsultar2))
                 .addContainerGap(139, Short.MAX_VALUE))
         );
 
@@ -1450,7 +1445,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         comboBoxProprietarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "CPF", "Apartamento" }));
 
-        botaoPesquisar3.setText("Pesquisar");
+        botaoConsultar3.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalConsultar3Layout = new javax.swing.GroupLayout(painelPrincipalConsultar3);
         painelPrincipalConsultar3.setLayout(painelPrincipalConsultar3Layout);
@@ -1471,7 +1466,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                             .addGroup(painelPrincipalConsultar3Layout.createSequentialGroup()
                                 .addComponent(textFieldPesquisar3, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(botaoPesquisar3))
+                                .addComponent(botaoConsultar3))
                             .addComponent(comboBoxProprietarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(120, Short.MAX_VALUE))
         );
@@ -1488,7 +1483,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalConsultar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCondominios13)
                     .addComponent(textFieldPesquisar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPesquisar3))
+                    .addComponent(botaoConsultar3))
                 .addContainerGap(139, Short.MAX_VALUE))
         );
 
@@ -1511,7 +1506,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
         comboBoxMoradores.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Nome", "CPF", "Apartamento" }));
 
-        botaoPesquisar11.setText("Pesquisar");
+        botaoConsultar4.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalConsultar4Layout = new javax.swing.GroupLayout(painelPrincipalConsultar4);
         painelPrincipalConsultar4.setLayout(painelPrincipalConsultar4Layout);
@@ -1532,7 +1527,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                             .addGroup(painelPrincipalConsultar4Layout.createSequentialGroup()
                                 .addComponent(textFieldPesquisar11, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(botaoPesquisar11))
+                                .addComponent(botaoConsultar4))
                             .addComponent(comboBoxMoradores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(120, Short.MAX_VALUE))
         );
@@ -1549,7 +1544,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalConsultar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelCondominios21)
                     .addComponent(textFieldPesquisar11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoPesquisar11))
+                    .addComponent(botaoConsultar4))
                 .addContainerGap(139, Short.MAX_VALUE))
         );
 
@@ -2053,8 +2048,6 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelSubTitulo2.setForeground(new java.awt.Color(255, 255, 255));
         labelSubTitulo2.setText("Alterar Condomínio");
 
-        comboBoxContainer2.setLayout(new java.awt.CardLayout());
-
         javax.swing.GroupLayout painelPrincipalAlterar1Layout = new javax.swing.GroupLayout(painelPrincipalAlterar1);
         painelPrincipalAlterar1.setLayout(painelPrincipalAlterar1Layout);
         painelPrincipalAlterar1Layout.setHorizontalGroup(
@@ -2064,9 +2057,6 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(labelSubTitulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
-                        .addComponent(comboBoxContainer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(labelCondominios11)
@@ -2090,9 +2080,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                     .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                         .addComponent(botaoPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(5, 5, 5)))
-                .addGap(15, 15, 15)
-                .addComponent(comboBoxContainer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(214, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         painelPrincipalSwitch.add(painelPrincipalAlterar1, "card2");
@@ -2774,10 +2762,6 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelOpcaoSwitch.add(painelOpcaoContainer4);
     }//GEN-LAST:event_btnRemoverMouseClicked
 
-    private void painelOpcaoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelOpcaoMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_painelOpcaoMouseClicked
-
     private void botao_moradoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_moradoresMouseClicked
         // TODO add your handling code here:
         labelSubTitulo.setText("Consultar Moradores");
@@ -2992,9 +2976,9 @@ public class Tela_inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoPesquisar10MouseClicked
 
-    private void botaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPesquisarActionPerformed
+    private void botaoConsultar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConsultar1ActionPerformed
         new ExibeConsultaCondominio().setVisible(true);
-    }//GEN-LAST:event_botaoPesquisarActionPerformed
+    }//GEN-LAST:event_botaoConsultar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3035,12 +3019,12 @@ public class Tela_inicial extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgside;
-    private javax.swing.JButton botaoPesquisar;
-    private javax.swing.JButton botaoPesquisar1;
+    private javax.swing.JButton botaoConsultar1;
+    private javax.swing.JButton botaoConsultar2;
+    private javax.swing.JButton botaoConsultar3;
+    private javax.swing.JButton botaoConsultar4;
     private javax.swing.JPanel botaoPesquisar10;
-    private javax.swing.JButton botaoPesquisar11;
     private javax.swing.JPanel botaoPesquisar2;
-    private javax.swing.JButton botaoPesquisar3;
     private javax.swing.JPanel botaoPesquisar4;
     private javax.swing.JPanel botaoPesquisar5;
     private javax.swing.JPanel botaoPesquisar6;
@@ -3074,7 +3058,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboBoxApartamentos1;
     private javax.swing.JComboBox<String> comboBoxCondominios;
     private javax.swing.JPanel comboBoxContainer10;
-    private javax.swing.JPanel comboBoxContainer2;
     private javax.swing.JPanel comboBoxContainer4;
     private javax.swing.JPanel comboBoxContainer5;
     private javax.swing.JPanel comboBoxContainer6;
@@ -3157,8 +3140,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel labelCondominios21;
     private javax.swing.JLabel labelCondominios22;
     private javax.swing.JLabel labelCondominios3;
-    private javax.swing.JLabel labelCondominios4;
-    private javax.swing.JLabel labelCondominios5;
     private javax.swing.JLabel labelCondominios6;
     private javax.swing.JLabel labelCondominios7;
     private javax.swing.JLabel labelCondominios8;
@@ -3176,6 +3157,8 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel labelConsultas7;
     private javax.swing.JLabel labelConsultas8;
     private javax.swing.JLabel labelConsultas9;
+    private javax.swing.JLabel labelPesquisa1;
+    private javax.swing.JLabel labelPesquisapor1;
     private javax.swing.JLabel labelRemover;
     private javax.swing.JLabel labelSubTitulo;
     private javax.swing.JLabel labelSubTitulo1;

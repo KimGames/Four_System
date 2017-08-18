@@ -45,7 +45,7 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
                 conAux.setRua(resposta.getString("rua"));
                 conAux.setBairro(resposta.getString("bairro"));
                 conAux.setCidade(resposta.getString("cidade"));
-
+                
                 condominios.add(conAux);
             }
         } catch (SQLException ex) {

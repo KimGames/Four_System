@@ -14,6 +14,9 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[1319, 896]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -507,9 +510,6 @@
         </Property>
         <Property name="name" type="java.lang.String" value="painelOpcao" noResource="true"/>
       </Properties>
-      <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="painelOpcaoMouseClicked"/>
-      </Events>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1853,15 +1853,15 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelCondominios5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelCondominios4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPesquisapor1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPesquisa1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="textFieldPesquisar" min="-2" pref="350" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="botaoPesquisar" min="-2" max="-2" attributes="0"/>
+                                      <Component id="botaoConsultar1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="comboBoxCondominios" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -1878,14 +1878,14 @@
                       <Component id="labelSubTitulo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisapor1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="comboBoxCondominios" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisa1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textFieldPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botaoPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaoConsultar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
                   </Group>
@@ -1893,30 +1893,6 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="textFieldPesquisar">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios4">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios5">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="labelSubTitulo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -1926,6 +1902,17 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Consultar Condom&#xed;nio"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelPesquisapor1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JComboBox" name="comboBoxCondominios">
@@ -1943,12 +1930,25 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="botaoPesquisar">
+            <Component class="javax.swing.JLabel" name="labelPesquisa1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldPesquisar">
+            </Component>
+            <Component class="javax.swing.JButton" name="botaoConsultar1">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoPesquisarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoConsultar1ActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -1980,7 +1980,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="textFieldPesquisar1" min="-2" pref="350" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="botaoPesquisar1" min="-2" max="-2" attributes="0"/>
+                              <Component id="botaoConsultar2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
@@ -2010,7 +2010,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelCondominios9" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textFieldPesquisar1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botaoPesquisar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaoConsultar2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
                   </Group>
@@ -2066,7 +2066,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="botaoPesquisar1">
+            <Component class="javax.swing.JButton" name="botaoConsultar2">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
@@ -2106,7 +2106,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="textFieldPesquisar3" min="-2" pref="350" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="botaoPesquisar3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="botaoConsultar3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="comboBoxProprietarios" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -2130,7 +2130,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelCondominios13" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textFieldPesquisar3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botaoPesquisar3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaoConsultar3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
                   </Group>
@@ -2188,7 +2188,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="botaoPesquisar3">
+            <Component class="javax.swing.JButton" name="botaoConsultar3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
@@ -2228,7 +2228,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="textFieldPesquisar11" min="-2" pref="350" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="botaoPesquisar11" min="-2" max="-2" attributes="0"/>
+                                      <Component id="botaoConsultar4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="comboBoxMoradores" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -2252,7 +2252,7 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelCondominios21" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="textFieldPesquisar11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botaoPesquisar11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaoConsultar4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
                   </Group>
@@ -2310,7 +2310,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="botaoPesquisar11">
+            <Component class="javax.swing.JButton" name="botaoConsultar4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pesquisar"/>
               </Properties>
@@ -3150,10 +3150,6 @@
                               <Component id="labelSubTitulo2" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
-                              <Component id="comboBoxContainer2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                               <Component id="labelCondominios11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
@@ -3184,9 +3180,7 @@
                               <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                      <Component id="comboBoxContainer2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="214" max="32767" attributes="0"/>
+                      <EmptySpace pref="229" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3261,10 +3255,6 @@
                 <Property name="text" type="java.lang.String" value="Alterar Condom&#xed;nio"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="comboBoxContainer2">
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
-            </Container>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="painelPrincipalAlterar2">
