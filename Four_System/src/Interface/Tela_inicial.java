@@ -198,31 +198,30 @@ public class Tela_inicial extends javax.swing.JFrame {
         botaoadicionar2 = new javax.swing.JPanel();
         labelBtnAdd1 = new javax.swing.JLabel();
         painelPrincipalAdicionar3 = new javax.swing.JPanel();
-        labelSubTitulo5 = new javax.swing.JLabel();
-        textFieldAdd11 = new javax.swing.JTextField();
-        labelAdd12 = new javax.swing.JLabel();
-        labelAdd13 = new javax.swing.JLabel();
-        textFieldAdd12 = new javax.swing.JTextField();
-        botao_adicionar2 = new javax.swing.JPanel();
+        labelSubtitulo7 = new javax.swing.JLabel();
+        labelAdicionar12 = new javax.swing.JLabel();
+        labelAdicionar13 = new javax.swing.JLabel();
+        labelAdicionar14 = new javax.swing.JLabel();
+        labelAdicionar15 = new javax.swing.JLabel();
+        textFieldAdicionar12 = new javax.swing.JTextField();
+        textFieldAdicionar13 = new javax.swing.JTextField();
+        textFieldAdicionar14 = new javax.swing.JTextField();
+        textFieldAdicionar15 = new javax.swing.JTextField();
+        botaoAdicionar3 = new javax.swing.JPanel();
         labelBtnAdd2 = new javax.swing.JLabel();
-        labelAdd16 = new javax.swing.JLabel();
-        labelAdd17 = new javax.swing.JLabel();
-        textFieldAdd15 = new javax.swing.JTextField();
-        textFieldAdd16 = new javax.swing.JTextField();
         painelPrincipalAdicionar4 = new javax.swing.JPanel();
-        labelSubTitulo6 = new javax.swing.JLabel();
-        textFieldAdd13 = new javax.swing.JTextField();
-        labelAdd14 = new javax.swing.JLabel();
-        labelAdd15 = new javax.swing.JLabel();
-        textFieldAdd14 = new javax.swing.JTextField();
-        botao_adicionar3 = new javax.swing.JPanel();
+        labelSubtitulo8 = new javax.swing.JLabel();
+        labelAdicionar16 = new javax.swing.JLabel();
+        labelAdicionar17 = new javax.swing.JLabel();
+        textFieldAdicionar16 = new javax.swing.JTextField();
+        textFieldAdicionar17 = new javax.swing.JTextField();
+        botaoAdicionar4 = new javax.swing.JPanel();
         labelBtnAdd3 = new javax.swing.JLabel();
         painelPrincipalAlterar1 = new javax.swing.JPanel();
-        botaoPesquisar2 = new javax.swing.JPanel();
-        iconeLupa2 = new javax.swing.JLabel();
+        labelSubtitulo9 = new javax.swing.JLabel();
         textFieldPesquisar2 = new javax.swing.JTextField();
         labelCondominios11 = new javax.swing.JLabel();
-        labelSubTitulo2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         painelPrincipalAlterar2 = new javax.swing.JPanel();
         botaoPesquisar4 = new javax.swing.JPanel();
         iconeLupa4 = new javax.swing.JLabel();
@@ -1822,23 +1821,31 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalAdicionar3.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalAdicionar3.setAutoscrolls(true);
 
-        labelSubTitulo5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo5.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo5.setText("Adicionar Proprietário");
+        labelSubtitulo7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo7.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo7.setText("Adicionar Proprietário");
 
-        labelAdd12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelAdd12.setForeground(new java.awt.Color(255, 255, 255));
-        labelAdd12.setText("CPF");
+        labelAdicionar12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAdicionar12.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdicionar12.setText("CPF");
 
-        labelAdd13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelAdd13.setForeground(new java.awt.Color(255, 255, 255));
-        labelAdd13.setText("Nome");
+        labelAdicionar13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAdicionar13.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdicionar13.setText("Nome");
 
-        botao_adicionar2.setBackground(new java.awt.Color(179, 222, 63));
-        botao_adicionar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botao_adicionar2.addMouseListener(new java.awt.event.MouseAdapter() {
+        labelAdicionar14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAdicionar14.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdicionar14.setText("E-mail");
+
+        labelAdicionar15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAdicionar15.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdicionar15.setText("Telefone");
+
+        botaoAdicionar3.setBackground(new java.awt.Color(179, 222, 63));
+        botaoAdicionar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoAdicionar3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botao_adicionar2MouseClicked(evt);
+                botaoAdicionar3MouseClicked(evt);
             }
         });
 
@@ -1846,30 +1853,22 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelBtnAdd2.setForeground(new java.awt.Color(255, 255, 255));
         labelBtnAdd2.setText("Adicionar");
 
-        javax.swing.GroupLayout botao_adicionar2Layout = new javax.swing.GroupLayout(botao_adicionar2);
-        botao_adicionar2.setLayout(botao_adicionar2Layout);
-        botao_adicionar2Layout.setHorizontalGroup(
-            botao_adicionar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_adicionar2Layout.createSequentialGroup()
+        javax.swing.GroupLayout botaoAdicionar3Layout = new javax.swing.GroupLayout(botaoAdicionar3);
+        botaoAdicionar3.setLayout(botaoAdicionar3Layout);
+        botaoAdicionar3Layout.setHorizontalGroup(
+            botaoAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoAdicionar3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelBtnAdd2)
                 .addGap(38, 38, 38))
         );
-        botao_adicionar2Layout.setVerticalGroup(
-            botao_adicionar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_adicionar2Layout.createSequentialGroup()
+        botaoAdicionar3Layout.setVerticalGroup(
+            botaoAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botaoAdicionar3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelBtnAdd2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        labelAdd16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelAdd16.setForeground(new java.awt.Color(255, 255, 255));
-        labelAdd16.setText("E-mail");
-
-        labelAdd17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelAdd17.setForeground(new java.awt.Color(255, 255, 255));
-        labelAdd17.setText("Telefone");
 
         javax.swing.GroupLayout painelPrincipalAdicionar3Layout = new javax.swing.GroupLayout(painelPrincipalAdicionar3);
         painelPrincipalAdicionar3.setLayout(painelPrincipalAdicionar3Layout);
@@ -1879,51 +1878,51 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAdicionar3Layout.createSequentialGroup()
-                        .addComponent(labelAdd17)
+                        .addComponent(labelAdicionar15)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(painelPrincipalAdicionar3Layout.createSequentialGroup()
                         .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelSubTitulo5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelAdd13)
+                            .addComponent(labelAdicionar13)
                             .addGroup(painelPrincipalAdicionar3Layout.createSequentialGroup()
                                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelAdd12)
-                                    .addComponent(labelAdd16))
+                                    .addComponent(labelAdicionar12)
+                                    .addComponent(labelAdicionar14))
                                 .addGap(139, 139, 139)
                                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFieldAdd15, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldAdd12, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldAdd11, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldAdd16, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(textFieldAdicionar14, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldAdicionar13, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldAdicionar12, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldAdicionar15, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(labelSubtitulo7, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(347, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelPrincipalAdicionar3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botao_adicionar2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botaoAdicionar3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62))
         );
         painelPrincipalAdicionar3Layout.setVerticalGroup(
             painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalAdicionar3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelSubTitulo5)
+                .addComponent(labelSubtitulo7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAdd12)
-                    .addComponent(textFieldAdd11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAdicionar12)
+                    .addComponent(textFieldAdicionar12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAdd13)
-                    .addComponent(textFieldAdd12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAdicionar13)
+                    .addComponent(textFieldAdicionar13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAdd16)
-                    .addComponent(textFieldAdd15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAdicionar14)
+                    .addComponent(textFieldAdicionar14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalAdicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAdd17)
-                    .addComponent(textFieldAdd16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAdicionar15)
+                    .addComponent(textFieldAdicionar15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botao_adicionar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botaoAdicionar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(53, Short.MAX_VALUE))
         );
 
@@ -1932,23 +1931,23 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalAdicionar4.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalAdicionar4.setAutoscrolls(true);
 
-        labelSubTitulo6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo6.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo6.setText("Adicionar Morador");
+        labelSubtitulo8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo8.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo8.setText("Adicionar Morador");
 
-        labelAdd14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelAdd14.setForeground(new java.awt.Color(255, 255, 255));
-        labelAdd14.setText("CPF");
+        labelAdicionar16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAdicionar16.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdicionar16.setText("CPF");
 
-        labelAdd15.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelAdd15.setForeground(new java.awt.Color(255, 255, 255));
-        labelAdd15.setText("Nome");
+        labelAdicionar17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelAdicionar17.setForeground(new java.awt.Color(255, 255, 255));
+        labelAdicionar17.setText("Nome");
 
-        botao_adicionar3.setBackground(new java.awt.Color(179, 222, 63));
-        botao_adicionar3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botao_adicionar3.addMouseListener(new java.awt.event.MouseAdapter() {
+        botaoAdicionar4.setBackground(new java.awt.Color(179, 222, 63));
+        botaoAdicionar4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        botaoAdicionar4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botao_adicionar3MouseClicked(evt);
+                botaoAdicionar4MouseClicked(evt);
             }
         });
 
@@ -1956,18 +1955,18 @@ public class Tela_inicial extends javax.swing.JFrame {
         labelBtnAdd3.setForeground(new java.awt.Color(255, 255, 255));
         labelBtnAdd3.setText("Adicionar");
 
-        javax.swing.GroupLayout botao_adicionar3Layout = new javax.swing.GroupLayout(botao_adicionar3);
-        botao_adicionar3.setLayout(botao_adicionar3Layout);
-        botao_adicionar3Layout.setHorizontalGroup(
-            botao_adicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botao_adicionar3Layout.createSequentialGroup()
+        javax.swing.GroupLayout botaoAdicionar4Layout = new javax.swing.GroupLayout(botaoAdicionar4);
+        botaoAdicionar4.setLayout(botaoAdicionar4Layout);
+        botaoAdicionar4Layout.setHorizontalGroup(
+            botaoAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoAdicionar4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(labelBtnAdd3)
                 .addGap(38, 38, 38))
         );
-        botao_adicionar3Layout.setVerticalGroup(
-            botao_adicionar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(botao_adicionar3Layout.createSequentialGroup()
+        botaoAdicionar4Layout.setVerticalGroup(
+            botaoAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(botaoAdicionar4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(labelBtnAdd3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1981,36 +1980,36 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAdicionar4Layout.createSequentialGroup()
+                        .addComponent(labelAdicionar17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botaoAdicionar4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(75, 75, 75))
+                    .addGroup(painelPrincipalAdicionar4Layout.createSequentialGroup()
                         .addGroup(painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelSubTitulo6, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(painelPrincipalAdicionar4Layout.createSequentialGroup()
-                                .addComponent(labelAdd14)
+                                .addComponent(labelAdicionar16)
                                 .addGap(161, 161, 161)
                                 .addGroup(painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(textFieldAdd14, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textFieldAdd13, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(347, Short.MAX_VALUE))
-                    .addGroup(painelPrincipalAdicionar4Layout.createSequentialGroup()
-                        .addComponent(labelAdd15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botao_adicionar3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(75, 75, 75))))
+                                    .addComponent(textFieldAdicionar17, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(textFieldAdicionar16, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(labelSubtitulo8, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(347, Short.MAX_VALUE))))
         );
         painelPrincipalAdicionar4Layout.setVerticalGroup(
             painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalAdicionar4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelSubTitulo6)
+                .addComponent(labelSubtitulo8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelAdd14)
-                    .addComponent(textFieldAdd13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelAdicionar16)
+                    .addComponent(textFieldAdicionar16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAdicionar4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelAdd15)
-                        .addComponent(textFieldAdd14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(botao_adicionar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelAdicionar17)
+                        .addComponent(textFieldAdicionar17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botaoAdicionar4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(173, Short.MAX_VALUE))
         );
 
@@ -2019,40 +2018,15 @@ public class Tela_inicial extends javax.swing.JFrame {
         painelPrincipalAlterar1.setBackground(new java.awt.Color(169, 207, 70));
         painelPrincipalAlterar1.setAutoscrolls(true);
 
-        botaoPesquisar2.setBackground(new java.awt.Color(179, 222, 63));
-        botaoPesquisar2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        botaoPesquisar2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botaoPesquisar2MouseClicked(evt);
-            }
-        });
-
-        iconeLupa2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        iconeLupa2.setForeground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout botaoPesquisar2Layout = new javax.swing.GroupLayout(botaoPesquisar2);
-        botaoPesquisar2.setLayout(botaoPesquisar2Layout);
-        botaoPesquisar2Layout.setHorizontalGroup(
-            botaoPesquisar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconeLupa2)
-                .addContainerGap())
-        );
-        botaoPesquisar2Layout.setVerticalGroup(
-            botaoPesquisar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, botaoPesquisar2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(iconeLupa2))
-        );
+        labelSubtitulo9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelSubtitulo9.setForeground(new java.awt.Color(255, 255, 255));
+        labelSubtitulo9.setText("Alterar Condomínio");
 
         labelCondominios11.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         labelCondominios11.setForeground(new java.awt.Color(255, 255, 255));
         labelCondominios11.setText("Pesquisa");
 
-        labelSubTitulo2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelSubTitulo2.setForeground(new java.awt.Color(255, 255, 255));
-        labelSubTitulo2.setText("Alterar Condomínio");
+        jButton1.setText("Pesquisar");
 
         javax.swing.GroupLayout painelPrincipalAlterar1Layout = new javax.swing.GroupLayout(painelPrincipalAlterar1);
         painelPrincipalAlterar1.setLayout(painelPrincipalAlterar1Layout);
@@ -2062,30 +2036,27 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(labelSubTitulo2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelSubtitulo9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(labelCondominios11)
                         .addGap(110, 110, 110)
                         .addComponent(textFieldPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(botaoPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(166, Short.MAX_VALUE))
+                        .addGap(26, 26, 26)
+                        .addComponent(jButton1)))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
         painelPrincipalAlterar1Layout.setVerticalGroup(
             painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
-                        .addComponent(labelSubTitulo2)
-                        .addGap(18, 18, 18)
-                        .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelCondominios11)
-                            .addComponent(textFieldPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(painelPrincipalAlterar1Layout.createSequentialGroup()
-                        .addComponent(botaoPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
+                .addComponent(labelSubtitulo9)
+                .addGap(18, 18, 18)
+                .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelCondominios11)
+                    .addGroup(painelPrincipalAlterar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(textFieldPesquisar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton1)))
                 .addContainerGap(229, Short.MAX_VALUE))
         );
 
@@ -2926,10 +2897,6 @@ public class Tela_inicial extends javax.swing.JFrame {
 
     }//GEN-LAST:event_botao_moradores3MouseClicked
 
-    private void botaoPesquisar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoPesquisar2MouseClicked
-
     private void botaoAdicionar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoAdicionar1MouseClicked
@@ -2946,13 +2913,13 @@ public class Tela_inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoadicionar2MouseClicked
 
-    private void botao_adicionar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_adicionar2MouseClicked
+    private void botaoAdicionar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar3MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_botao_adicionar2MouseClicked
+    }//GEN-LAST:event_botaoAdicionar3MouseClicked
 
-    private void botao_adicionar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_adicionar3MouseClicked
+    private void botaoAdicionar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar4MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_botao_adicionar3MouseClicked
+    }//GEN-LAST:event_botaoAdicionar4MouseClicked
 
     private void botaoPesquisar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoPesquisar4MouseClicked
         // TODO add your handling code here:
@@ -3030,20 +2997,19 @@ public class Tela_inicial extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgside;
     private javax.swing.JPanel botaoAdicionar1;
+    private javax.swing.JPanel botaoAdicionar3;
+    private javax.swing.JPanel botaoAdicionar4;
     private javax.swing.JButton botaoConsultar1;
     private javax.swing.JButton botaoConsultar2;
     private javax.swing.JButton botaoConsultar3;
     private javax.swing.JButton botaoConsultar4;
     private javax.swing.JPanel botaoPesquisar10;
-    private javax.swing.JPanel botaoPesquisar2;
     private javax.swing.JPanel botaoPesquisar4;
     private javax.swing.JPanel botaoPesquisar5;
     private javax.swing.JPanel botaoPesquisar6;
     private javax.swing.JPanel botaoPesquisar7;
     private javax.swing.JPanel botaoPesquisar8;
     private javax.swing.JPanel botaoPesquisar9;
-    private javax.swing.JPanel botao_adicionar2;
-    private javax.swing.JPanel botao_adicionar3;
     private javax.swing.JPanel botao_apartamentos;
     private javax.swing.JPanel botao_apartamentos1;
     private javax.swing.JPanel botao_apartamentos2;
@@ -3088,7 +3054,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel iconeCondominios6;
     private javax.swing.JLabel iconeConsultas;
     private javax.swing.JLabel iconeLupa10;
-    private javax.swing.JLabel iconeLupa2;
     private javax.swing.JLabel iconeLupa4;
     private javax.swing.JLabel iconeLupa5;
     private javax.swing.JLabel iconeLupa6;
@@ -3104,6 +3069,7 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel iconeProprietarios2;
     private javax.swing.JLabel iconeProprietarios3;
     private javax.swing.JLabel iconeRemover;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -3113,16 +3079,16 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JLabel labelAdd12;
-    private javax.swing.JLabel labelAdd13;
-    private javax.swing.JLabel labelAdd14;
-    private javax.swing.JLabel labelAdd15;
-    private javax.swing.JLabel labelAdd16;
-    private javax.swing.JLabel labelAdd17;
     private javax.swing.JLabel labelAdicionar;
     private javax.swing.JLabel labelAdicionar1;
     private javax.swing.JLabel labelAdicionar10;
     private javax.swing.JLabel labelAdicionar11;
+    private javax.swing.JLabel labelAdicionar12;
+    private javax.swing.JLabel labelAdicionar13;
+    private javax.swing.JLabel labelAdicionar14;
+    private javax.swing.JLabel labelAdicionar15;
+    private javax.swing.JLabel labelAdicionar16;
+    private javax.swing.JLabel labelAdicionar17;
     private javax.swing.JLabel labelAdicionar2;
     private javax.swing.JLabel labelAdicionar3;
     private javax.swing.JLabel labelAdicionar4;
@@ -3174,9 +3140,6 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel labelSubTitulo11;
     private javax.swing.JLabel labelSubTitulo15;
     private javax.swing.JLabel labelSubTitulo16;
-    private javax.swing.JLabel labelSubTitulo2;
-    private javax.swing.JLabel labelSubTitulo5;
-    private javax.swing.JLabel labelSubTitulo6;
     private javax.swing.JLabel labelSubTitulo7;
     private javax.swing.JLabel labelSubTitulo8;
     private javax.swing.JLabel labelSubTitulo9;
@@ -3186,6 +3149,9 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JLabel labelSubtitulo4;
     private javax.swing.JLabel labelSubtitulo5;
     private javax.swing.JLabel labelSubtitulo6;
+    private javax.swing.JLabel labelSubtitulo7;
+    private javax.swing.JLabel labelSubtitulo8;
+    private javax.swing.JLabel labelSubtitulo9;
     private javax.swing.JLabel labelTitulo;
     private javax.swing.JPanel painelOpcao;
     private javax.swing.JPanel painelOpcaoContainer1;
@@ -3210,15 +3176,15 @@ public class Tela_inicial extends javax.swing.JFrame {
     private javax.swing.JPanel painelPrincipalRemover3;
     private javax.swing.JPanel painelPrincipalRemover4;
     private javax.swing.JPanel painelPrincipalSwitch;
-    private javax.swing.JTextField textFieldAdd11;
-    private javax.swing.JTextField textFieldAdd12;
-    private javax.swing.JTextField textFieldAdd13;
-    private javax.swing.JTextField textFieldAdd14;
-    private javax.swing.JTextField textFieldAdd15;
-    private javax.swing.JTextField textFieldAdd16;
     private javax.swing.JTextField textFieldAdicionar1;
     private javax.swing.JTextField textFieldAdicionar10;
     private javax.swing.JTextField textFieldAdicionar11;
+    private javax.swing.JTextField textFieldAdicionar12;
+    private javax.swing.JTextField textFieldAdicionar13;
+    private javax.swing.JTextField textFieldAdicionar14;
+    private javax.swing.JTextField textFieldAdicionar15;
+    private javax.swing.JTextField textFieldAdicionar16;
+    private javax.swing.JTextField textFieldAdicionar17;
     private javax.swing.JTextField textFieldAdicionar2;
     private javax.swing.JTextField textFieldAdicionar3;
     private javax.swing.JTextField textFieldAdicionar4;
