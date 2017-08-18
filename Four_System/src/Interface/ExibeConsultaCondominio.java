@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Interface;
+
 import Classes.Condominio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -160,42 +161,9 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
             }
         });
     }
+
     
-    public List<Condominio> fazerConsulta(){
-        
-    
-    Conexao c = new Conexao();
-    Condominio con = new Condominio();
-    Condominio conAux = new Condominio();
-    ResultSet resposta = con.consultarTodosCondominios(c.getStatement());
-    List<Condominio> condominios = new ArrayList<>();
-        try {
-            while(resposta.next()){
-                conAux.setId(resposta.getInt("id"));
-                conAux.setNome("nome");
-                
-                condominios.add(conAux);
-            }   } catch (SQLException ex) {
-            Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    
-        for(Condominio conAux2: condominios){
-            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-            model.addRow(new Object[]{conAux2.getId(),conAux.getNome() } );
-            
-        }
-    
-        
-        
-        
-        
-        return condominios;
-    }
-    
-    
-   
-    
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.util.List<Interface.Condominio> condominioList;
     private javax.persistence.Query condominioQuery;

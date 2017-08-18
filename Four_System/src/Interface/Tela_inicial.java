@@ -2956,7 +2956,7 @@ public class Tela_inicial extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoPesquisar10MouseClicked
 
     private void botaoPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPesquisarActionPerformed
-        new ExibeConsultaCondominio().setVisible(true);
+        new ExibeConsultaCondominio1().setVisible(true);
     }//GEN-LAST:event_botaoPesquisarActionPerformed
 
     /**
