@@ -49,7 +49,7 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
                 condominios.add(conAux);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ExibeConsultaCondominio1.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(Level.SEVERE, null, ex);
         }
         DefaultTableModel model = (DefaultTableModel) tabelaConsultas.getModel();
 
