@@ -8,6 +8,7 @@ package Interface;
 import Classes.Condominio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -25,25 +26,27 @@ public class ExibeConsultaCondominio1 extends javax.swing.JPanel {
      */
     public ExibeConsultaCondominio1() {
         initComponents();
-        List<Condominio> fazerConsulta = fazerConsulta();
+        fazerConsulta();
     }
 
-    public List<Condominio> fazerConsulta() {
+    public void fazerConsulta() {
 
         Conexao c = new Conexao();
         Condominio con = new Condominio();
         Condominio conAux = new Condominio();
-        ResultSet resposta = con.consultarTodosCondominios(c.getStatement());
+        Statement k = c.getStatement();
+        ResultSet resposta = con.consultarTodosCondominios(k);
         List<Condominio> condominios = new ArrayList<>();
         try {
             while (resposta.next()) {
                 conAux.setId(resposta.getInt("id"));
                 conAux.setNome("nome");
+                //conAux.setRua(resposta.getString);
 
                 condominios.add(conAux);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExibeConsultaCondominio1.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         for (Condominio conAux2 : condominios) {
@@ -52,7 +55,7 @@ public class ExibeConsultaCondominio1 extends javax.swing.JPanel {
 
         }
 
-        return condominios;
+        
     }
 
     
@@ -68,6 +71,8 @@ public class ExibeConsultaCondominio1 extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,26 +87,38 @@ public class ExibeConsultaCondominio1 extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(74, 74, 74)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 25, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

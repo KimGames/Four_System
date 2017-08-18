@@ -8,17 +8,16 @@ package Interface;
 import Classes.Condominio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
- * @author kimruan
+ * @author Victor
  */
 public class ExibeConsultaCondominio extends javax.swing.JFrame {
 
@@ -27,8 +26,46 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
      */
     public ExibeConsultaCondominio() {
         initComponents();
-        List<Condominio> fazerConsulta = fazerConsulta();
+        fazerConsulta();
     }
+    
+     public void fazerConsulta() {
+
+        Conexao c = new Conexao();
+        Condominio con = new Condominio();
+        
+        Statement k = c.getStatement();
+        ResultSet resposta = con.consultarTodosCondominios(k);
+        ArrayList<Condominio> condominios = new ArrayList<>();
+        try {
+            while (resposta.next()) {
+                Condominio conAux = new Condominio();
+                conAux.setId(resposta.getInt("id"));
+                conAux.setNome(resposta.getString("nome"));
+                conAux.setRua(resposta.getString("rua"));
+                conAux.setBairro(resposta.getString("bairro"));
+                conAux.setCidade(resposta.getString("cidade"));
+
+                condominios.add(conAux);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(ExibeConsultaCondominio1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        DefaultTableModel model = (DefaultTableModel) tabelaConsultas.getModel();
+
+        
+        
+        for (Condominio conAux2 : condominios) {
+
+            model.addRow(new Object[]
+            {conAux2.getId(), conAux2.getNome(), conAux2.getRua(), conAux2.getBairro(),
+            conAux2.getCidade()});
+
+        }
+
+        
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,91 +75,37 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        postgresPUEntityManager = java.beans.Beans.isDesignTime() ? null : javax.persistence.Persistence.createEntityManagerFactory("postgresPU").createEntityManager();
-        condominioQuery = java.beans.Beans.isDesignTime() ? null : postgresPUEntityManager.createQuery("SELECT c FROM Condominio c");
-        condominioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : condominioQuery.getResultList();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabelaConsultas = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ResultadoConsultaCondominio");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(312, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(412, 412, 412))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addContainerGap(56, Short.MAX_VALUE))
-        );
-
-<<<<<<< HEAD
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaConsultas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
-                "Id", "Nome"
+                "Id", "Nome", "Rua", "Bairro", "Cidade"
             }
         ));
-=======
-        org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, condominioList, jTable1);
-        org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${nome}"));
-        columnBinding.setColumnName("Nome");
-        columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idSindico}"));
-        columnBinding.setColumnName("Id Sindico");
-        columnBinding.setColumnClass(Integer.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${rua}"));
-        columnBinding.setColumnName("Rua");
-        columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${bairro}"));
-        columnBinding.setColumnName("Bairro");
-        columnBinding.setColumnClass(String.class);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${cidade}"));
-        columnBinding.setColumnName("Cidade");
-        columnBinding.setColumnClass(String.class);
-        bindingGroup.addBinding(jTableBinding);
-        jTableBinding.bind();
->>>>>>> 0a59b6f0d3673a76af5ee8114918b3b5a411c1a0
-        jScrollPane2.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tabelaConsultas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2)
-                .addContainerGap())
+                .addGap(34, 34, 34)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 806, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 25, Short.MAX_VALUE))
         );
-
-        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,16 +145,8 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
         });
     }
 
-    
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.util.List<Interface.Condominio> condominioList;
-    private javax.persistence.Query condominioQuery;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.persistence.EntityManager postgresPUEntityManager;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tabelaConsultas;
     // End of variables declaration//GEN-END:variables
 }
