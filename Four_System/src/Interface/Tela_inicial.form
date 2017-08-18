@@ -52,7 +52,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="painelOpcao" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-              <Component id="painelPrincipalSwitch" min="-2" pref="500" max="-2" attributes="0"/>
+              <Component id="painelPrincipalSwitch" min="-2" pref="315" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
