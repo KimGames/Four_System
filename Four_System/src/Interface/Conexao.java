@@ -18,7 +18,7 @@ public class Conexao {
           //Estabelece conexao com o banco de dados
           System.out.println(">Conectando com o servidor: ");
           String url = "jdbc:postgresql://localhost/postgres?user=postgres&password=conectax";
-          conexao = DriverManager.getConnection(url);
+          conexao = DriverManager.getConnection(url); 
           System.out.println(">Conectado!");
           //cria uma sentenca para consultar o banco de dados
           sentenca = conexao.createStatement();
