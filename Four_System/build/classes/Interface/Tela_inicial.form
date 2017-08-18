@@ -1848,7 +1848,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="labelSubTitulo" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="labelSubtitulo1" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
@@ -1859,11 +1859,11 @@
                               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="textFieldPesquisar" min="-2" pref="350" max="-2" attributes="0"/>
+                                      <Component id="textFieldConsultar1" min="-2" pref="350" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="botaoConsultar1" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="comboBoxCondominios" min="-2" max="-2" attributes="0"/>
+                                  <Component id="comboBox1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -1875,16 +1875,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelPesquisapor1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboBoxCondominios" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="labelPesquisa1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldPesquisar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldConsultar1" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botaoConsultar1" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
@@ -1893,7 +1893,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo">
+            <Component class="javax.swing.JLabel" name="labelSubtitulo1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -1915,7 +1915,18 @@
                 <Property name="text" type="java.lang.String" value="Pesquisa por"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="comboBoxCondominios">
+            <Component class="javax.swing.JLabel" name="labelPesquisa1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBox1">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -1930,18 +1941,7 @@
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelPesquisa1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldPesquisar">
+            <Component class="javax.swing.JTextField" name="textFieldConsultar1">
             </Component>
             <Component class="javax.swing.JButton" name="botaoConsultar1">
               <Properties>
@@ -1972,26 +1972,26 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelCondominios10" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="labelCondominios9" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisapor2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisa2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="textFieldPesquisar1" min="-2" pref="350" max="-2" attributes="0"/>
+                              <Component id="textFieldConsultar2" min="-2" pref="350" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="botaoConsultar2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
-                              <Component id="comboBoxApartamentos1" min="-2" max="-2" attributes="0"/>
+                              <Component id="comboBox2" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="438" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo3" min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo2" min="-2" pref="300" max="-2" attributes="0"/>
                       <EmptySpace pref="489" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -2000,16 +2000,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios10" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboBoxApartamentos1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisapor2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios9" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldPesquisar1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisa2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldConsultar2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botaoConsultar2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
@@ -2018,31 +2018,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="textFieldPesquisar1">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios9">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios10">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo3">
+            <Component class="javax.swing.JLabel" name="labelSubtitulo2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -2053,7 +2029,29 @@
                 <Property name="text" type="java.lang.String" value="Consultar Apartamento"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="comboBoxApartamentos1">
+            <Component class="javax.swing.JLabel" name="labelPesquisapor2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelPesquisa2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBox2">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
@@ -2065,6 +2063,11 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldConsultar2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldConsultar2ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="botaoConsultar2">
               <Properties>
@@ -2093,22 +2096,22 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="labelSubTitulo14" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="labelSubtitulo3" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelCondominios14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelCondominios13" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPesquisapor3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPesquisa3" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="textFieldPesquisar3" min="-2" pref="350" max="-2" attributes="0"/>
+                                      <Component id="textFieldConsultar3" min="-2" pref="350" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="botaoConsultar3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="comboBoxProprietarios" min="-2" max="-2" attributes="0"/>
+                                  <Component id="comboBox3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2120,16 +2123,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo14" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios14" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboBoxProprietarios" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisapor3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios13" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldPesquisar3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisa3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldConsultar3" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botaoConsultar3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
@@ -2138,31 +2141,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="textFieldPesquisar3">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios13">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios14">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo14">
+            <Component class="javax.swing.JLabel" name="labelSubtitulo3">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -2173,7 +2152,29 @@
                 <Property name="text" type="java.lang.String" value="Consultar Propriet&#xe1;rios"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="comboBoxProprietarios">
+            <Component class="javax.swing.JLabel" name="labelPesquisapor3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelPesquisa3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBox3">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -2187,6 +2188,8 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldConsultar3">
             </Component>
             <Component class="javax.swing.JButton" name="botaoConsultar3">
               <Properties>
@@ -2215,22 +2218,22 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="labelSubTitulo15" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="labelSubtitulo4" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelCondominios22" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelCondominios21" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPesquisapor" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelPesquisa" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="textFieldPesquisar11" min="-2" pref="350" max="-2" attributes="0"/>
+                                      <Component id="textFieldConsultar4" min="-2" pref="350" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="botaoConsultar4" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="comboBoxMoradores" min="-2" max="-2" attributes="0"/>
+                                  <Component id="comboBox4" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2242,16 +2245,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo15" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelCondominios22" min="-2" max="-2" attributes="0"/>
-                          <Component id="comboBoxMoradores" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisapor" min="-2" max="-2" attributes="0"/>
+                          <Component id="comboBox4" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelCondominios21" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldPesquisar11" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelPesquisa" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldConsultar4" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botaoConsultar4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="139" max="32767" attributes="0"/>
@@ -2260,31 +2263,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JTextField" name="textFieldPesquisar11">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios21">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelCondominios22">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo15">
+            <Component class="javax.swing.JLabel" name="labelSubtitulo4">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -2295,7 +2274,29 @@
                 <Property name="text" type="java.lang.String" value="Consultar Morador"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JComboBox" name="comboBoxMoradores">
+            <Component class="javax.swing.JLabel" name="labelPesquisapor">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa por"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelPesquisa">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Pesquisa"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="comboBox4">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -2309,6 +2310,8 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldConsultar4">
             </Component>
             <Component class="javax.swing.JButton" name="botaoConsultar4">
               <Properties>
@@ -2335,32 +2338,32 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo1" min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo5" min="-2" pref="300" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelAdd3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelAdicionar5" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelAdd1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelAdd" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelAdd4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelAdd2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar1" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textFieldAdd" min="-2" pref="225" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd4" min="-2" pref="303" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd3" min="-2" pref="340" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd1" min="-2" pref="350" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd2" alignment="0" min="-2" pref="320" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar1" min="-2" pref="225" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar2" min="-2" pref="303" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar4" min="-2" pref="340" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar3" min="-2" pref="350" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar5" alignment="0" min="-2" pref="320" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace pref="135" max="32767" attributes="0"/>
-                      <Component id="botao_adicionar" min="-2" pref="95" max="-2" attributes="0"/>
+                      <Component id="botaoAdicionar1" min="-2" pref="95" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -2369,44 +2372,44 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelSubTitulo1" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSubtitulo5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="labelAdd2" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldAdd" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelAdd4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldAdd4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelAdicionar1" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldAdicionar1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelAdd1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldAdd1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelAdicionar2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldAdicionar2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelAdd" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldAdd3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelAdicionar3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldAdicionar3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="labelAdd3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="textFieldAdd2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelAdicionar4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldAdicionar4" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="60" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="labelAdicionar5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="textFieldAdicionar5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="53" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="botao_adicionar" min="-2" max="-2" attributes="0"/>
+                      <Component id="botaoAdicionar1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo1">
+            <Component class="javax.swing.JLabel" name="labelSubtitulo5">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -2417,31 +2420,7 @@
                 <Property name="text" type="java.lang.String" value="Adicionar Condom&#xed;nio"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Bairro"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd1">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Rua"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd2">
+            <Component class="javax.swing.JLabel" name="labelAdicionar1">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -2452,24 +2431,7 @@
                 <Property name="text" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd3">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Cidade"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd1">
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd2">
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd3">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd4">
+            <Component class="javax.swing.JLabel" name="labelAdicionar2">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -2480,12 +2442,53 @@
                 <Property name="text" type="java.lang.String" value="S&#xed;ndico"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd4">
+            <Component class="javax.swing.JLabel" name="labelAdicionar3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Rua"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelAdicionar4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Bairro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelAdicionar5">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Cidade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar1">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar2">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldAdd4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldAdicionar2ActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JPanel" name="botao_adicionar">
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar3">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar4">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar5">
+            </Component>
+            <Container class="javax.swing.JPanel" name="botaoAdicionar1">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3f" green="de" red="b3" type="rgb"/>
@@ -2495,7 +2498,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botao_adicionarMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoAdicionar1MouseClicked"/>
               </Events>
 
               <Layout>
@@ -2554,38 +2557,38 @@
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="labelAdd10" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelAdicionar11" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                              <Component id="textFieldAdd10" min="-2" pref="325" max="-2" attributes="0"/>
+                              <Component id="textFieldAdicionar11" min="-2" pref="325" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="labelSubTitulo4" min="-2" pref="300" max="-2" attributes="0"/>
+                          <Component id="labelSubtitulo6" min="-2" pref="300" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="labelAdd7" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelAdicionar7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="textFieldAdd6" min="-2" pref="85" max="-2" attributes="0"/>
+                              <Component id="textFieldAdicionar7" min="-2" pref="85" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                              <Component id="labelAdd9" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelAdicionar8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="textFieldAdd9" min="-2" pref="75" max="-2" attributes="0"/>
+                              <Component id="textFieldAdicionar10" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelAdd5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelAdd8" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelAdd6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar6" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="textFieldAdd5" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar6" min="-2" pref="250" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="textFieldAdd8" pref="340" max="32767" attributes="0"/>
-                                      <Component id="textFieldAdd7" max="32767" attributes="0"/>
+                                      <Component id="textFieldAdicionar9" pref="340" max="32767" attributes="0"/>
+                                      <Component id="textFieldAdicionar8" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace pref="95" max="32767" attributes="0"/>
-                      <Component id="botao_adicionar1" min="-2" pref="95" max="-2" attributes="0"/>
+                      <Component id="botaoadicionar2" min="-2" pref="95" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -2595,38 +2598,38 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="botao_adicionar1" min="-2" max="-2" attributes="0"/>
+                          <Component id="botaoadicionar2" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="labelSubTitulo4" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelSubtitulo6" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="labelAdd6" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar6" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="labelAdd7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="labelAdd9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar8" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar7" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="labelAdd8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelAdicionar9" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="labelAdd5" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelAdicionar10" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="textFieldAdd8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textFieldAdicionar9" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                      <Component id="textFieldAdd7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="textFieldAdicionar8" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="labelAdd10" min="-2" max="-2" attributes="0"/>
-                                  <Component id="textFieldAdd10" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelAdicionar11" min="-2" max="-2" attributes="0"/>
+                                  <Component id="textFieldAdicionar11" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -2636,7 +2639,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo4">
+            <Component class="javax.swing.JLabel" name="labelSubtitulo6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="24" style="1"/>
@@ -2647,20 +2650,7 @@
                 <Property name="text" type="java.lang.String" value="Adicionar Apartamento"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd5">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd5">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Morador"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd6">
+            <Component class="javax.swing.JLabel" name="labelAdicionar6">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -2671,7 +2661,7 @@
                 <Property name="text" type="java.lang.String" value="Condom&#xed;nio"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd7">
+            <Component class="javax.swing.JLabel" name="labelAdicionar7">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -2682,24 +2672,7 @@
                 <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd8">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Propriet&#xe1;rio"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd6">
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd7">
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd8">
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelAdd9">
+            <Component class="javax.swing.JLabel" name="labelAdicionar8">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="1"/>
@@ -2710,12 +2683,55 @@
                 <Property name="text" type="java.lang.String" value="Bloco"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd9">
+            <Component class="javax.swing.JLabel" name="labelAdicionar9">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Propriet&#xe1;rio"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelAdicionar10">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Morador"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="labelAdicionar11">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Diret&#xf3;rio do Boleto"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar6">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar7">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar8">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar9">
+            </Component>
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar10">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldAdd9ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldAdicionar10ActionPerformed"/>
               </Events>
             </Component>
-            <Container class="javax.swing.JPanel" name="botao_adicionar1">
+            <Component class="javax.swing.JTextField" name="textFieldAdicionar11">
+            </Component>
+            <Container class="javax.swing.JPanel" name="botaoadicionar2">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="3f" green="de" red="b3" type="rgb"/>
@@ -2725,7 +2741,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botao_adicionar1MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botaoadicionar2MouseClicked"/>
               </Events>
 
               <Layout>
@@ -2762,19 +2778,6 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="labelAdd10">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Diret&#xf3;rio do Boleto"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="textFieldAdd10">
-            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="painelPrincipalAdicionar3">
@@ -3977,7 +3980,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="labelSubTitulo12" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="labelSubTitulo15" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
@@ -4002,7 +4005,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="labelSubTitulo12" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelSubTitulo15" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelCondominios19" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4022,6 +4025,17 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelSubTitulo15">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Remover Propriet&#xe1;rio"/>
+              </Properties>
+            </Component>
             <Container class="javax.swing.JPanel" name="botaoPesquisar9">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -4080,17 +4094,6 @@
                 <Property name="text" type="java.lang.String" value="Pesquisa"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo12">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="24" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Remover Propriet&#xe1;rio"/>
-              </Properties>
-            </Component>
             <Container class="javax.swing.JPanel" name="comboBoxContainer9">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
@@ -4117,7 +4120,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="labelSubTitulo13" min="-2" pref="300" max="-2" attributes="0"/>
+                              <Component id="labelSubTitulo16" min="-2" pref="300" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
@@ -4142,7 +4145,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="labelSubTitulo13" min="-2" max="-2" attributes="0"/>
+                              <Component id="labelSubTitulo16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="labelCondominios20" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -4162,6 +4165,17 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
+            <Component class="javax.swing.JLabel" name="labelSubTitulo16">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="24" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Remover Morador"/>
+              </Properties>
+            </Component>
             <Container class="javax.swing.JPanel" name="botaoPesquisar10">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -4218,17 +4232,6 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Pesquisa"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="labelSubTitulo13">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="24" style="1"/>
-                </Property>
-                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Remover Morador"/>
               </Properties>
             </Component>
             <Container class="javax.swing.JPanel" name="comboBoxContainer10">
