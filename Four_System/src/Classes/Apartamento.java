@@ -18,10 +18,11 @@ public class Apartamento {
 
   private String numero;
   private String bloco;
-  private String id_condominio;
+  private String condominio;
   private String id_proprietario;
   private String id_morador;
   private String diretorio_boleto;
+  
 
 	/**
 	* Default empty Apartamento constructor
@@ -33,13 +34,13 @@ public class Apartamento {
 	/**
 	* Default Apartamento constructor
 	*/
-	public Apartamento(String numero, String bloco, String id_condominio,
+	public Apartamento(String numero, String bloco, String condominio,
                      String id_proprietario, String id_morador,
                      String diretorio_boleto) {
 		super();
 		this.numero = numero;
 		this.bloco = bloco;
-		this.id_condominio = id_condominio;
+		this.condominio = condominio;
 		this.id_proprietario = id_proprietario;
 		this.id_morador = id_morador;
 		this.diretorio_boleto = diretorio_boleto;
@@ -81,16 +82,16 @@ public class Apartamento {
 	* Returns value of id_condominio
 	* @return
 	*/
-	public String getId_condominio() {
-		return id_condominio;
+	public String getCondominio() {
+		return condominio;
 	}
 
 	/**
 	* Sets new value of id_condominio
 	* @param
 	*/
-	public void setId_condominio(String id_condominio) {
-		this.id_condominio = id_condominio;
+	public void setCondominio(String condominio) {
+		this.condominio = condominio;
 	}
 
 	/**
@@ -170,10 +171,12 @@ public class Apartamento {
     System.out.println(">Realizando consulta..");
     try{
         String query;
-        query = "SELECT * "
-              + "FROM condominio c, apartamento a "
+        query = "SELECT c.nome AS condominio_nome  "
+              + "FROM condominio c, apartamento a, pessoa p, pessoa m "
               + "WHERE c.id = a.id_condominio "
-              + "AND c.id = " + condominio + ";";
+              + "AND a.id_proprietario = p.id "
+              + "AND a.id_morador = m.id "
+              + "AND c.nome LIKE '%" + condominio + "%';";
         System.out.println(query);
         //consulta
         resposta = sentenca.executeQuery(query);

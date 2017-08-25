@@ -517,7 +517,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(448, Short.MAX_VALUE))
+                .addContainerGap(466, Short.MAX_VALUE))
         );
 
         painelOpcao.setBackground(new java.awt.Color(169, 207, 70));
@@ -2401,7 +2401,7 @@ public class Tela_inicial extends javax.swing.JFrame {
                 .addComponent(painelOpcao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(painelPrincipalSwitch, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(353, Short.MAX_VALUE))
         );
 
         pack();
@@ -2508,11 +2508,7 @@ public class Tela_inicial extends javax.swing.JFrame {
 
     private void botao_apartamentosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botao_apartamentosMouseClicked
         // TODO add your handling code here:
-        labelSubtitulo1.setText("Consultar Apartamentos");
-        painelPrincipalSwitch.removeAll();
-        painelPrincipalSwitch.repaint();
-        painelPrincipalSwitch.revalidate();
-        painelPrincipalSwitch.add(painelPrincipalConsultar2);
+        new ExibeConsultaApartamento().setVisible(true);
         
     }//GEN-LAST:event_botao_apartamentosMouseClicked
 
@@ -2643,6 +2639,22 @@ public class Tela_inicial extends javax.swing.JFrame {
 
     }//GEN-LAST:event_botao_moradores3MouseClicked
 
+    private void botaoAdicionar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoAdicionar4MouseClicked
+
+    private void botaoAdicionar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoAdicionar3MouseClicked
+
+    private void botaoadicionar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoadicionar2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoadicionar2MouseClicked
+
+    private void textFieldAdicionar10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldAdicionar10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldAdicionar10ActionPerformed
+
     private void botaoAdicionar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_botaoAdicionar1MouseClicked
@@ -2651,29 +2663,13 @@ public class Tela_inicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldAdicionar2ActionPerformed
 
-    private void textFieldAdicionar10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldAdicionar10ActionPerformed
+    private void textFieldConsultar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldConsultar2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldAdicionar10ActionPerformed
-
-    private void botaoadicionar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoadicionar2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoadicionar2MouseClicked
-
-    private void botaoAdicionar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar3MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoAdicionar3MouseClicked
-
-    private void botaoAdicionar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botaoAdicionar4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoAdicionar4MouseClicked
+    }//GEN-LAST:event_textFieldConsultar2ActionPerformed
 
     private void botaoConsultar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoConsultar1ActionPerformed
         new ExibeConsultaCondominio().setVisible(true);
     }//GEN-LAST:event_botaoConsultar1ActionPerformed
-
-    private void textFieldConsultar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldConsultar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldConsultar2ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -5,7 +5,9 @@
  */
 package Interface;
 
+import Classes.Apartamento;
 import Classes.Condominio;
+import Classes.Pessoa;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -19,47 +21,55 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Victor
  */
-public class ExibeConsultaCondominio2 extends javax.swing.JFrame {
+public class ExibeConsultaApartamento extends javax.swing.JFrame {
 
     /**
      * Creates new form ExibeConsultaCondominio
      */
-    public ExibeConsultaCondominio2() {
+    public ExibeConsultaApartamento() {
         initComponents();
-        fazerConsulta();
+       
     }
     
      public void fazerConsulta() {
 
         Conexao c = new Conexao();
-        Condominio con = new Condominio();
-        
         Statement k = c.getStatement();
-        ResultSet resposta = con.consultarTodosCondominios(k);
-        ArrayList<Condominio> condominios = new ArrayList<>();
+        Apartamento ap = new Apartamento();
+        
+        
+        ResultSet resposta = ap.consultarTodosApartamentos(k, jTextPane1.getText());
+        ArrayList<Apartamento> apartamentos = new ArrayList<>();
+        ArrayList<Pessoa> pessoas_m = new ArrayList<>();
+        ArrayList<Pessoa> pessoas_p = new ArrayList<>();
         try {
             while (resposta.next()) {
-                Condominio conAux = new Condominio();
-                conAux.setId(resposta.getInt("id"));
-                conAux.setNome(resposta.getString("nome"));
-                conAux.setRua(resposta.getString("rua"));
-                conAux.setBairro(resposta.getString("bairro"));
-                conAux.setCidade(resposta.getString("cidade"));
+                Apartamento apAux = new Apartamento();
+                Pessoa pAuxM = new Pessoa();
+                Pessoa pAuxP = new Pessoa();
+                apAux.setCondominio(resposta.getString("c.nome"));
+                apAux.setNumero(resposta.getString("a.numero"));
+                apAux.setBloco(resposta.getString("a.bloco"));
+                pAuxM.setNome(resposta.getString("m.nome"));
                 
-                condominios.add(conAux);
+                
+                
+                
+                apartamentos.add(apAux);
+                pessoas_m.add(pAuxM);
             }
         } catch (SQLException ex) {
-            Logger.getLogger(ExibeConsultaCondominio2.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(Level.SEVERE, null, ex);
         }
         DefaultTableModel model = (DefaultTableModel) tabelaConsultas.getModel();
 
         
         
-        for (Condominio conAux2 : condominios) {
+        for (int i = 0; i < apartamentos.size(); i++) {
 
             model.addRow(new Object[]
-            {conAux2.getId(), conAux2.getNome(), conAux2.getRua(), conAux2.getBairro(),
-            conAux2.getCidade()});
+            {apartamentos.get(i).getCondominio(), apartamentos.get(i).getNumero(), apartamentos.get(i).getBloco(),
+            pessoas_m.get(i).getNome()});
 
         }
 
@@ -80,6 +90,10 @@ public class ExibeConsultaCondominio2 extends javax.swing.JFrame {
         tabelaConsultas = new javax.swing.JTable();
         painelSuperior = new javax.swing.JPanel();
         labelTitulo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -90,11 +104,11 @@ public class ExibeConsultaCondominio2 extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Id", "Nome", "Rua", "Bairro", "Cidade"
+                "Condominio", "Numero", "Bloco", "Morador", "Email Morador", "Telefone Morador", "Proprietário", "Email Proprietario", "Telefone Proprietario"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, true, true, false, true, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -108,7 +122,7 @@ public class ExibeConsultaCondominio2 extends javax.swing.JFrame {
 
         labelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         labelTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        labelTitulo.setText("Resultados da Consulta - Todos os Condomínios");
+        labelTitulo.setText("Resultados da Consulta - Todos os Apartamentos");
 
         javax.swing.GroupLayout painelSuperiorLayout = new javax.swing.GroupLayout(painelSuperior);
         painelSuperior.setLayout(painelSuperiorLayout);
@@ -127,28 +141,63 @@ public class ExibeConsultaCondominio2 extends javax.swing.JFrame {
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("Pesquisa");
+
+        jScrollPane2.setViewportView(jTextPane1);
+
+        jButton1.setText("Pesquisa");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(27, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
             .addComponent(painelSuperior, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(painelSuperior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(56, 56, 56)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel tabela = new DefaultTableModel();
+        tabela = (DefaultTableModel) tabelaConsultas.getModel();
+        tabela.setNumRows(0);
+        
+        fazerConsulta();
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,29 +216,30 @@ public class ExibeConsultaCondominio2 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ExibeConsultaCondominio2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ExibeConsultaCondominio2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ExibeConsultaCondominio2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ExibeConsultaCondominio2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ExibeConsultaCondominio2().setVisible(true);
+                new ExibeConsultaCondominio().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel labelTitulo;
     private javax.swing.JPanel painelSuperior;
     private javax.swing.JTable tabelaConsultas;
