@@ -171,7 +171,7 @@ public class Apartamento {
     System.out.println(">Realizando consulta..");
     try{
         String query;
-        query = "SELECT c.nome AS condominio_nome  "
+        query = "SELECT c.nome AS nome_con, a.numero AS numero_ap, a.bloco AS bloco_ap, m.nome AS nome_mor, p.nome  AS nome_pro "
               + "FROM condominio c, apartamento a, pessoa p, pessoa m "
               + "WHERE c.id = a.id_condominio "
               + "AND a.id_proprietario = p.id "

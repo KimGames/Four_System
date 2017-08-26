@@ -47,16 +47,17 @@ public class ExibeConsultaApartamento extends javax.swing.JFrame {
                 Apartamento apAux = new Apartamento();
                 Pessoa pAuxM = new Pessoa();
                 Pessoa pAuxP = new Pessoa();
-                apAux.setCondominio(resposta.getString("c.nome"));
-                apAux.setNumero(resposta.getString("a.numero"));
-                apAux.setBloco(resposta.getString("a.bloco"));
-                pAuxM.setNome(resposta.getString("m.nome"));
-                
+                apAux.setCondominio(resposta.getString("nome_con"));
+                apAux.setNumero(resposta.getString("numero_ap"));
+                apAux.setBloco(resposta.getString("bloco_ap"));
+                pAuxM.setNome(resposta.getString("nome_mor"));
+                pAuxP.setNome(resposta.getString("nome_pro"));
                 
                 
                 
                 apartamentos.add(apAux);
                 pessoas_m.add(pAuxM);
+                pessoas_p.add(pAuxP);
             }
         } catch (SQLException ex) {
             Logger.getLogger(ExibeConsultaCondominio.class.getName()).log(Level.SEVERE, null, ex);
@@ -69,7 +70,7 @@ public class ExibeConsultaApartamento extends javax.swing.JFrame {
 
             model.addRow(new Object[]
             {apartamentos.get(i).getCondominio(), apartamentos.get(i).getNumero(), apartamentos.get(i).getBloco(),
-            pessoas_m.get(i).getNome()});
+            pessoas_m.get(i).getNome(), pessoas_p.get(i).getNome()});
 
         }
 
@@ -104,11 +105,11 @@ public class ExibeConsultaApartamento extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Condominio", "Numero", "Bloco", "Morador", "Email Morador", "Telefone Morador", "Proprietário", "Email Proprietario", "Telefone Proprietario"
+                "Condominio", "Numero", "Bloco", "Morador", "Proprietário"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true, false, true, true
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
