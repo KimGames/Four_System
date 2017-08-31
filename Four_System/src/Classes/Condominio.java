@@ -17,6 +17,7 @@ import java.sql.Statement;
 public class Condominio {
 
   private String id;
+  //private int id;
   private String nome;
   private String id_sindico;
   private String rua;
