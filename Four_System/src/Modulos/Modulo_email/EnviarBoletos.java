@@ -23,7 +23,7 @@ public class EnviarBoletos{
                                    + "<p style=\"color:black;\">(34) 9226-2967</p>"
                                    + " </body>"
                                    + "</html>";
-  private static final String IMAGE_BODY = "..\\Four_System\\Imagens\\crea.png";
+  private static final String IMAGE_BODY = "..\\Four_System\\Images\\crea.png";
 
   private final ArrayList<String> to = new ArrayList<>();
   private final ArrayList<String> filename_to = new ArrayList<>();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -7,3 +8,17 @@
         </group>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Victor/Desktop/condominios/github/Four_System/Four_System/src/Classes/Pessoa.java</file>
+            <file>file:/C:/Users/Victor/Desktop/condominios/github/Four_System/Four_System/src/Classes/Apartamento.java</file>
+            <file>file:/C:/Users/Victor/Desktop/condominios/github/Four_System/Four_System/src/Interface/ExibeConsultaApartamento.java</file>
+            <file>file:/C:/Users/Victor/Desktop/condominios/github/Four_System/Four_System/src/Interface/ExibeConsultaCondominio.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> 55f453466159db58662fb0e581997e8099950887
