@@ -40,7 +40,7 @@ public class ExibeConsultaCondominio extends javax.swing.JFrame {
         try {
             while (resposta.next()) {
                 Condominio conAux = new Condominio();
-                conAux.setId(resposta.getInt("id"));
+                conAux.setId(resposta.getString("id"));
                 conAux.setNome(resposta.getString("nome"));
                 conAux.setRua(resposta.getString("rua"));
                 conAux.setBairro(resposta.getString("bairro"));

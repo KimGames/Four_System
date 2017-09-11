@@ -45,7 +45,7 @@ public class ExibeConsultaApartamento extends javax.swing.JFrame {
                 Apartamento apAux = new Apartamento();
                 Pessoa pAuxM = new Pessoa();
                 Pessoa pAuxP = new Pessoa();
-                apAux.setCondominio(resposta.getString("nome_con"));
+                apAux.setId_condominio(resposta.getString("nome_con"));
                 apAux.setNumero(resposta.getString("numero_ap"));
                 apAux.setBloco(resposta.getString("bloco_ap"));
                 pAuxM.setNome(resposta.getString("nome_mor"));
@@ -67,7 +67,7 @@ public class ExibeConsultaApartamento extends javax.swing.JFrame {
         for (int i = 0; i < apartamentos.size(); i++) {
 
             model.addRow(new Object[]
-            {apartamentos.get(i).getCondominio(), apartamentos.get(i).getNumero(), apartamentos.get(i).getBloco(),
+            {apartamentos.get(i).getId_condominio(), apartamentos.get(i).getNumero(), apartamentos.get(i).getBloco(),
             pessoas_m.get(i).getNome(), pessoas_p.get(i).getNome()});
 
         }
